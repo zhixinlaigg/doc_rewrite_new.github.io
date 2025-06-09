@@ -1,0 +1,1077 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../images/favicon-platform.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Intro - Google Cloud Documentation Rewrite</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migrate-your-application-to-gemini-2-with-the-vertex-ai-gemini-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Google Cloud Documentation Rewrite" class="md-header__button md-logo" aria-label="Google Cloud Documentation Rewrite" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Google Cloud Documentation Rewrite
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/openai-agents-python/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Google Cloud Documentation Rewrite" class="md-nav__button md-logo" aria-label="Google Cloud Documentation Rewrite" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Google Cloud Documentation Rewrite
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-migrate-to-gemini-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Why migrate to Gemini 2?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-gemini-2-model-should-i-migrate-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Which Gemini 2 model should I migrate to?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Before you begin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Before you begin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-retirement-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model retirement awareness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infosec-governance-and-regulatory-approvals" class="md-nav__link">
+    <span class="md-ellipsis">
+      InfoSec, governance, and regulatory approvals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Location availability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modality-and-tokenization-based-pricing-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modality and tokenization-based pricing differences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioned-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioned Throughput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervised-fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supervised fine-tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regression-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regression testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Migration process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Migration process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-document-model-evaluation-and-testing-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Document model evaluation and testing requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-upgrade-and-test-your-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Upgrade and test your code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Upgrade and test your code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-your-gemini-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change your Gemini calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-breaking-code-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Address breaking code changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-perform-offline-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Perform offline evaluation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-assess-evaluation-results-and-tune-the-gemini-2-prompts-and-hyperparameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Assess evaluation results and tune the Gemini 2 prompts and hyperparameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-perform-load-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Perform load testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-perform-online-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Perform online evaluation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-deploy-to-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Deploy to production
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-model-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Improving model performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Getting help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-migrate-to-gemini-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Why migrate to Gemini 2?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-gemini-2-model-should-i-migrate-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Which Gemini 2 model should I migrate to?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Before you begin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Before you begin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-retirement-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model retirement awareness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infosec-governance-and-regulatory-approvals" class="md-nav__link">
+    <span class="md-ellipsis">
+      InfoSec, governance, and regulatory approvals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Location availability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modality-and-tokenization-based-pricing-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modality and tokenization-based pricing differences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioned-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioned Throughput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervised-fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supervised fine-tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regression-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regression testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Migration process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Migration process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-document-model-evaluation-and-testing-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Document model evaluation and testing requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-upgrade-and-test-your-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Upgrade and test your code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Upgrade and test your code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-your-gemini-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change your Gemini calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-breaking-code-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Address breaking code changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-perform-offline-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Perform offline evaluation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-assess-evaluation-results-and-tune-the-gemini-2-prompts-and-hyperparameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Assess evaluation results and tune the Gemini 2 prompts and hyperparameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-perform-load-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Perform load testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-perform-online-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Perform online evaluation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-deploy-to-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Deploy to production
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-model-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Improving model performance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Getting help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="migrate-your-application-to-gemini-2-with-the-vertex-ai-gemini-api">Migrate your application to Gemini 2 with the Vertex AI Gemini API</h1>
+<p>This guide shows how to migrate generative AI applications from Gemini 1.x and PaLM models to <a href="/vertex-ai/generative-ai/docs/gemini-v2">Gemini 2 models</a>.</p>
+<h2 id="why-migrate-to-gemini-2">📚 Why migrate to Gemini 2?</h2>
+<p>Gemini 2 delivers significant performance improvements over Gemini 1.x and PaLM models, along with <a href="/vertex-ai/generative-ai/docs/gemini-v2">new capabilities</a>. Additionally, each model version has its own <a href="/vertex-ai/generative-ai/docs/learn/model-versions">version support and availability timeline</a>.</p>
+<p>Upgrading most generative AI applications to Gemini 2 shouldn't require significant reengineering of prompts or code. But some applications require prompt changes, and these changes are difficult to predict without running a prompt through Gemini 2 first. Therefore, Gemini 2 testing is recommended before migration.</p>
+<p>Significant code changes are only needed for certain breaking changes, or to use new Gemini 2 capabilities.</p>
+<h2 id="which-gemini-2-model-should-i-migrate-to">📚 Which Gemini 2 model should I migrate to?</h2>
+<p>As you choose a Gemini 2 model to migrate to, you'll want to consider the features that your application requires, as well as the <a href="/vertex-ai/generative-ai/pricing">cost of those features</a>.</p>
+<p>For an overview of Gemini 2 model features, see <a href="/vertex-ai/generative-ai/docs/gemini-v2">Gemini 2</a>. For an overview of all Google models, see <a href="/vertex-ai/generative-ai/docs/learn/models">Google models</a>.</p>
+<p>For a comparison of Gemini 1.x and Gemini 2 models, see the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Gemini 1.5 Pro</th>
+<th>Gemini 1.5 Flash</th>
+<th>Gemini 2.0 Flash</th>
+<th>Gemini 2.0 Flash-Lite</th>
+<th>Gemini 2.5 Pro</th>
+<th>Gemini 2.5 Flash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input modalities</td>
+<td>text, documents, image, video, audio</td>
+<td>text, documents, image, video, audio</td>
+<td>text, documents, image, video, audio</td>
+<td>text, documents, image, video, audio</td>
+<td>text, documents, image, video, audio</td>
+<td>text, documents, image, video, audio</td>
+</tr>
+<tr>
+<td>Output modalities</td>
+<td>text</td>
+<td>text</td>
+<td>text</td>
+<td>text</td>
+<td>text</td>
+<td>text</td>
+</tr>
+<tr>
+<td>Context window, total token limit</td>
+<td>2,097,152</td>
+<td>1,048,576</td>
+<td>1,048,576</td>
+<td>1,048,576</td>
+<td>1,048,576</td>
+<td>1,048,576</td>
+</tr>
+<tr>
+<td>Output context length</td>
+<td>8,192</td>
+<td>8,192</td>
+<td>8,192</td>
+<td>8,192</td>
+<td>64,192</td>
+<td>64,192</td>
+</tr>
+<tr>
+<td><a href="/vertex-ai/generative-ai/docs/grounding/grounding-with-google-search">Grounding with Search</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="/vertex-ai/generative-ai/docs/multimodal/function-calling">Function calling</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="/vertex-ai/generative-ai/docs/multimodal/code-execution">Code execution</a></td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="/vertex-ai/generative-ai/docs/context-cache/context-cache-overview">Context caching</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="/vertex-ai/generative-ai/docs/multimodal/batch-prediction-gemini">Batch prediction</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="/vertex-ai/generative-ai/docs/live-api">Live API</a></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>Most capable in 1.5 family</td>
+<td>Fastest in 1.5 family</td>
+<td>Fast + good cost efficiency</td>
+<td>Fast + most cost efficient</td>
+<td>Slower than Flash, but good cost efficiency</td>
+<td>Fast + most cost efficient</td>
+</tr>
+<tr>
+<td><a href="/vertex-ai/generative-ai/docs/models/tune-models">Fine-tuning</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Recommended SDK</td>
+<td><a href="/vertex-ai/docs/python-sdk/use-vertex-ai-python-sdk">Vertex AI SDK</a></td>
+<td><a href="/vertex-ai/docs/python-sdk/use-vertex-ai-python-sdk">Vertex AI SDK</a></td>
+<td><a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
+<td><a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
+<td><a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
+<td><a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
+</tr>
+<tr>
+<td><a href="/vertex-ai/generative-ai/pricing">Pricing units</a></td>
+<td>Character</td>
+<td>Character</td>
+<td>Token</td>
+<td>Token</td>
+<td>Token</td>
+<td>Token</td>
+</tr>
+</tbody>
+</table>
+<h2 id="before-you-begin">⚙️ Before you begin</h2>
+<p>For a seamless Gemini 2 migration, we recommend that you address the following concerns before you begin the migration process.</p>
+<h3 id="model-retirement-awareness">Model retirement awareness</h3>
+<p>Note the <a href="/vertex-ai/generative-ai/docs/learn/model-versions">model version support and availability timelines</a> for older Gemini models, and make sure your migration is completed before the model you're using is retired.</p>
+<h3 id="infosec-governance-and-regulatory-approvals">InfoSec, governance, and regulatory approvals</h3>
+<p>Proactively request the approvals you need for Gemini 2 from your information security (InfoSec), risk, and compliance stakeholders. Make sure that you cover domain-specific risk and compliance constraints, especially in heavily regulated industries such as healthcare and financial services. Note that <a href="/vertex-ai/generative-ai/docs/security-controls">Gemini security controls</a> differ among Gemini 2 models.</p>
+<h3 id="location-availability">Location availability</h3>
+<p>See the <a href="/vertex-ai/generative-ai/docs/learn/locations#genai-locations">Generative AI on Google Cloud models and partner model availability</a> documentation, and make sure your chosen Gemini 2 model is available in the regions where you need it, or consider switching to the <a href="/vertex-ai/generative-ai/docs/learn/locations#global-endpoint">global endpoint</a>.</p>
+<h3 id="modality-and-tokenization-based-pricing-differences">Modality and tokenization-based pricing differences</h3>
+<p>Check Gemini 2 pricing for all the modalities (text, code, images, speech) in your application. For more information, see <a href="/vertex-ai/generative-ai/pricing">generative AI pricing page</a>. Note that Gemini 2 text input and output is priced per token, while Gemini 1 text input and output is priced per character.</p>
+<h3 id="provisioned-throughput">Provisioned Throughput</h3>
+<p>If needed, <a href="/vertex-ai/generative-ai/docs/purchase-provisioned-throughput#place-an-order">purchase additional Provisioned Throughput</a> for Gemini 2 or <a href="/vertex-ai/generative-ai/docs/purchase-provisioned-throughput#change-order">change existing Provisioned Throughput orders</a>.</p>
+<h3 id="supervised-fine-tuning">Supervised fine-tuning</h3>
+<p>If your Gemini application uses <a href="/vertex-ai/generative-ai/docs/models/gemini-supervised-tuning">supervised fine-tuning</a>, submit a new tuning job with Gemini 2. We recommend that you start with the default tuning hyperparameters instead of reusing the hyperparameter values that you used with previous Gemini versions. The tuning service has been optimized for Gemini 2. Therefore, reusing previous hyperparameter values might not yield the best results.</p>
+<h3 id="regression-testing">Regression testing</h3>
+<p>There are three main types of regression tests involved when upgrading to Gemini 2 models:
+*   <strong>Code regression tests</strong>: Regression testing from a software engineering and DevOps perspective. This type of regression test is always required.
+*   <strong>Model performance regression tests</strong>: Regression testing from a data science or machine learning perspective. This means ensuring that the new Gemini 2 model provides outputs that are at least as high-quality as outputs from the current production model. Model performance regression tests are just model evaluations done as part of a change to a system or to the underlying model. Model performance regression testing further breaks down into:
+    *   <strong>Offline model performance testing</strong>: Assessing the quality of model outputs in a dedicated experimentation environment based on various model output quality metrics.
+    *   <strong>Online model performance testing</strong>: Assessing the quality of model outputs in a live online deployment based on implicit or explicit user feedback.
+*   <strong>Load testing</strong>: Assessing how the application handles high volumes of inference requests. This type of regression test is required for applications that require Provisioned Throughput.</p>
+<h2 id="migration-process">⚙️ Migration process</h2>
+<p>The following diagram shows the high-level workflow for migrating your application to Gemini 2.</p>
+<p><img alt="Migration process overview" src="../workflow2.png" title="Migration process overview" /></p>
+<h3 id="step-1-document-model-evaluation-and-testing-requirements">Step 1: Document model evaluation and testing requirements</h3>
+<ol>
+<li>Prepare to repeat any relevant evaluations from when you originally built your application, along with any relevant evaluations you have done since then.</li>
+<li>If you feel your existing evaluations don't appropriately cover or measure the breadth of tasks that your application performs, you should design and prepare additional evaluations.</li>
+<li>If your application involves RAG, tool use, complex agentic workflows, or prompt chains, make sure that your existing evaluation data allows for assessing each component independently. If not, gather input-output examples for each component.</li>
+<li>If your application is especially high-impact, or if it's part of a larger user-facing real-time system, you should include online evaluation.</li>
+</ol>
+<h3 id="step-2-upgrade-and-test-your-code">Step 2: Upgrade and test your code</h3>
+<p>If your Gemini 1.x application uses the Vertex AI SDK, consider upgrading to the Gen AI SDK. New Gemini 2 capabilities are only available in the Gen AI SDK. However, there is no need to switch to the Gen AI SDK if your application only requires capabilities that are available in the Vertex AI SDK.</p>
+<p>If you're new to the Gen AI SDK, see the <a href="https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/getting-started/intro_genai_sdk.ipynb">Getting started with Google Generative AI using the Gen AI SDK</a> notebook.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Gen AI SDK</label><div class="tabbed-content">
+<p>iii</p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Vertex AI SDK</label><div class="tabbed-content">
+<p>kkk</p>
+</div>
+</div>
+<h4 id="change-your-gemini-calls">Change your Gemini calls</h4>
+<p>Change your prediction code to use Gemini 2. At a minimum, this means changing the specific model endpoint name to a Gemini 2 model where you load your model. The exact code change will differ depending on how you originally implemented your application, and especially whether you used the Gen AI SDK or the Vertex AI SDK.</p>
+<p>After you make your code changes, perform code regression testing and other software tests on your code to make sure that it runs. This test is only meant to assess whether the code functions correctly. It's not meant to assess the quality of model responses.</p>
+<h4 id="address-breaking-code-changes">Address breaking code changes</h4>
+<p>Focus only on code changes in this step. You may need to make other changes, but wait until you start your evaluation, and then consider the following adjustment based on evaluation results:</p>
+<ul>
+<li><strong>Dynamic retrieval</strong>: Switch to using <a href="/vertex-ai/generative-ai/docs/grounding/grounding-with-google-search#dynamic-retrieval">Grounding with Google Search</a>. This feature requires using the <a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a>; it's not supported by the Vertex AI SDK. If you're switching from dynamic retrieval, you might need to experiment with system instructions to control when Google Search is used (for example, <code>"Only generate queries for the Google Search tool if the user asks about sports. Don't generate queries for any other topic."</code>), but wait until you evaluate before making prompt changes.</li>
+<li><strong>Content filters</strong>: Note the <a href="/vertex-ai/generative-ai/docs/multimodal/configure-safety-filters#how_to_configure_content_filters">default content filter settings</a>, and change your code if it relies on a default that has changed.</li>
+<li><strong><code>Top-K</code> token sampling parameter</strong>: Models after <code>gemini-1.0-pro-vision</code> don't support changing the <a href="/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters#top-k"><code>Top-K</code> parameter</a>. If you used the <code>Top-K</code> parameter, adjust other token sampling parameters, such as <a href="/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters#top-p"><code>Top-P</code></a>, to achieve similar results.</li>
+</ul>
+<h3 id="step-3-perform-offline-evaluation">Step 3: Perform offline evaluation</h3>
+<p>Repeat the evaluation that you did when you originally developed and launched your application, any further offline evaluation you did after launching, and any additional evaluation you identified in step 1. If you then feel that your evaluation doesn't fully capture the breadth and depth of your application, do further evaluation.</p>
+<p>If you don't have an automated way to run your offline evaluations, consider using the <a href="/vertex-ai/generative-ai/docs/models/evaluation-overview">Gen AI evaluation service</a>.</p>
+<p>If your application uses fine-tuning, perform offline evaluation before retuning your model with Gemini 2. Gemini 2's improved output quality may mean that your application no longer requires a fine-tuned model.</p>
+<h3 id="step-4-assess-evaluation-results-and-tune-the-gemini-2-prompts-and-hyperparameters">Step 4: Assess evaluation results and tune the Gemini 2 prompts and hyperparameters</h3>
+<p>If your offline evaluation shows a drop in performance with Gemini 2, iterate on your application as follows until Gemini performance matches the older model:</p>
+<ul>
+<li>Iteratively engineer your prompts to improve performance ("Hill Climbing"). If you are new to hill climbing, see the <a href="https://cloudonair.withgoogle.com/events/vertex-gemini-hill-climbing-your-way-to-optimal-prompts">Vertex Gemini hill climbing online training</a>. The <a href="/vertex-ai/generative-ai/docs/learn/prompts/prompt-optimizer">Vertex AI prompt optimizer</a> (<a href="https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/prompts/prompt_optimizer/vertex_ai_prompt_optimizer_sdk_custom_metric.ipynb">example notebook</a>) can help as well.</li>
+<li>If your application already relies on fine-tuning, try fine-tuning Gemini 2.</li>
+<li>If your application is impacted by Dynamic Retrieval and Top-K breaking changes, experiment with changing your prompt and token sampling parameters.</li>
+</ul>
+<h3 id="step-5-perform-load-testing">Step 5: Perform load testing</h3>
+<p>If your application requires a certain minimum throughput, perform load testing to make sure the Gemini 2 version of your application meets your throughput requirements.</p>
+<p>Load testing should happen before online evaluation, because online evaluation requires exposing Gemini 2 to production traffic. Use your existing load testing instrumentation to perform this step.</p>
+<p>If your application already meets throughput requirements, consider using <a href="/vertex-ai/generative-ai/docs/provisioned-throughput">Provisioned Throughput</a>. You'll need additional short-term Provisioned Throughput to cover load testing while your existing Provisioned Throughput order continues to serve production traffic.</p>
+<h3 id="step-6-perform-online-evaluation">Step 6: Perform online evaluation</h3>
+<p>Only proceed to online evaluation if your offline evaluation shows adequate Gemini output quality <em>and</em> your application requires online evaluation.</p>
+<p>Online evaluation is a special case of online testing. Try to use your organization's existing tools and procedures for online evaluation. For example:</p>
+<ul>
+<li>If your organization regularly conducts <a href="https://en.wikipedia.org/wiki/A%2FB_testing">A/B tests</a>, perform an A/B test that evaluates the current implementation of your application compared to the Gemini 2 version.</li>
+<li>If your organization regularly conducts <a href="https://en.wikipedia.org/wiki/Feature_toggle#Canary_release">canary deployments</a>, be sure to do so with Gemini 2 and measure differences in user behavior.</li>
+</ul>
+<p>Online evaluation can also be done by building new feedback and measurement capabilities into your application. Different feedback and measurement capabilities are appropriate for different applications. For example:</p>
+<ul>
+<li>Adding thumbs-up and thumbs-down buttons next to model outputs and comparing thumbs-up versus thumbs-down rates between an older model and Gemini 2.</li>
+<li>Presenting users with the older model and Gemini 2 outputs side-by-side and asking for users to pick their favorite.</li>
+<li>Tracking how often users override or manually adjust older model versus Gemini 2 outputs.</li>
+</ul>
+<p>These kinds of feedback mechanisms often require running a Gemini 2 version of your application in parallel to your existing version. This parallel deployment is sometimes called "shadow mode" or "blue-green deployment".</p>
+<p>If online evaluation results differ significantly from offline evaluation results, your offline evaluation is not capturing key aspects of the live environment or user experience. Use the online evaluation findings to devise a new offline evaluation to cover the gap the online evaluation exposed, and then return to step 3.</p>
+<p>If you use Provisioned Throughput, you may need to <a href="/vertex-ai/generative-ai/docs/purchase-provisioned-throughput#pt-weekly-term">purchase additional short-term Provisioned Throughput</a> to continue to meet your throughput requirements for users subject to online evaluation.</p>
+<h3 id="step-7-deploy-to-production">Step 7: Deploy to production</h3>
+<p>Once your evaluation shows that Gemini 2 meets or exceeds performance of an older model, turn down the existing version of your application in favor of the Gemini 2 version. Follow your organization's existing procedures for production rollout.</p>
+<p>If you're using Provisioned Throughput, change your Provisioned Throughput order to your chosen Gemini 2 model. If you're rolling out your application incrementally, use short-term Provisioned Throughput to meet throughput requirements for two different Gemini models.</p>
+<h2 id="improving-model-performance">📚 Improving model performance</h2>
+<p>As you complete your migration, use the following tips to maximize Gemini 2 model performance:</p>
+<ul>
+<li>Inspect your <a href="/vertex-ai/generative-ai/docs/learn/prompts/system-instructions">system instructions</a>, <a href="/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies">prompts</a>, and <a href="/vertex-ai/generative-ai/docs/learn/prompts/few-shot-examples">few-shot learning examples</a> for any inconsistencies, contradictions, or irrelevant instructions and examples.</li>
+<li>Test a more powerful model. For example, if you evaluated Gemini 2.0 Flash-Lite, try Gemini 2.0 Flash.</li>
+<li>Examine any automated evaluation results to make sure they match human judgment, especially results that use a <a href="/vertex-ai/generative-ai/docs/models/evaluate-judge-model">judge model</a>. Make sure your judge model instructions don't contain inconsistencies or ambiguities.</li>
+<li>One way to improve judge model instructions is to test the instructions with multiple humans in isolation and see if their judgments are consistent. If humans interpret the instructions differently and render different judgments, your judge model instructions are ambiguous.</li>
+<li><a href="/vertex-ai/generative-ai/docs/models/tune-models">Fine-tune the Gemini 2 model</a>.</li>
+<li>Examine evaluation outputs to look for patterns that show specific kinds of failures. Grouping together failures into different models, kinds, or categories gives you more targeted evaluation data, which makes it easier to adjust prompts to address these errors.</li>
+<li>Make sure you are independently evaluating different generative AI components.</li>
+<li>Experiment with adjusting <a href="/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters#token-sampling-parameters">token sampling parameters</a>.</li>
+</ul>
+<h2 id="getting-help">🔗 Getting help</h2>
+<p>If you need help, Google Cloud offers support packages to meet your needs, such as 24/7 coverage, phone support, and access to a technical support manager. For more information, see <a href="/support">Google Cloud Support</a>.</p>
+<h2 id="whats-next">🔗 What's next</h2>
+<ul>
+<li>Read the list of <a href="/vertex-ai/generative-ai/docs/faq">frequently asked questions</a>.</li>
+<li><a href="/vertex-ai/generative-ai/docs/migrate/migrate-palm-to-gemini">Migrate from the PaLM API to the Vertex AI Gemini API</a>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "navigation.path", "navigation.sections", "navigation.expand", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

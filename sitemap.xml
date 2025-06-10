@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>None./</loc>
-        <lastmod>2025-06-10</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+         <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/</loc>
+         <lastmod>2025-06-10</lastmod>
     </url>
     <url>
-        <loc>Nonegemini/migrate_to_gemini2/</loc>
-        <lastmod>2025-06-10</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegemini/migrate_to_gemini2/"/>
+         <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/gemini/migrate_to_gemini2/</loc>
+         <lastmod>2025-06-10</lastmod>
     </url>
     <url>
-        <loc>Nonemigration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/</loc>
-        <lastmod>2025-06-10</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonemigration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/"/>
+         <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/</loc>
+         <lastmod>2025-06-10</lastmod>
     </url>
     <url>
-        <loc>Nonemigration/openai/Authenticate/</loc>
-        <lastmod>2025-06-10</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonemigration/openai/Authenticate/"/>
+         <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/openai/Authenticate/</loc>
+         <lastmod>2025-06-10</lastmod>
     </url>
     <url>
-        <loc>Nonemigration/openai/Examples/</loc>
-        <lastmod>2025-06-10</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonemigration/openai/Examples/"/>
+         <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/openai/Examples/</loc>
+         <lastmod>2025-06-10</lastmod>
     </url>
     <url>
-        <loc>Nonemigration/openai/Overview/</loc>
-        <lastmod>2025-06-10</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonemigration/openai/Overview/"/>
+         <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/openai/Overview/</loc>
+         <lastmod>2025-06-10</lastmod>
     </url>
 </urlset>

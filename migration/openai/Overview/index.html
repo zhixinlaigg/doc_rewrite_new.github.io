@@ -6,7 +6,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Google Cloud Vertex AI Documentations">
       
+      
+      
+        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/openai/Overview/">
       
       
         <link rel="prev" href="../../..">
@@ -15,12 +19,12 @@
         <link rel="next" href="../Authenticate/">
       
       
-      <link rel="icon" href="../../../images/favicon-platform.svg">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Overview - Google Cloud Documentation Rewrite</title>
+        <title>Overview - Google Cloud Vertex AI Documentations</title>
       
     
     
@@ -41,8 +45,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -60,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -88,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Google Cloud Documentation Rewrite" class="md-header__button md-logo" aria-label="Google Cloud Documentation Rewrite" data-md-component="logo">
+    <a href="../../.." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +108,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Google Cloud Documentation Rewrite
+            Google Cloud Vertex AI Documentations
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -116,28 +122,34 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
-      <div class="md-header__option">
-  <div class="md-select">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
-    </button>
-    <div class="md-select__inner">
-      <ul class="md-select__list">
-        
-          <li class="md-select__item">
-            <a href="/openai-agents-python/" hreflang="en" class="md-select__link">
-              English
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
     
     
       
@@ -181,6 +193,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doc_rewrite_new.github.io
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -206,14 +230,26 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Google Cloud Documentation Rewrite" class="md-nav__button md-logo" aria-label="Google Cloud Documentation Rewrite" data-md-component="logo">
+    <a href="../../.." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Google Cloud Documentation Rewrite
+    Google Cloud Vertex AI Documentations
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doc_rewrite_new.github.io
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -249,22 +285,23 @@
   
     
     
-    
-    
       
         
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -294,9 +331,15 @@
   
     
     
-    
-    
       
+        
+      
+        
+      
+        
+      
+    
+    
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -383,18 +426,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#choosing-your-sdk-openai-libraries-vs-google-gen-ai-sdk" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-the-chat-completions-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ When to use the Chat Completions API
+      📚 Choosing your SDK: OpenAI Libraries vs. Google Gen AI SDK
     </span>
   </a>
   
@@ -403,11 +437,11 @@
         <li class="md-nav__item">
   <a href="#supported-models" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Supported models
+      🔗 Supported models
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📚 Supported models">
+    <nav class="md-nav" aria-label="🔗 Supported models">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -459,8 +493,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Gemini-specific parameters">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#extra_body-features" class="md-nav__link">
@@ -482,20 +515,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples-and-tutorials" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Examples and Tutorials
-    </span>
-  </a>
   
 </li>
       
@@ -609,24 +628,21 @@
   
     
     
-    
-    
       
-        
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -703,18 +719,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#choosing-your-sdk-openai-libraries-vs-google-gen-ai-sdk" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-the-chat-completions-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ When to use the Chat Completions API
+      📚 Choosing your SDK: OpenAI Libraries vs. Google Gen AI SDK
     </span>
   </a>
   
@@ -723,11 +730,11 @@
         <li class="md-nav__item">
   <a href="#supported-models" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Supported models
+      🔗 Supported models
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📚 Supported models">
+    <nav class="md-nav" aria-label="🔗 Supported models">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -779,8 +786,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Gemini-specific parameters">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#extra_body-features" class="md-nav__link">
@@ -802,20 +808,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples-and-tutorials" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Examples and Tutorials
-    </span>
-  </a>
   
 </li>
       
@@ -843,92 +835,99 @@
                   
 
 
+  
+  
 
-<h1 id="using-openai-libraries-with-vertex-ai">Using OpenAI libraries with Vertex AI</h1>
+
+<h1 id="using-openai-libraries-with-vertex-ai">Using OpenAI libraries with Vertex AI<a class="headerlink" href="#using-openai-libraries-with-vertex-ai" title="Permanent link">&para;</a></h1>
 <p><strong>Preview</strong></p>
 <p>This product or feature is subject to the "Pre-GA Offerings Terms" in the
 General Service Terms section of the <a href="/terms/service-
 terms#1">Service Specific Terms</a>. Pre-GA products and features are available "as is" and might have
 limited support. For more information, see the <a href="/products#product-launch-stages">launch stage
 descriptions</a>.</p>
-<h2 id="overview">📚 Overview</h2>
-<p>The Vertex AI Chat Completions API provides an OpenAI-compatible endpoint for interacting with Google's Gemini models and select models from Model Garden. This API is designed to make it easier for developers already familiar with the OpenAI libraries (Python and REST) to leverage Vertex AI's capabilities.</p>
-<p>By using this API, you can:</p>
-<ul>
-<li>Switch between calling OpenAI models and Vertex AI hosted models with minimal code changes.</li>
-<li>Compare output, cost, and scalability between different model providers.</li>
-<li>Integrate Gemini's advanced features into existing OpenAI-based applications.</li>
-</ul>
-<p>If you are new to generative AI on Google Cloud or not already using OpenAI libraries, we generally recommend using the <a href="/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal">Google Gen AI SDK</a> for a more integrated experience with Google's ecosystem.</p>
-<h2 id="when-to-use-the-chat-completions-api">⚙️ When to use the Chat Completions API</h2>
-<p>Choosing between the OpenAI-compatible Chat Completions API and the native Google Gen AI SDK depends on your existing setup and specific needs.</p>
-<section class="tabs">
-
-### OpenAI-compatible API (Chat Completions) {.new-tab}
-
-**Use this API if:**
-
-*   You have existing applications built using OpenAI's libraries (Python client or REST APIs).
-*   You want a quick way to test and migrate to Vertex AI models with minimal code changes.
-*   You need to compare the performance, cost, or features of Gemini models against OpenAI models within your current workflow.
-*   Your primary goal is to leverage a familiar API structure.
-
-**Pros:**
-*   Low friction for migration from OpenAI.
-*   Familiar API structure for OpenAI users.
-*   Supports both Gemini and select self-deployed models.
-
-**Cons:**
-*   May not expose all of Gemini's newest or most unique features as directly as the native SDK.
-*   Gemini-specific parameters require special handling (e.g., `extra_body`, `extra_part`).
-
-### Google Gen AI SDK {.new-tab}
-
-**Use this SDK if:**
-
-*   You are starting a new project on Google Cloud.
-*   You want the most direct and idiomatic way to access all features of Gemini and other Vertex AI generative AI models.
-*   You prefer an SDK tightly integrated with the Google Cloud ecosystem (e.g., authentication, other Google Cloud services).
-*   You are not heavily invested in the OpenAI API structure.
-
-**Pros:**
-*   Optimized for Google Cloud and Gemini models.
-*   Provides access to the full range of model capabilities and features directly.
-*   Often simpler to use for features unique to Google's models.
-
-**Cons:**
-*   Requires learning a new SDK if you are coming from an OpenAI background.
-
-</section>
-
-<h2 id="supported-models">📚 Supported models</h2>
-<p>The Chat Completions API supports both Gemini models and select self-deployed models from Model Garden.</p>
-<h3 id="gemini-models">Gemini models</h3>
-<p>The following models provide support for the Chat Completions API:</p>
-<ul>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-5-pro">Gemini 2.5 Pro</a> Preview</li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Gemini 2.5 Flash</a> Preview</li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-0-flash">Gemini 2.0 Flash</a></li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-0-flash-lite">Gemini 2.0 Flash-Lite</a></li>
-</ul>
-<h3 id="self-deployed-models-from-model-garden">Self-deployed models from Model Garden</h3>
-<p>The <a href="https://huggingface.co/docs/text-generation-inference/en/index">Hugging Face Text Generation Interface (HF TGI)</a> and <a href="http://us-docker.pkg.dev/vertex-ai/vertex-vision-model-garden-dockers/pytorch-vllm-serve">Vertex AI Model Garden prebuilt vLLM</a> containers support the Chat Completions API. However, not every model deployed to these containers supports the Chat Completions API. The following table includes the most popular supported models by container:</p>
+<p>To see an example of using the Chat Completions API, run the "Call Gemini with
+the OpenAI Library" Jupyter notebook in one of the following environments:</p>
+<p><a href="https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/chat-completions/intro_chat_completions_api.ipynb">Open in Colab</a> | <a href="https://console.cloud.google.com/vertex-ai/colab/import/https%3A%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fgenerative-ai%2Fmain%2Fgemini%2Fchat-completions%2Fintro_chat_completions_api.ipynb">Open in Colab Enterprise</a> | <a href="https://console.cloud.google.com/vertex-ai/workbench/deploy-notebook?download_url=https%3A%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fgenerative-ai%2Fmain%2Fgemini%2Fchat-completions%2Fintro_chat_completions_api.ipynb">Open in Vertex AI Workbench user-managed notebooks</a> | <a href="https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/chat-completions/intro_chat_completions_api.ipynb">View on GitHub</a></p>
+<p>The Chat Completions API works as an OpenAI-compatible endpoint, designed to
+make it easier to interface with Gemini on Vertex AI by using the OpenAI
+libraries for Python and REST.</p>
+<h2 id="choosing-your-sdk-openai-libraries-vs-google-gen-ai-sdk">📚 Choosing your SDK: OpenAI Libraries vs. Google Gen AI SDK<a class="headerlink" href="#choosing-your-sdk-openai-libraries-vs-google-gen-ai-sdk" title="Permanent link">&para;</a></h2>
+<p>The Chat Completions API for Vertex AI allows you to interact with Gemini models using existing OpenAI SDKs. This approach is beneficial if you have an established codebase using OpenAI's libraries. However, for new projects or to fully leverage all Gemini-specific features, the native Google Generative AI SDK is recommended.</p>
+<p>Here's a comparison to help you decide:</p>
 <table>
 <thead>
 <tr>
-<th>HF TGI</th>
-<th>vLLM</th>
+<th>Feature/Aspect</th>
+<th>OpenAI Libraries with Vertex AI Chat Completions API</th>
+<th>Google Gen AI SDK</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><ul><li><a href="https://huggingface.co/google/gemma-2-9b-it"><code>gemma-2-9b-it</code></a></li><li><a href="https://huggingface.co/google/gemma-2-27b-it"><code>gemma-2-27b-it</code></a></li><li><a href="https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct"><code>Meta-Llama-3.1-8B-Instruct</code></a></li><li><a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct"><code>Meta-Llama-3-8B-Instruct</code></a></li><li><a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3"><code>Mistral-7B-Instruct-v0.3</code></a></li><li><a href="https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"><code>Mistral-Nemo-Instruct-2407</code></a></li></ul></td>
-<td><ul><li><a href="https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/335">Gemma</a></li><li><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama2">Llama 2</a></li><li><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3">Llama 3</a></li><li><a href="https://console.cloud.google.com/vertex-ai/publishers/mistral-ai/model-garden/mistral-7b">Mistral-7B</a></li><li><a href="https://console.cloud.google.com/vertex-ai/publishers/mistralai/model-garden/mistral-nemo">Mistral Nemo</a></li></ul></td>
+<td><strong>Primary Use Case</strong></td>
+<td>Migrating existing OpenAI applications to Vertex AI with minimal code changes. Comparing OpenAI models with Vertex AI models.</td>
+<td>New application development on Vertex AI. Access to the full suite of Gemini features and optimizations.</td>
+</tr>
+<tr>
+<td><strong>Ease of Adoption</strong></td>
+<td>High for existing OpenAI users.</td>
+<td>Moderate; requires learning the Google Gen AI SDK.</td>
+</tr>
+<tr>
+<td><strong>Feature Access</strong></td>
+<td>Supports common OpenAI parameters and some Gemini-specific features via <code>extra_body</code> or <code>extra_content</code>.</td>
+<td>Full access to all current and future Gemini features and parameters.</td>
+</tr>
+<tr>
+<td><strong>Recommendation</strong></td>
+<td>Suitable for quick migration, comparison, or if deeply invested in OpenAI tooling.</td>
+<td>Recommended for new projects and for users wanting to maximize Gemini's capabilities.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="supported-parameters">🔗 Supported parameters</h2>
-<p>For Google models, the Chat Completions API supports the following OpenAI parameters. For a description of each parameter, see OpenAI's documentation on <a href="https://platform.openai.com/docs/api-reference/chat/create">Creating chat completions</a>. Parameter support for third-party models varies by model. To see which parameters are supported, consult the model's documentation.</p>
+<p>If you're already using the OpenAI libraries, using this Chat Completions API provides a low-effort way to switch between calling OpenAI models and Vertex AI hosted models to compare output, cost, and scalability, without significant code changes.</p>
+<p>If you aren't already using the OpenAI libraries, or for new development, we recommend that you <a href="/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal">use the Google Gen AI SDK</a>.</p>
+<h2 id="supported-models">🔗 Supported models<a class="headerlink" href="#supported-models" title="Permanent link">&para;</a></h2>
+<p>The Chat Completions API supports both Gemini models and select self-deployed
+models from Model Garden.</p>
+<h3 id="gemini-models">Gemini models<a class="headerlink" href="#gemini-models" title="Permanent link">&para;</a></h3>
+<p>The following models provide support for the Chat Completions API:</p>
+<ul>
+<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-5-pro">Gemini 2.5 Pro</a> (Preview)</li>
+<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Gemini 2.5 Flash</a> (Preview)</li>
+<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-0-flash">Gemini 2.0 Flash</a></li>
+<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-0-flash-lite">Gemini 2.0 Flash-Lite</a></li>
+</ul>
+<h3 id="self-deployed-models-from-model-garden">Self-deployed models from Model Garden<a class="headerlink" href="#self-deployed-models-from-model-garden" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://huggingface.co/docs/text-generation-inference/en/index">Hugging Face Text Generation Interface (HF
+TGI)</a> and
+<a href="http://us-docker.pkg.dev/vertex-
+ai/vertex-vision-model-garden-dockers/pytorch-vllm-serve">Vertex AI Model Garden prebuilt vLLM</a> containers support
+the Chat Completions API. However, not every model deployed to these
+containers supports the Chat Completions API. The following table includes the
+most popular supported models by container:</p>
+<table>
+<thead>
+<tr>
+<th>HF TGI Models</th>
+<th>vLLM Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>* <a href="https://huggingface.co/google/gemma-2-9b-it"><code>gemma-2-9b-it</code></a> <br/> * <a href="https://huggingface.co/google/gemma-2-27b-it"><code>gemma-2-27b-it</code></a> <br/> * <a href="https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct"><code>Meta-Llama-3.1-8B-Instruct</code></a> <br/> * <a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct"><code>Meta-Llama-3-8B-Instruct</code></a> <br/> * <a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3"><code>Mistral-7B-Instruct-v0.3</code></a> <br/> * <a href="https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"><code>Mistral-Nemo-Instruct-2407</code></a></td>
+<td>* <a href="https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/335">Gemma</a> <br/> * <a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama2">Llama 2</a> <br/> * <a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3">Llama 3</a> <br/> * <a href="https://console.cloud.google.com/vertex-ai/publishers/mistral-ai/model-garden/mistral-7b">Mistral-7B</a> <br/> * <a href="https://console.cloud.google.com/vertex-ai/publishers/mistralai/model-garden/mistral-nemo">Mistral Nemo</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-parameters">🔗 Supported parameters<a class="headerlink" href="#supported-parameters" title="Permanent link">&para;</a></h2>
+<p>For Google models, the Chat Completions API supports the following OpenAI
+parameters. For a description of each parameter, see OpenAI's documentation on
+<a href="https://platform.openai.com/docs/api-
+reference/chat/create">Creating chat completions</a>. Parameter support for third-party models varies by
+model. To see which parameters are supported, consult the model's
+documentation.</p>
 <table>
 <thead>
 <tr>
@@ -939,7 +938,7 @@ descriptions</a>.</p>
 <tbody>
 <tr>
 <td><code>messages</code></td>
-<td><ul><li><code>System message</code></li><li><code>User message</code>: The <code>text</code> and <code>image_url</code> types are supported. The <code>image_url</code> type supports images stored a Cloud Storage URI or a base64 encoding in the form <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>. To learn how to create a Cloud Storage bucket and upload a file to it, see <a href="/storage/docs/discover-object-storage-console">Discover object storage</a>. The <code>detail</code> option is not supported.</li><li><code>Assistant message</code></li><li><code>Tool message</code></li><li><code>Function message</code>: This field is deprecated, but supported for backwards compatibility.</li></ul></td>
+<td>* <code>System message</code> <br/> * <code>User message</code>: The <code>text</code> and <code>image_url</code> types are supported. The <code>image_url</code> type supports images stored a Cloud Storage URI or a base64 encoding in the form <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>. To learn how to create a Cloud Storage bucket and upload a file to it, see <a href="/storage/docs/discover-object-storage-console">Discover object storage</a>. The <code>detail</code> option is not supported. <br/> * <code>Assistant message</code> <br/> * <code>Tool message</code> <br/> * <code>Function message</code>: This field is deprecated, but supported for backwards compatibility.</td>
 </tr>
 <tr>
 <td><code>model</code></td>
@@ -967,11 +966,11 @@ descriptions</a>.</p>
 </tr>
 <tr>
 <td><code>reasoning_effort</code></td>
-<td>Configures how much time and how many tokens are used on a response. <ul><li><code>low</code>: 1024</li><li><code>medium</code>: 8192</li><li><code>high</code>: 24576</li></ul> As no thoughts are included in the response, only one of <code>reasoning_effort</code> or <code>extra_body.google.thinking_config</code> may be specified.</td>
+<td>Configures how much time and how many tokens are used on a response. <br/> * <code>low</code>: 1024 <br/> * <code>medium</code>: 8192 <br/> * <code>high</code>: 24576 <br/> <strong>Note:</strong> As no thoughts are included in the response when using <code>reasoning_effort</code>, only one of <code>reasoning_effort</code> or <code>extra_body.google.thinking_config</code> may be specified.</td>
 </tr>
 <tr>
 <td><code>response_format</code></td>
-<td><ul><li><code>json_object</code>: Interpreted as passing "application/json" to the Gemini API.</li><li><code>json_schema</code>. <a href="https://platform.openai.com/docs/guides/structured-outputs#recursive-schemas-are-supported"> Fully recursive schemas</a> are not supported. <code>additional_properties</code> is supported.</li><li><code>text</code>: Interpreted as passing "text/plain" to the Gemini API.</li><li>Any other MIME type is passed as is to the model, such as passing "application/json" directly.</li></ul></td>
+<td>* <code>json_object</code>: Interpreted as passing "application/json" to the Gemini API. <br/> * <code>json_schema</code>: <a href="https://platform.openai.com/docs/guides/structured-outputs#recursive-schemas-are-supported">Fully recursive schemas</a> are not supported. <code>additional_properties</code> is supported. <br/> * <code>text</code>: Interpreted as passing "text/plain" to the Gemini API. <br/> * Any other MIME type is passed as is to the model, such as passing "application/json" directly.</td>
 </tr>
 <tr>
 <td><code>seed</code></td>
@@ -995,11 +994,11 @@ descriptions</a>.</p>
 </tr>
 <tr>
 <td><code>tools</code></td>
-<td><ul><li><code>type</code></li><li><code>function</code><ul><li><code>name</code></li><li><code>description</code></li><li><code>parameters</code>: Specify parameters by using the <a href="https://spec.openapis.org/oas/v3.0.3#openapi-specification">OpenAPI specification</a>. This differs from the OpenAI parameters field, which is described as a JSON Schema object. To learn about keyword differences between OpenAPI and JSON Schema, see the <a href="https://swagger.io/docs/specification/data-models/keywords/">OpenAPI guide</a>.</li></ul></li></ul></td>
+<td>* <code>type</code> <br/> * <code>function</code> <br/>   * <code>name</code> <br/>   * <code>description</code> <br/>   * <code>parameters</code>: Specify parameters by using the <a href="https://spec.openapis.org/oas/v3.0.3#openapi-specification">OpenAPI specification</a>. This differs from the OpenAI parameters field, which is described as a JSON Schema object. To learn about keyword differences between OpenAPI and JSON Schema, see the <a href="https://swagger.io/docs/specification/data-models/keywords/">OpenAPI guide</a>.</td>
 </tr>
 <tr>
 <td><code>tool_choice</code></td>
-<td><ul><li><code>none</code></li><li><code>auto</code></li><li><code>required</code>: Corresponds to the mode <code>ANY</code> in the <code>FunctionCallingConfig</code>.</li><li><code>validated</code>: Corresponds to the mode <code>VALIDATED</code> in the <code>FunctionCallingConfig</code>. This is Google-specific.</li></ul></td>
+<td>* <code>none</code> <br/> * <code>auto</code> <br/> * <code>required</code>: Corresponds to the mode <code>ANY</code> in the <code>FunctionCallingConfig</code>. <br/> * <code>validated</code>: Corresponds to the mode <code>VALIDATED</code> in the <code>FunctionCallingConfig</code>. This is Google-specific.</td>
 </tr>
 <tr>
 <td><code>web_search_options</code></td>
@@ -1016,7 +1015,7 @@ descriptions</a>.</p>
 </tbody>
 </table>
 <p>If you pass any unsupported parameter, it is ignored.</p>
-<h3 id="multimodal-input-parameters">Multimodal input parameters</h3>
+<h3 id="multimodal-input-parameters">Multimodal input parameters<a class="headerlink" href="#multimodal-input-parameters" title="Permanent link">&para;</a></h3>
 <p>The Chat Completions API supports select multimodal inputs.</p>
 <table>
 <thead>
@@ -1028,20 +1027,29 @@ descriptions</a>.</p>
 <tbody>
 <tr>
 <td><code>input_audio</code></td>
-<td><ul><li><code>data:</code> Any URI or valid blob format. We support all blob types, including image, audio, and video. Anything supported by <code>GenerateContent</code> is supported (HTTP, Cloud Storage, etc.).</li><li><code>format:</code> OpenAI supports both <code>wav</code> (audio/wav) and <code>mp3</code> (audio/mp3). Using Gemini, all valid MIME types are supported.</li></ul></td>
+<td>* <code>data:</code> Any URI or valid blob format. We support all blob types, including image, audio, and video. Anything supported by <code>GenerateContent</code> is supported (HTTP, Cloud Storage, etc.). <br/> * <code>format:</code> OpenAI supports both <code>wav</code> (audio/wav) and <code>mp3</code> (audio/mp3). Using Gemini, all valid MIME types are supported.</td>
 </tr>
 <tr>
 <td><code>image_url</code></td>
-<td><ul><li><code>data:</code> Like <code>input_audio</code>, any URI or valid blob format is supported.<br>Note that <code>image_url</code> as a URL will default to the image/* MIME-type and <code>image_url</code> as blob data can be used as any multimodal input.</li><li><code>detail:</code> Similar to <a href="/vertex-ai/generative-ai/docs/multimodal/image-understanding#supported_models">media resolution</a>, this determines the maximum tokens per image for the request. Note that while OpenAI's field is per-image, Gemini enforces the same detail across the request, and passing multiple detail types in one request will throw an error.</li></ul></td>
+<td>* <code>data:</code> Like <code>input_audio</code>, any URI or valid blob format is supported. <strong>Note:</strong> <code>image_url</code> as a URL defaults to the <code>image/*</code> MIME type, while <code>image_url</code> as blob data can be used for any multimodal input. <br/> * <code>detail:</code> Similar to <a href="/vertex-ai/generative-ai/docs/multimodal/image-understanding#supported_models">media resolution</a>, this determines the maximum tokens per image for the request. <strong>Note:</strong> While OpenAI's field is per-image, Gemini enforces the same detail across the request, and passing multiple detail types in one request will throw an error.</td>
 </tr>
 </tbody>
 </table>
-<p>In general, the <code>data</code> parameter can be a URI or a combination of MIME type and base64 encoded bytes in the form <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>. For a full list of MIME types, see <a href="/vertex-ai/generative-ai/docs/model-reference/inference#blob"><code>GenerateContent</code></a>. For more information on OpenAI's base64 encoding, see <a href="https://platform.openai.com/docs/guides/images-vision#giving-a-model-images-as-input">their documentation</a>.</p>
-<p>For usage, see our <a href="/vertex-ai/generative-ai/docs/migrate/openai/examples#multimodal-input-examples">multimodal input examples</a>.</p>
-<h3 id="gemini-specific-parameters">Gemini-specific parameters</h3>
-<p>There are several features supported by Gemini that are not available in standard OpenAI models. These Gemini-specific features are passed using the <code>extra_body</code> field at the request level, or the <code>extra_part</code> field within a message part. Parameters not placed in these designated fields will be ignored.</p>
-<h4 id="extra_body-features"><code>extra_body</code> features</h4>
-<p>These parameters are passed within an <code>extra_body</code> JSON object at the top level of your request.</p>
+<p>In general, the <code>data</code> parameter can be a URI or a combination of MIME type
+and base64 encoded bytes in the form <code>"data:&lt;MIME-
+TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>. For a full list of MIME types, see
+<a href="/vertex-ai/generative-ai/docs/model-
+reference/inference#blob"><code>GenerateContent</code></a>. For more information on OpenAI's base64 encoding,
+see <a href="https://platform.openai.com/docs/guides/images-
+vision#giving-a-model-images-as-input">their documentation</a>.</p>
+<p>For usage, see our <a href="/vertex-ai/generative-
+ai/docs/migrate/openai/examples#multimodal-input-examples">multimodal input examples</a>.</p>
+<h3 id="gemini-specific-parameters">Gemini-specific parameters<a class="headerlink" href="#gemini-specific-parameters" title="Permanent link">&para;</a></h3>
+<p>There are several features supported by Gemini that are not available in
+OpenAI models. These features can still be passed in as parameters, but must
+be contained within an <code>extra_content</code> or <code>extra_body</code> or they will be
+ignored.</p>
+<h3 id="extra_body-features"><code>extra_body</code> features<a class="headerlink" href="#extra_body-features" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1064,12 +1072,12 @@ descriptions</a>.</p>
 </tr>
 <tr>
 <td><code>thought_tag_marker</code></td>
-<td>Used to separate a model's thoughts from its responses for models with Thinking available.<br>If not specified, no tags will be returned around the model's thoughts. If present, subsequent queries will strip the thought tags and mark the thoughts appropriately for context. This helps preserve the appropriate context for subsequent queries.</td>
+<td>Used to separate a model's thoughts from its responses for models with Thinking available. <br/> * If not specified, thoughts are not enclosed in tags. <br/> * If specified, thoughts are enclosed in these tags. Subsequent queries will strip these tags and correctly identify thoughts for context, preserving appropriate context for follow-up interactions.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="extra_part-features"><code>extra_part</code> features</h4>
-<p>These parameters are specified within an <code>extra_part</code> object inside a message <code>Part</code>. This allows you to apply settings at a per-<code>Part</code> level.</p>
+<h3 id="extra_part-features"><code>extra_part</code> features<a class="headerlink" href="#extra_part-features" title="Permanent link">&para;</a></h3>
+<p><code>extra_part</code> lets you specify additional settings at a per-<code>Part</code> level.</p>
 <table>
 <thead>
 <tr>
@@ -1088,10 +1096,7 @@ descriptions</a>.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="examples-and-tutorials">💻 Examples and Tutorials</h2>
-<p>To see an example of using the Chat Completions API, run the "Call Gemini with the OpenAI Library" Jupyter notebook in one of the following environments:</p>
-<p><a href="https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/chat-completions/intro_chat_completions_api.ipynb">Open in Colab</a> | <a href="https://console.cloud.google.com/vertex-ai/colab/import/https%3A%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fgenerative-ai%2Fmain%2Fgemini%2Fchat-completions%2Fintro_chat_completions_api.ipynb">Open in Colab Enterprise</a> | <a href="https://console.cloud.google.com/vertex-ai/workbench/deploy-notebook?download_url=https%3A%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fgenerative-ai%2Fmain%2Fgemini%2Fchat-completions%2Fintro_chat_completions_api.ipynb">Open in Vertex AI Workbench user-managed notebooks</a> | <a href="https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/chat-completions/intro_chat_completions_api.ipynb">View on GitHub</a></p>
-<h2 id="whats-next">🔗 What's next</h2>
+<h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Learn more about <a href="/vertex-ai/generative-ai/docs/migrate/openai/auth-and-credentials">authentication and credentialing</a> with the OpenAI-compatible syntax.</li>
 <li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/migrate/openai/examples">Chat Completions API</a> with the OpenAI-compatible syntax.</li>
@@ -1117,17 +1122,74 @@ descriptions</a>.</p>
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Authenticate/" class="md-footer__link md-footer__link--next" aria-label="Next: Authenticate">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Authenticate
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright Google 2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       
@@ -1140,10 +1202,12 @@ descriptions</a>.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "navigation.path", "navigation.sections", "navigation.expand", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>

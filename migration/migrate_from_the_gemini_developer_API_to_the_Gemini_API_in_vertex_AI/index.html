@@ -6,7 +6,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Google Cloud Vertex AI Documentations">
       
+      
+      
+        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/">
       
       
         <link rel="prev" href="../openai/Examples/">
@@ -15,12 +19,12 @@
         <link rel="next" href="../../gemini/migrate_to_gemini2/">
       
       
-      <link rel="icon" href="../../images/favicon-platform.svg">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Migrate from Google AI to Vertex AI - Google Cloud Documentation Rewrite</title>
+        <title>Migrate from Google AI to Vertex AI - Google Cloud Vertex AI Documentations</title>
       
     
     
@@ -41,8 +45,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -60,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrate-from-the-gemini-developer-api-to-the-gemini-api-in-vertex-ai" class="md-skip">
+        <a href="#migrate-from-the-gemini-api-on-google-ai-studio-to-the-gemini-api-in-vertex-ai" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Google Cloud Documentation Rewrite" class="md-header__button md-logo" aria-label="Google Cloud Documentation Rewrite" data-md-component="logo">
+    <a href="../.." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +108,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Google Cloud Documentation Rewrite
+            Google Cloud Vertex AI Documentations
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -116,28 +122,34 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
-      <div class="md-header__option">
-  <div class="md-select">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
-    </button>
-    <div class="md-select__inner">
-      <ul class="md-select__list">
-        
-          <li class="md-select__item">
-            <a href="/openai-agents-python/" hreflang="en" class="md-select__link">
-              English
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
     
     
       
@@ -181,6 +193,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doc_rewrite_new.github.io
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -206,14 +230,26 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Google Cloud Documentation Rewrite" class="md-nav__button md-logo" aria-label="Google Cloud Documentation Rewrite" data-md-component="logo">
+    <a href="../.." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Google Cloud Documentation Rewrite
+    Google Cloud Vertex AI Documentations
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    doc_rewrite_new.github.io
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -249,22 +285,23 @@
   
     
     
-    
-    
       
         
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -292,18 +329,22 @@
   
     
     
-    
-    
       
+        
+      
+        
+      
+        
+      
+    
+    
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -460,124 +501,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#benefits-of-using-the-gemini-api-in-vertex-ai" class="md-nav__link">
+  <a href="#when-to-choose-the-gemini-api-in-vertex-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Benefits of using the Gemini API in Vertex AI
+      📚 When to choose the Gemini API in Vertex AI
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#differences-between-the-gemini-developer-api-and-the-gemini-api-in-vertex-ai" class="md-nav__link">
+  <a href="#differences-between-the-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Differences between the Gemini Developer API and the Gemini API in Vertex AI
+      📚 Differences between the APIs
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrate-to-gemini-api-in-vertex-ai" class="md-nav__link">
+  <a href="#migrate-to-the-gemini-api-in-vertex-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Migrate to Gemini API in Vertex AI
+      ⚙️ Migrate to the Gemini API in Vertex AI
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⚙️ Migrate to Gemini API in Vertex AI">
+    <nav class="md-nav" aria-label="⚙️ Migrate to the Gemini API in Vertex AI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#considerations-when-migrating" class="md-nav__link">
+  <a href="#migration-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Considerations when migrating
+      Migration workflow
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#start-using-vertex-ai-studio" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
-      Start using Vertex AI Studio
+      Before you begin
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#python-migrate-to-the-gemini-api-in-vertex-ai" class="md-nav__link">
+  <a href="#migration-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Python: Migrate to the Gemini API in Vertex AI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 Python: Migrate to the Gemini API in Vertex AI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vertex-ai-python-sdk-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vertex AI Python SDK Setup
+      Migration steps
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#code-example-to-install-the-client" class="md-nav__link">
+  <a href="#sdk-setup-and-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Code example to install the client
+      SDK setup and authentication
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#code-example-to-generate-text-from-text-prompt" class="md-nav__link">
+  <a href="#code-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Code example to generate text from text prompt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-example-to-generate-text-from-text-and-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code example to generate text from text and image
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-example-to-generate-multi-turn-chat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code example to generate multi-turn chat
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#migrate-prompts-to-vertex-ai-studio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migrate prompts to Vertex AI Studio
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upload-training-data-to-vertex-ai-studio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upload training data to Vertex AI Studio
+      Code examples
     </span>
   </a>
   
@@ -591,7 +581,7 @@
         <li class="md-nav__item">
   <a href="#delete-unused-api-keys" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Delete unused API Keys
+      ⚙️ Delete unused API keys
     </span>
   </a>
   
@@ -630,24 +620,21 @@
   
     
     
-    
-    
       
-        
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -724,124 +711,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#benefits-of-using-the-gemini-api-in-vertex-ai" class="md-nav__link">
+  <a href="#when-to-choose-the-gemini-api-in-vertex-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Benefits of using the Gemini API in Vertex AI
+      📚 When to choose the Gemini API in Vertex AI
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#differences-between-the-gemini-developer-api-and-the-gemini-api-in-vertex-ai" class="md-nav__link">
+  <a href="#differences-between-the-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Differences between the Gemini Developer API and the Gemini API in Vertex AI
+      📚 Differences between the APIs
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrate-to-gemini-api-in-vertex-ai" class="md-nav__link">
+  <a href="#migrate-to-the-gemini-api-in-vertex-ai" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Migrate to Gemini API in Vertex AI
+      ⚙️ Migrate to the Gemini API in Vertex AI
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⚙️ Migrate to Gemini API in Vertex AI">
+    <nav class="md-nav" aria-label="⚙️ Migrate to the Gemini API in Vertex AI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#considerations-when-migrating" class="md-nav__link">
+  <a href="#migration-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Considerations when migrating
+      Migration workflow
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#start-using-vertex-ai-studio" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
-      Start using Vertex AI Studio
+      Before you begin
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#python-migrate-to-the-gemini-api-in-vertex-ai" class="md-nav__link">
+  <a href="#migration-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      💻 Python: Migrate to the Gemini API in Vertex AI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💻 Python: Migrate to the Gemini API in Vertex AI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vertex-ai-python-sdk-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vertex AI Python SDK Setup
+      Migration steps
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#code-example-to-install-the-client" class="md-nav__link">
+  <a href="#sdk-setup-and-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Code example to install the client
+      SDK setup and authentication
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#code-example-to-generate-text-from-text-prompt" class="md-nav__link">
+  <a href="#code-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Code example to generate text from text prompt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-example-to-generate-text-from-text-and-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code example to generate text from text and image
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-example-to-generate-multi-turn-chat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code example to generate multi-turn chat
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#migrate-prompts-to-vertex-ai-studio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migrate prompts to Vertex AI Studio
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upload-training-data-to-vertex-ai-studio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upload training data to Vertex AI Studio
+      Code examples
     </span>
   </a>
   
@@ -855,7 +791,7 @@
         <li class="md-nav__item">
   <a href="#delete-unused-api-keys" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Delete unused API Keys
+      ⚙️ Delete unused API keys
     </span>
   </a>
   
@@ -885,159 +821,147 @@
                   
 
 
+  
+  
 
-<h1 id="migrate-from-the-gemini-developer-api-to-the-gemini-api-in-vertex-ai">Migrate from the Gemini Developer API to the Gemini API in Vertex AI</h1>
-<p>If you are new to Gemini, using the <a href="https://ai.google.dev/gemini-api/docs/quickstart?lang=python">quickstarts</a> is the fastest way to get started.</p>
-<p>However, as your generative AI solutions mature, you may need a platform for building and deploying generative AI applications and solutions end to end. Google Cloud provides a comprehensive ecosystem of tools to enable developers to harness the power of generative AI, from the initial stages of app development to app deployment, app hosting, and managing complex data at scale.</p>
-<p>Google Cloud's Vertex AI platform offers a suite of MLOps tools that streamline usage, deployment, and monitoring of AI models for efficiency and reliability. Additionally, integrations with databases, DevOps tools, logging, monitoring, and IAM provide a holistic approach to managing the entire generative AI lifecycle.</p>
-<h2 id="benefits-of-using-the-gemini-api-in-vertex-ai">📚 Benefits of using the Gemini API in Vertex AI</h2>
-<p>Migrating to the Gemini API in Vertex AI allows you to leverage the broader Google Cloud ecosystem. Here are some common use cases and benefits:</p>
+
+<h1 id="migrate-from-the-gemini-api-on-google-ai-studio-to-the-gemini-api-in-vertex-ai">Migrate from the Gemini API on Google AI Studio to the Gemini API in Vertex AI<a class="headerlink" href="#migrate-from-the-gemini-api-on-google-ai-studio-to-the-gemini-api-in-vertex-ai" title="Permanent link">&para;</a></h1>
+<p>If you started building with the Gemini API through Google AI Studio, you might find that as your generative AI solutions mature, you need a more comprehensive platform for building, deploying, and managing them end-to-end.</p>
+<p>This guide explains the benefits of migrating to the Gemini API in Vertex AI and provides a step-by-step process for moving your existing work from Google AI Studio to Google Cloud's Vertex AI platform.</p>
+<h2 id="when-to-choose-the-gemini-api-in-vertex-ai">📚 When to choose the Gemini API in Vertex AI<a class="headerlink" href="#when-to-choose-the-gemini-api-in-vertex-ai" title="Permanent link">&para;</a></h2>
+<p>Google Cloud provides a comprehensive ecosystem of tools to enable developers to harness the power of generative AI, from app development to deployment, hosting, and managing complex data at scale.</p>
+<p>Vertex AI offers a suite of MLOps tools that streamline the usage, deployment, and monitoring of AI models for efficiency and reliability. Integrations with databases, DevOps tools, logging, monitoring, and IAM provide a holistic approach to managing the entire generative AI lifecycle.</p>
+<p>Consider migrating to Vertex AI for the following use cases:</p>
 <ul>
-<li><strong>Productionize your apps and solutions</strong>: Products like <a href="https://cloud.google.com/functions/docs/concepts/overview">Cloud Run functions</a> and <a href="https://cloud.google.com/run/docs/overview/what-is-cloud-run">Cloud Run</a> let you deploy apps with enterprise-grade scale, security, and privacy. Find more details about security and privacy in the <a href="https://cloud.google.com/security">Security, Privacy, and Cloud Compliance on Google Cloud</a> guide.</li>
-<li><strong>Utilize end-to-end MLOps capabilities</strong>: Use Vertex AI for a full suite of MLOps tools, from model tuning to vector similarity search and ML pipelines.</li>
-<li><strong>Event-driven architecture</strong>: Trigger your LLM calls with event-driven architecture using <a href="https://cloud.google.com/functions/docs/concepts/overview">Cloud Run functions</a> or <a href="https://cloud.google.com/run/docs/overview/what-is-cloud-run">Cloud Run</a>.</li>
-<li><strong>Monitor application usage</strong>: Monitor your app's usage with <a href="https://cloud.google.com/logging/docs">Cloud Logging</a> and <a href="https://cloud.google.com/logging/docs/export/bigquery">BigQuery</a>.</li>
-<li><strong>Secure and scalable data storage</strong>: Store your data with enterprise-grade security at scale with services like <a href="https://cloud.google.com/bigquery/docs">BigQuery</a>, <a href="https://cloud.google.com/storage/docs/introduction">Cloud Storage</a>, and <a href="https://cloud.google.com/sql">Cloud SQL</a>.</li>
-<li><strong>Retrieval-Augmented Generation (RAG)</strong>: Perform RAG using data in the cloud with <a href="https://cloud.google.com/bigquery/docs">BigQuery</a> or <a href="https://cloud.google.com/storage/docs/introduction">Cloud Storage</a>.</li>
-<li><strong>Create and schedule data pipelines</strong>: <a href="https://cloud.google.com/scheduler/docs/schedule-run-cron-job">Schedule jobs</a> using <a href="https://cloud.google.com/scheduler/docs/overview">Cloud Scheduler</a>.</li>
-<li><strong>Apply LLMs to your cloud data</strong>: If you store data in Cloud Storage or BigQuery, you can prompt LLMs over that data to extract information, summarize, or ask questions.</li>
-<li><strong>Data governance and residency</strong>: Leverage Google Cloud <a href="https://cloud.google.com/learn/what-is-data-governance">data governance/residency</a> policies to manage your data lifecycle.</li>
+<li><strong>Productionize your apps and solutions</strong>: Products like <a href="https://cloud.google.com/functions/docs/concepts/overview">Cloud Functions</a> and <a href="https://cloud.google.com/run/docs/overview/what-is-cloud-run">Cloud Run</a> let you deploy apps with enterprise-grade scale, security, and privacy. For more details, see <a href="https://cloud.google.com/security">Security, Privacy, and Cloud Compliance on Google Cloud</a>.</li>
+<li><strong>Leverage end-to-end MLOps</strong>: Use Vertex AI for capabilities ranging from model tuning to vector similarity search and ML pipelines.</li>
+<li><strong>Build event-driven architectures</strong>: Trigger your LLM calls with <a href="https://cloud.google.com/functions/docs/concepts/overview">Cloud Functions</a> or <a href="https://cloud.google.com/run/docs/overview/what-is-cloud-run">Cloud Run</a>.</li>
+<li><strong>Monitor application usage</strong>: Integrate with <a href="https://cloud.google.com/logging/docs">Cloud Logging</a> and <a href="https://cloud.google.com/logging/docs/export/bigquery">BigQuery</a> to monitor your app's performance and usage.</li>
+<li><strong>Store data at scale</strong>: Use enterprise-grade services like <a href="https://cloud.google.com/bigquery/docs">BigQuery</a>, <a href="https://cloud.google.com/storage/docs/introduction">Cloud Storage</a>, and <a href="https://cloud.google.com/sql">Cloud SQL</a>.</li>
+<li><strong>Perform Retrieval-Augmented Generation (RAG)</strong>: Use your data in <a href="https://cloud.google.com/bigquery/docs">BigQuery</a> or <a href="https://cloud.google.com/storage/docs/introduction">Cloud Storage</a> to ground model responses.</li>
+<li><strong>Create and schedule data pipelines</strong>: Use <a href="https://cloud.google.com/scheduler/docs/overview">Cloud Scheduler</a> to <a href="https://cloud.google.com/scheduler/docs/schedule-run-cron-job">schedule jobs</a>.</li>
+<li><strong>Apply LLMs to your data in the cloud</strong>: If you store data in Cloud Storage or BigQuery, you can prompt LLMs over that data to extract information, summarize, or ask questions.</li>
+<li><strong>Manage data governance</strong>: Leverage Google Cloud <a href="https://cloud.google.com/learn/what-is-data-governance">data governance and residency</a> policies to manage your data lifecycle.</li>
 </ul>
-<h2 id="differences-between-the-gemini-developer-api-and-the-gemini-api-in-vertex-ai">📚 Differences between the Gemini Developer API and the Gemini API in Vertex AI</h2>
-<p>The following table summarizes the main differences between the Gemini Developer API and the Vertex AI Gemini API to help you decide which option is right for your use case:</p>
+<h2 id="differences-between-the-apis">📚 Differences between the APIs<a class="headerlink" href="#differences-between-the-apis" title="Permanent link">&para;</a></h2>
+<p>The following table summarizes the main differences between the Gemini API on Google AI Studio and the Gemini API in Vertex AI to help you decide which option is right for your use case.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>Features</strong></th>
-<th style="text-align: left;"><strong>Gemini Developer API</strong></th>
-<th style="text-align: left;"><strong>Vertex AI Gemini API</strong></th>
+<th><strong>Features</strong></th>
+<th><strong>Gemini API on Google AI Studio</strong></th>
+<th><strong>Gemini API in Vertex AI</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Gemini models</td>
-<td style="text-align: left;">Gemini 2.0 Flash, Gemini 2.0 Flash-Lite</td>
-<td style="text-align: left;">Gemini 2.0 Flash, Gemini 2.0 Flash-Lite</td>
+<td><strong>Gemini models</strong></td>
+<td>Gemini 2.0 Flash, Gemini 2.0 Flash-Lite</td>
+<td>Gemini 2.0 Flash, Gemini 2.0 Flash-Lite</td>
 </tr>
 <tr>
-<td style="text-align: left;">Sign up</td>
-<td style="text-align: left;">Google account</td>
-<td style="text-align: left;">Google Cloud account (with terms agreement and billing)</td>
+<td><strong>Sign up</strong></td>
+<td>Google account</td>
+<td>Google Cloud account (with terms agreement and billing)</td>
 </tr>
 <tr>
-<td style="text-align: left;">Authentication</td>
-<td style="text-align: left;">API key</td>
-<td style="text-align: left;">Google Cloud service account</td>
+<td><strong>Authentication</strong></td>
+<td>API key</td>
+<td>Google Cloud service account</td>
 </tr>
 <tr>
-<td style="text-align: left;">User interface playground</td>
-<td style="text-align: left;">Google AI Studio</td>
-<td style="text-align: left;">Vertex AI Studio</td>
+<td><strong>User interface playground</strong></td>
+<td>Google AI Studio</td>
+<td>Vertex AI Studio</td>
 </tr>
 <tr>
-<td style="text-align: left;">API &amp; SDK</td>
-<td style="text-align: left;">Server and mobile/web client SDKs:<br/><em> Server: Python, Node.js, Go, Dart, ABAP<br/></em> Mobile/Web client: Android (Kotlin/Java), Swift, Web, Flutter</td>
-<td style="text-align: left;">Server and mobile/web client SDKs:<br/><em> Server: Python, Node.js, Go, Java, ABAP<br/></em> Mobile/Web client (via <a href="https://firebase.google.com/docs/vertex-ai">Vertex AI in Firebase</a>): Android (Kotlin/Java), Swift, Web, Flutter</td>
+<td><strong>API &amp; SDK</strong></td>
+<td>Server and mobile/web client SDKs <ul><li>Server: Python, Node.js, Go, Dart, ABAP</li><li>Mobile/Web client: Android (Kotlin/Java), Swift, Web, Flutter</li></ul></td>
+<td>Server and mobile/web client SDKs <ul><li>Server: Python, Node.js, Go, Java, ABAP</li><li>Mobile/Web client (via <a href="https://firebase.google.com/docs/vertex-ai">Vertex AI in Firebase</a>): Android (Kotlin/Java), Swift, Web, Flutter</li></ul></td>
 </tr>
 <tr>
-<td style="text-align: left;">No-cost usage of API &amp; SDK</td>
-<td style="text-align: left;">Yes, <a href="https://ai.google.dev/gemini-api/docs/billing#is-Gemini-free-in-EEA-UK-CH">where applicable</a></td>
-<td style="text-align: left;">$300 Google Cloud credit for new users</td>
+<td><strong>No-cost usage of API &amp; SDK</strong></td>
+<td>Yes, <a href="https://ai.google.dev/gemini-api/docs/billing#is-Gemini-free-in-EEA-UK-CH">where applicable</a></td>
+<td>$300 Google Cloud credit for new users</td>
 </tr>
 <tr>
-<td style="text-align: left;">Quota (requests per minute)</td>
-<td style="text-align: left;">Varies based on model and pricing plan (see <a href="https://ai.google.dev/pricing">detailed information</a>)</td>
-<td style="text-align: left;">Varies based on model and region (see <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/quotas">detailed information</a>)</td>
+<td><strong>Quota (requests per minute)</strong></td>
+<td>Varies based on model and pricing plan (see <a href="https://ai.google.dev/pricing">detailed information</a>)</td>
+<td>Varies based on model and region (see <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/quotas">detailed information</a>)</td>
 </tr>
 <tr>
-<td style="text-align: left;">Enterprise support</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">Customer-managed encryption keys (CMEK)<br/>Virtual Private Cloud (VPC)<br/>Data residency<br/>Access Transparency<br/>Scalable infrastructure for application hosting<br/>Databases and data storage</td>
+<td><strong>Enterprise support</strong></td>
+<td>No</td>
+<td>Customer encryption key<br>Virtual private cloud<br>Data residency<br>Access transparency<br>Scalable infrastructure for application hosting<br>Databases and data storage</td>
 </tr>
 <tr>
-<td style="text-align: left;">MLOps</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">Full MLOps on Vertex AI (for example, model evaluation, Model Monitoring, and Model Registry)</td>
+<td><strong>MLOps</strong></td>
+<td>No</td>
+<td>Full MLOps on Vertex AI (examples: model evaluation, Model Monitoring, Model Registry)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="migrate-to-gemini-api-in-vertex-ai">⚙️ Migrate to Gemini API in Vertex AI</h2>
-<p>This section shows how to migrate from the Gemini Developer API to the Gemini API in Vertex AI.</p>
+<h2 id="migrate-to-the-gemini-api-in-vertex-ai">⚙️ Migrate to the Gemini API in Vertex AI<a class="headerlink" href="#migrate-to-the-gemini-api-in-vertex-ai" title="Permanent link">&para;</a></h2>
+<p>This section shows how to migrate from the Gemini API on Google AI Studio to the Gemini API in Vertex AI.</p>
+<h3 id="migration-workflow">Migration workflow<a class="headerlink" href="#migration-workflow" title="Permanent link">&para;</a></h3>
+<p>The following diagram shows the high-level workflow for migrating to Vertex AI.</p>
 <pre class="mermaid"><code>flowchart TD
-    A[Start Migration to Vertex AI] --&gt; B[Review Migration Considerations];
-    B --&gt; C{Google Cloud Account Setup};
-    C -- Existing Account --&gt; D[Connect to Vertex AI via Google AI Studio];
-    C -- New Account --&gt; E[Create Google Cloud Account &amp; Connect to Vertex AI via Google AI Studio];
-    D --&gt; F[Access Vertex AI Console];
-    E --&gt; F;
-    F --&gt; G[Migrate Python Code to Vertex AI SDK];
-    G --&gt; H[Migrate Prompts from Google AI Studio to Vertex AI Studio];
-    H --&gt; I[Upload Training Data to Cloud Storage for Vertex AI];
-    I --&gt; J[Migration Steps Complete];</code></pre>
-<h3 id="considerations-when-migrating">Considerations when migrating</h3>
+    A[Start] --&gt; B{Have a Google Cloud Project?}
+    B -- Yes --&gt; C[Enable Vertex AI API]
+    B -- No --&gt; D[Create Google Cloud Account &amp; Project]
+    D --&gt; C
+    C --&gt; E[Migrate Code to use Vertex AI SDK]
+    E --&gt; F[Migrate Prompts from Google Drive to Vertex AI Studio]
+    F --&gt; G[Upload Training Data to Cloud Storage]
+    G --&gt; H[Clean up: Delete old Gemini API Key]
+    H --&gt; I[Finish]</code></pre>
+<h3 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h3>
 <p>Consider the following when migrating:</p>
 <ul>
 <li>You can use your existing Google Cloud project (the same one you used to generate your Gemini API key) or you can create a new <a href="/resource-manager/docs/creating-managing-projects">Google Cloud project</a>.</li>
-<li>Supported regions might differ between the Gemini Developer API and the Gemini API in Vertex AI. See the list of <a href="/vertex-ai/generative-ai/docs/learn/locations">supported regions for generative AI on Google Cloud</a>.</li>
+<li>Supported regions might differ. See the list of <a href="/vertex-ai/generative-ai/docs/learn/locations">supported regions for generative AI on Google Cloud</a>.</li>
 <li>Any models you created in Google AI Studio need to be retrained in Vertex AI.</li>
 </ul>
-<h3 id="start-using-vertex-ai-studio">Start using Vertex AI Studio</h3>
-<p>The process you follow to migrate to Gemini API in Vertex AI is different, depending on if you already have a Google Cloud account or you are new to Google Cloud.</p>
-<p><strong>Note:</strong> Google AI Studio and the Gemini Developer API are available only in <a href="https://ai.google.dev/available_regions">specific regions and languages</a>. If you aren't located in a supported region, you can't start using the Gemini API in Vertex AI.</p>
-<p>To learn how to migrate to the Gemini API in Vertex AI, click one of the following tabs, depending on your Google Cloud account status:</p>
-<section class="tabs">
-
-### Already use Google Cloud {.new-tab}
-
-1.  Sign in to [Google AI Studio](https://aistudio.google.com/app/waitlist/97445851).
-2.  At the bottom of the left navigation pane, click **Build with Vertex AI on Google Cloud**.
-
-    The **Try Vertex AI and Google Cloud for free** page opens.
-3.  Click **Agree & Continue**.
-
-    The **Get Started with Vertex AI studio** dialog appears.
-4.  To enable the APIs required to run Vertex AI, click **Agree & Continue**.
-
-    The Vertex AI console appears. To learn how to migrate your data from Google AI Studio, see [Migrate prompts to Vertex AI Studio](#migrate-prompts-to-vertex-ai-studio).
-
-### New to Google Cloud {.new-tab}
-
-1.  Sign in to [Google AI Studio](https://aistudio.google.com/app/waitlist/97445851).
-2.  At the bottom of the left navigation pane, click **Build with Vertex AI on Google Cloud**.
-
-    The **Create an account to get started with Google Cloud** page opens.
-3.  Click **Agree & Continue**.
-
-    The **Let's confirm your identity** page appears.
-4.  Click **Start Free**.
-
-    The **Get Started with Vertex AI studio** dialog appears.
-5.  To enable the APIs required to run Vertex AI, click **Agree & Continue**.
-6.  Optional: To learn how to migrate your data from Google AI Studio, see [Migrate prompts to Vertex AI Studio](#migrate-prompts-to-vertex-ai-studio) on this page.
-
-</section>
-
-<h3 id="python-migrate-to-the-gemini-api-in-vertex-ai">💻 Python: Migrate to the Gemini API in Vertex AI</h3>
+<h3 id="migration-steps">Migration steps<a class="headerlink" href="#migration-steps" title="Permanent link">&para;</a></h3>
+<details>
+<summary>Step 1: Set up your Google Cloud project and Vertex AI</summary>
+<p>The process you follow depends on whether you already have a Google Cloud account.</p>
+<p><strong>Note:</strong> Google AI Studio and its Gemini API are available only in <a href="https://ai.google.dev/available_regions">specific regions and languages</a>. If you aren't located in a supported region, you can't start using the Gemini API in Vertex AI.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="new-to-google-cloud" name="__tabbed_1" type="radio" /><input id="already-use-google-cloud" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="new-to-google-cloud">New to Google Cloud</label><label for="already-use-google-cloud">Already use Google Cloud</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Sign in to <a href="https://aistudio.google.com/app/waitlist/97445851">Google AI Studio</a>.</li>
+<li>At the bottom of the left navigation pane, click <strong>Build with Vertex AI on Google Cloud</strong>. The <strong>Create an account to get started with Google Cloud</strong> page opens.</li>
+<li>Click <strong>Agree &amp; Continue</strong>. The <strong>Let's confirm your identity</strong> page appears.</li>
+<li>Click <strong>Start Free</strong>. The <strong>Get Started with Vertex AI studio</strong> dialog appears.</li>
+<li>To enable the APIs required to run Vertex AI, click <strong>Agree &amp; Continue</strong>. The Vertex AI console appears.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Sign in to <a href="https://aistudio.google.com/app/waitlist/97445851">Google AI Studio</a>.</li>
+<li>At the bottom of the left navigation pane, click <strong>Build with Vertex AI on Google Cloud</strong>. The <strong>Try Vertex AI and Google Cloud for free</strong> page opens.</li>
+<li>Click <strong>Agree &amp; Continue</strong>. The <strong>Get Started with Vertex AI studio</strong> dialog appears.</li>
+<li>To enable the APIs required to run Vertex AI, click <strong>Agree &amp; Continue</strong>. The Vertex AI console appears.</li>
+</ol>
+</div>
+</div>
+</div>
+</details>
+<details>
+<summary>Step 2: Migrate your Python code</summary>
 <p>The following sections show code snippets to help you migrate your Python code to use the Gemini API in Vertex AI.</p>
-<h4 id="vertex-ai-python-sdk-setup">Vertex AI Python SDK Setup</h4>
-<p>On Vertex AI, you don't need an API key. Instead, Gemini on Vertex AI is managed using IAM access, which controls permission for a user, a group, or a service account to call the Gemini API through the Vertex AI SDK.</p>
-<p>While there are <a href="https://cloud.google.com/docs/authentication#auth-decision-tree">many ways to authenticate</a>, the easiest method for authenticating in a development environment is to <a href="https://cloud.google.com/sdk/docs/install">install the Google Cloud CLI</a> then use your user credentials to <a href="https://cloud.google.com/docs/authentication/gcloud#local">sign in to the CLI</a>.</p>
-<p>To make inference calls to Vertex AI, you must also make sure that your user or service account has the <a href="https://cloud.google.com/vertex-ai/docs/general/access-control#aiplatform.user">Vertex AI User role</a>.</p>
-<h4 id="code-example-to-install-the-client">Code example to install the client</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Gemini Developer API</th>
-<th style="text-align: left;">Gemini API in Vertex AI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># To install the Python SDK, use this CLI command:</span>
+<h3 id="sdk-setup-and-authentication">SDK setup and authentication<a class="headerlink" href="#sdk-setup-and-authentication" title="Permanent link">&para;</a></h3>
+<p>On Vertex AI, you don't need an API key. Instead, access is managed using IAM, which controls permissions for a user, group, or service account.</p>
+<p>While there are <a href="https://cloud.google.com/docs/authentication#auth-decision-tree">many ways to authenticate</a>, the easiest method for a development environment is to <a href="https://cloud.google.com/sdk/docs/install">install the Google Cloud CLI</a> and then use your user credentials to <a href="https://cloud.google.com/docs/authentication/gcloud#local">sign in to the CLI</a>.</p>
+<p>To make inference calls to Vertex AI, you must also ensure that your user or service account has the <a href="https://cloud.google.com/vertex-ai/docs/general/access-control#aiplatform.user">Vertex AI User role</a>.</p>
+<h3 id="code-examples">Code examples<a class="headerlink" href="#code-examples" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="install-the-client" name="__tabbed_2" type="radio" /><input id="generate-text-from-text" name="__tabbed_2" type="radio" /><input id="generate-text-from-text-and-image" name="__tabbed_2" type="radio" /><input id="multi-turn-chat" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="install-the-client">Install the client</label><label for="generate-text-from-text">Generate text from text</label><label for="generate-text-from-text-and-image">Generate text from text and image</label><label for="multi-turn-chat">Multi-turn chat</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Gemini API on Google AI Studio</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># To install the Python SDK, use this CLI command:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># pip install google-generativeai</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">google.generativeai</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">genai</span>
@@ -1045,15 +969,9 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">API_KEY</span><span class="o">=</span><span class="s2">&quot;API_KEY&quot;</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">genai</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">API_KEY</span><span class="p">)</span>
-</span></code></pre></div></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># To install the Python SDK, use this CLI command:</span>
+</span></code></pre></div>
+<p><strong>Gemini API in Vertex AI</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># To install the Python SDK, use this CLI command:</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># pip install google-genai</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google</span><span class="w"> </span><span class="kn">import</span> <span class="n">genai</span>
@@ -1061,150 +979,98 @@
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">PROJECT_ID</span> <span class="o">=</span> <span class="s2">&quot;PROJECT_ID&quot;</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">LOCATION</span> <span class="o">=</span> <span class="s2">&quot;LOCATION&quot;</span>  <span class="c1"># e.g. us-central1</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">client</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">PROJECT_ID</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="n">LOCATION</span><span class="p">,</span> <span class="n">vertexai</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></code></pre></div></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<h4 id="code-example-to-generate-text-from-text-prompt">Code example to generate text from text prompt</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Gemini Developer API</th>
-<th style="text-align: left;">Gemini API in Vertex AI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">GenerativeModel</span><span class="p">(</span><span class="s2">&quot;gemini-2.0-flash&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Gemini API on Google AI Studio</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">GenerativeModel</span><span class="p">(</span><span class="s2">&quot;gemini-2.0-flash&quot;</span><span class="p">)</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">response</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate_content</span><span class="p">(</span><span class="s2">&quot;The opposite of hot is&quot;</span><span class="p">)</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="c1">#  The opposite of hot is cold.</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="err">```</span>                                                                                                                                                  <span class="o">|</span> <span class="err">```</span><span class="n">python</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google</span><span class="w"> </span><span class="kn">import</span> <span class="n">genai</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.genai.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpOptions</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">client</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">http_options</span><span class="o">=</span><span class="n">HttpOptions</span><span class="p">(</span><span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">))</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">generate_content</span><span class="p">(</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gemini-2.5-flash-preview-05-20&quot;</span><span class="p">,</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">contents</span><span class="o">=</span><span class="s2">&quot;How does AI work?&quot;</span><span class="p">,</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">)</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="c1"># Example response:</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># Okay, let&#39;s break down how AI works. It&#39;s a broad field, so I&#39;ll focus on the ...</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c1">#</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># Here&#39;s a simplified overview:</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1"># ...</span>
-</span></code></pre></div></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<h4 id="code-example-to-generate-text-from-text-and-image">Code example to generate text from text and image</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Gemini Developer API</th>
-<th style="text-align: left;">Gemini API in Vertex AI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">PIL.Image</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">multimodal_model</span> <span class="o">=</span> <span class="n">GenerativeModel</span><span class="p">(</span><span class="s2">&quot;gemini-2.0-flash&quot;</span><span class="p">)</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">image</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;image.jpg&quot;</span><span class="p">)</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">response</span> <span class="o">=</span> <span class="n">multimodal_model</span><span class="o">.</span><span class="n">generate_content</span><span class="p">([</span><span class="s2">&quot;What is this picture?&quot;</span><span class="p">,</span> <span class="n">image</span><span class="p">])</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="c1"># A cat is shown in this picture.</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="err">```</span>                                                                                                                                                  <span class="o">|</span> <span class="err">```</span><span class="n">python</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google</span><span class="w"> </span><span class="kn">import</span> <span class="n">genai</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.genai.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpOptions</span><span class="p">,</span> <span class="n">Part</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">client</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">http_options</span><span class="o">=</span><span class="n">HttpOptions</span><span class="p">(</span><span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">))</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">generate_content</span><span class="p">(</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gemini-2.5-flash-preview-05-20&quot;</span><span class="p">,</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">contents</span><span class="o">=</span><span class="p">[</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        <span class="s2">&quot;What is shown in this image?&quot;</span><span class="p">,</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        <span class="n">Part</span><span class="o">.</span><span class="n">from_uri</span><span class="p">(</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>            <span class="n">file_uri</span><span class="o">=</span><span class="s2">&quot;gs://cloud-samples-data/generative-ai/image/scones.jpg&quot;</span><span class="p">,</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>            <span class="n">mime_type</span><span class="o">=</span><span class="s2">&quot;image/jpeg&quot;</span><span class="p">,</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>        <span class="p">),</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="p">],</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">)</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="c1"># Example response:</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="c1"># The image shows a flat lay of blueberry scones arranged on parchment paper. There are ...</span>
-</span></code></pre></div></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<h4 id="code-example-to-generate-multi-turn-chat">Code example to generate multi-turn chat</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Gemini Developer API</th>
-<th style="text-align: left;">Gemini API in Vertex AI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">GenerativeModel</span><span class="p">(</span><span class="s2">&quot;gemini-2.0-flash&quot;</span><span class="p">)</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">chat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">start_chat</span><span class="p">()</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">chat</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;How are you?&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">chat</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;What can you do?&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="err">```</span>                                                                                                                                                  <span class="o">|</span> <span class="err">```</span><span class="n">python</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google</span><span class="w"> </span><span class="kn">import</span> <span class="n">genai</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.genai.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpOptions</span><span class="p">,</span> <span class="n">ModelContent</span><span class="p">,</span> <span class="n">Part</span><span class="p">,</span> <span class="n">UserContent</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">client</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">http_options</span><span class="o">=</span><span class="n">HttpOptions</span><span class="p">(</span><span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">))</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">chat_session</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chats</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gemini-2.5-flash-preview-05-20&quot;</span><span class="p">,</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="n">history</span><span class="o">=</span><span class="p">[</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="n">UserContent</span><span class="p">(</span><span class="n">parts</span><span class="o">=</span><span class="p">[</span><span class="n">Part</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">)]),</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        <span class="n">ModelContent</span><span class="p">(</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>            <span class="n">parts</span><span class="o">=</span><span class="p">[</span><span class="n">Part</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Great to meet you. What would you like to know?&quot;</span><span class="p">)],</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="p">),</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="p">],</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="p">)</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="n">response</span> <span class="o">=</span> <span class="n">chat_session</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Tell me a story.&quot;</span><span class="p">)</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="c1"># Example response:</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="c1"># Okay, here&#39;s a story for you:</span>
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="c1"># ...</span>
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code>                                                                                                                                             |
-</code></pre></div>
-<h3 id="migrate-prompts-to-vertex-ai-studio">Migrate prompts to Vertex AI Studio</h3>
+<p><strong>Gemini API in Vertex AI</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google</span><span class="w"> </span><span class="kn">import</span> <span class="n">genai</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.genai.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpOptions</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">http_options</span><span class="o">=</span><span class="n">HttpOptions</span><span class="p">(</span><span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">))</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">generate_content</span><span class="p">(</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gemini-2.5-flash-preview-05-20&quot;</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">contents</span><span class="o">=</span><span class="s2">&quot;How does AI work?&quot;</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># Example response:</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Okay, let&#39;s break down how AI works. It&#39;s a broad field, so I&#39;ll focus on the ...</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1">#</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># Here&#39;s a simplified overview:</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># ...</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Gemini API on Google AI Studio</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">PIL.Image</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">multimodal_model</span> <span class="o">=</span> <span class="n">GenerativeModel</span><span class="p">(</span><span class="s2">&quot;gemini-2.0-flash&quot;</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">image</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;image.jpg&quot;</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">response</span> <span class="o">=</span> <span class="n">multimodal_model</span><span class="o">.</span><span class="n">generate_content</span><span class="p">([</span><span class="s2">&quot;What is this picture?&quot;</span><span class="p">,</span> <span class="n">image</span><span class="p">])</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="c1"># A cat is shown in this picture.</span>
+</span></code></pre></div>
+<p><strong>Gemini API in Vertex AI</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google</span><span class="w"> </span><span class="kn">import</span> <span class="n">genai</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.genai.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpOptions</span><span class="p">,</span> <span class="n">Part</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">http_options</span><span class="o">=</span><span class="n">HttpOptions</span><span class="p">(</span><span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">))</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">generate_content</span><span class="p">(</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gemini-2.5-flash-preview-05-20&quot;</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">contents</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="s2">&quot;What is shown in this image?&quot;</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="n">Part</span><span class="o">.</span><span class="n">from_uri</span><span class="p">(</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>            <span class="n">file_uri</span><span class="o">=</span><span class="s2">&quot;gs://cloud-samples-data/generative-ai/image/scones.jpg&quot;</span><span class="p">,</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>            <span class="n">mime_type</span><span class="o">=</span><span class="s2">&quot;image/jpeg&quot;</span><span class="p">,</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="p">),</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="p">],</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">)</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="c1"># Example response:</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="c1"># The image shows a flat lay of blueberry scones arranged on parchment paper. There are ...</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Gemini API on Google AI Studio</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">GenerativeModel</span><span class="p">(</span><span class="s2">&quot;gemini-2.0-flash&quot;</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">chat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">start_chat</span><span class="p">()</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">chat</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;How are you?&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">chat</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;What can you do?&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Gemini API in Vertex AI</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google</span><span class="w"> </span><span class="kn">import</span> <span class="n">genai</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.genai.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">HttpOptions</span><span class="p">,</span> <span class="n">ModelContent</span><span class="p">,</span> <span class="n">Part</span><span class="p">,</span> <span class="n">UserContent</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">http_options</span><span class="o">=</span><span class="n">HttpOptions</span><span class="p">(</span><span class="n">api_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">))</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">chat_session</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chats</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gemini-2.5-flash-preview-05-20&quot;</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">history</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="n">UserContent</span><span class="p">(</span><span class="n">parts</span><span class="o">=</span><span class="p">[</span><span class="n">Part</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">)]),</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="n">ModelContent</span><span class="p">(</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>            <span class="n">parts</span><span class="o">=</span><span class="p">[</span><span class="n">Part</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Great to meet you. What would you like to know?&quot;</span><span class="p">)],</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        <span class="p">),</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="p">],</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">response</span> <span class="o">=</span> <span class="n">chat_session</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Tell me a story.&quot;</span><span class="p">)</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1"># Example response:</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="c1"># Okay, here&#39;s a story for you:</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="c1"># ...</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<details>
+<summary>Step 3: Migrate your prompts to Vertex AI Studio</summary>
 <p>Your Google AI Studio prompt data is saved in a Google Drive folder. This section shows how to migrate your prompts to Vertex AI Studio.</p>
 <ol>
 <li>Open <a href="https://drive.google.com">Google Drive</a>.</li>
@@ -1212,21 +1078,23 @@
     <img alt="Location of prompts in Google Drive" src="/static/vertex-ai/generative-ai/docs/migrate/images/ai-studio-drive.png" /></li>
 <li>
 <p>Download your prompts from Google Drive to a local directory.</p>
-<p><strong>Note:</strong> Prompts downloaded from Google Drive are in the text (<code>txt</code>) format. Before you upload them to Vertex AI Studio, convert them to JSON files. To do this, change the file extension from <code>.txt</code> to <code>.json</code>.
-4.  Open <a href="https://console.cloud.google.com/vertex-ai/generative">Vertex AI Studio</a> in the Google Cloud console.
-5.  In the <strong>Vertex AI</strong> menu, click <strong>Prompt management</strong>.
-6.  Click <strong>Import prompt</strong>.
-7.  In the <strong>Prompt file</strong> field, click <strong>Browse</strong> and select a prompt from your local directory.</p>
-<p>To upload prompts in bulk, you must manually combine your prompts into a single JSON file.
-8.  Click <strong>Upload</strong>.</p>
-<p>The prompts are uploaded to the <strong>My Prompts</strong> tab.</p>
+<p><strong>Note:</strong> Prompts downloaded from Google Drive are in the text (<code>.txt</code>) format. Before you upload them to Vertex AI Studio, convert them to JSON files by changing the file extension from <code>.txt</code> to <code>.json</code>.</p>
 </li>
+<li>
+<p>Open <a href="https://console.cloud.google.com/vertex-ai/generative">Vertex AI Studio</a> in the Google Cloud console.</p>
+</li>
+<li>In the <strong>Vertex AI</strong> menu, click <strong>Prompt management</strong>.</li>
+<li>Click <strong>Import prompt</strong>.</li>
+<li>In the <strong>Prompt file</strong> field, click <strong>Browse</strong> and select a prompt from your local directory. To upload prompts in bulk, you must manually combine your prompts into a single JSON file.</li>
+<li>Click <strong>Upload</strong>. The prompts are uploaded to the <strong>My Prompts</strong> tab.</li>
 </ol>
-<h3 id="upload-training-data-to-vertex-ai-studio">Upload training data to Vertex AI Studio</h3>
+</details>
+<details>
+<summary>Step 4: Upload training data to Vertex AI</summary>
 <p>To migrate your training data to Vertex AI, you need to upload your data to a Cloud Storage bucket. For more information, see <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/tune-models">Introduction to tuning</a>.</p>
-<h2 id="delete-unused-api-keys">⚙️ Delete unused API Keys</h2>
-<p>If you no longer need to use your Gemini API key for the Gemini Developer API, then follow security best practices and delete it.</p>
-<p>To delete an API key:</p>
+</details>
+<h2 id="delete-unused-api-keys">⚙️ Delete unused API keys<a class="headerlink" href="#delete-unused-api-keys" title="Permanent link">&para;</a></h2>
+<p>If you have fully migrated to Vertex AI and no longer need your old Gemini API key, follow security best practices and delete it.</p>
 <ol>
 <li>Open the <a href="https://console.cloud.google.com/apis/credentials">Google Cloud API Credentials</a> page.</li>
 <li>Find the API key that you want to delete and click the <strong>Actions</strong> icon.</li>
@@ -1235,7 +1103,7 @@
 </ol>
 <p>Deleting an API key takes a few minutes to propagate. After propagation completes, any traffic using the deleted API key is rejected.</p>
 <p><strong>Important:</strong> If you delete a key that's still used in production and need to recover it, see <a href="/sdk/gcloud/reference/beta/services/api-keys/undelete"><code>gcloud beta services api-keys undelete</code></a>.</p>
-<h2 id="whats-next">🔗 What's next</h2>
+<h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Try a quickstart tutorial using <a href="/vertex-ai/generative-ai/docs/start/quickstarts/quickstart">Vertex AI Studio</a> or the <a href="/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal">Vertex AI API</a>.</li>
 </ul>
@@ -1256,17 +1124,74 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../openai/Examples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Examples">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Examples
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../gemini/migrate_to_gemini2/" class="md-footer__link md-footer__link--next" aria-label="Next: Migrate to Gemini 2">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Migrate to Gemini 2
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright Google 2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       
@@ -1279,10 +1204,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "navigation.path", "navigation.sections", "navigation.expand", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>

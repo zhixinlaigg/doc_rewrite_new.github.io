@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/">
+        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/quickstarts/try-gen-ai/">
       
       
+        <link rel="prev" href="../../..">
       
-        <link rel="next" href="start/quickstarts/try-gen-ai/">
+      
+        <link rel="next" href="../../../image/quickstart-image-generate-console/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Google Cloud Vertex AI Documentations</title>
+        <title>Send a text prompt to the Gemini API without an account - Google Cloud Vertex AI Documentations</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-google-cloud-documentation" class="md-skip">
+        <a href="#send-a-text-prompt-to-gemini-using-vertex-ai-studio" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
+    <a href="../../.." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Send a text prompt to the Gemini API without an account
             
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
+    <a href="../../.." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -255,19 +257,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -278,7 +271,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -287,8 +279,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -308,11 +302,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -328,7 +322,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -339,10 +333,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="start/quickstarts/try-gen-ai/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Send a text prompt to the Gemini API without an account
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -353,6 +369,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 What is a prompt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin-choose-an-access-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Before you begin: Choose an access option
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-gemini-with-a-text-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Test Gemini with a text prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -365,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="image/quickstart-image-generate-console/" class="md-nav__link">
+      <a href="../../../image/quickstart-image-generate-console/" class="md-nav__link">
         
   
   
@@ -388,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/quickstart-multimodal/" class="md-nav__link">
+      <a href="../quickstart-multimodal/" class="md-nav__link">
         
   
   
@@ -411,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/quickstart/" class="md-nav__link">
+      <a href="../quickstart/" class="md-nav__link">
         
   
   
@@ -434,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/deploy-vais-prompt/" class="md-nav__link">
+      <a href="../deploy-vais-prompt/" class="md-nav__link">
         
   
   
@@ -503,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/overview/" class="md-nav__link">
+      <a href="../../express-mode/overview/" class="md-nav__link">
         
   
   
@@ -526,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
+      <a href="../../express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
         
   
   
@@ -549,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
+      <a href="../../express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
         
   
   
@@ -677,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Overview/" class="md-nav__link">
+      <a href="../../../migration/openai/Overview/" class="md-nav__link">
         
   
   
@@ -700,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Authenticate/" class="md-nav__link">
+      <a href="../../../migration/openai/Authenticate/" class="md-nav__link">
         
   
   
@@ -723,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Examples/" class="md-nav__link">
+      <a href="../../../migration/openai/Examples/" class="md-nav__link">
         
   
   
@@ -754,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
+      <a href="../../../migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
         
   
   
@@ -826,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gemini/migrate_to_gemini2/" class="md-nav__link">
+      <a href="../../../gemini/migrate_to_gemini2/" class="md-nav__link">
         
   
   
@@ -869,6 +941,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 What is a prompt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin-choose-an-access-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Before you begin: Choose an access option
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-gemini-with-a-text-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Test Gemini with a text prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -886,7 +1002,89 @@
   
 
 
-<h1 id="welcome-to-google-cloud-documentation">Welcome to Google Cloud Documentation<a class="headerlink" href="#welcome-to-google-cloud-documentation" title="Permanent link">&para;</a></h1>
+<h1 id="send-a-text-prompt-to-gemini-using-vertex-ai-studio">Send a text prompt to Gemini using Vertex AI Studio<a class="headerlink" href="#send-a-text-prompt-to-gemini-using-vertex-ai-studio" title="Permanent link">&para;</a></h1>
+<p>In this quickstart, you use Vertex AI Studio to send a prompt to the Gemini API without needing to register for a Google Cloud account. Vertex AI Studio provides an interface where you can design, test, and manage prompts for Google's <a href="/vertex-ai/generative-ai/docs/overview">Gemini</a> large language model (LLM).</p>
+<p>In this quickstart, you will:</p>
+<ul>
+<li>Send a freeform text prompt to the Gemini API.</li>
+<li>View the code used to generate the response.</li>
+</ul>
+<h2 id="what-is-a-prompt">📚 What is a prompt?<a class="headerlink" href="#what-is-a-prompt" title="Permanent link">&para;</a></h2>
+<p>A prompt is a natural language request that you send to a large language model to elicit a response. A good prompt can contain questions, instructions, contextual information, <a href="/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design#few-shot-examples">few-shot examples</a>, and partial input for the model to complete.</p>
+<p>After the model receives a prompt, it can generate various types of output depending on the model used, including text, code, images, and more.</p>
+<h2 id="before-you-begin-choose-an-access-option">⚙️ Before you begin: Choose an access option<a class="headerlink" href="#before-you-begin-choose-an-access-option" title="Permanent link">&para;</a></h2>
+<p>You can try Vertex AI Studio with or without a Google Cloud account. Using a free trial or an existing account provides access to more features. Choose the option that best suits your needs.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="without-a-google-cloud-account" name="__tabbed_1" type="radio" /><input id="with-a-google-cloud-free-trial" name="__tabbed_1" type="radio" /><input id="with-an-existing-google-cloud-account" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="without-a-google-cloud-account">Without a Google Cloud account</label><label for="with-a-google-cloud-free-trial">With a Google Cloud free trial</label><label for="with-an-existing-google-cloud-account">With an existing Google Cloud account</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This option is the quickest way to try the Gemini API without any setup or billing information.</p>
+<ul>
+<li><strong>Sign-in required</strong>: No, but you must accept the Terms of Service.</li>
+<li><strong>Queries per minute (QPM)</strong>: 2 QPM for all multimodal models.</li>
+<li><strong>Features</strong>: Access to the prompt designer for freeform text prompts.</li>
+<li><strong>Limitations</strong>: You cannot save prompts, view prompt history, use advanced parameters, or access the API directly.</li>
+<li><strong>Get started</strong>: <a href="https://console.cloud.google.com/vertex-ai/generative/multimodal/create/text">Go to Vertex AI Studio</a></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>This option is ideal for exploring more features of Vertex AI with free credits.</p>
+<ul>
+<li><strong>Sign-in required</strong>: Yes.</li>
+<li><strong>Credits offered</strong>: Up to $300 for 90 days.</li>
+<li><strong>Queries per minute (QPM)</strong>: <a href="/vertex-ai/generative-ai/docs/quotas">See quota limits</a>.</li>
+<li><strong>Features</strong>: Access to the prompt gallery, prompt designer, prompt history, and API usage.</li>
+<li><strong>Limitations</strong>: Advanced parameters and model tuning are not available.</li>
+<li><strong>Get started</strong>: <a href="https://console.cloud.google.com/freetrial?redirectPath=/vertex-ai/generative">Sign up for a free trial</a></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>This option provides full access to all Vertex AI features for users with an active Google Cloud project and billing enabled.</p>
+<ul>
+<li><strong>Sign-in required</strong>: Yes.</li>
+<li><strong>Billing required</strong>: Yes.</li>
+<li><strong>Queries per minute (QPM)</strong>: <a href="/vertex-ai/generative-ai/docs/quotas">See quota limits</a>.</li>
+<li><strong>Features</strong>: Full access to all features, including the prompt gallery, prompt designer, prompt history, advanced parameters, model tuning, and API usage.</li>
+<li><strong>Get started</strong>: <a href="https://console.cloud.google.com/vertex-ai/generative">Try Vertex AI Studio in your console</a></li>
+</ul>
+</div>
+</div>
+</div>
+<p>This quickstart follows the instructions for accessing Vertex AI Studio without an account.</p>
+<h2 id="test-gemini-with-a-text-prompt">⚙️ Test Gemini with a text prompt<a class="headerlink" href="#test-gemini-with-a-text-prompt" title="Permanent link">&para;</a></h2>
+<p>Vertex AI Studio lets you test text and multimodal prompts using a variety of Gemini models. The following steps show you how to ask Gemini for flower shop name suggestions.</p>
+<pre class="mermaid"><code>flowchart TD
+    A[Start] --&gt; B[Open Vertex AI Studio];
+    B --&gt; C[Enter prompt text in the prompt box];
+    C --&gt; D[Click Submit];
+    D --&gt; E[View the generated response];
+    E --&gt; F{Want to see the code?};
+    F -- Yes --&gt; G[Click Get Code];
+    F -- No --&gt; H[End];
+    G --&gt; H[End];</code></pre>
+<details>
+<summary>Step 1: Open Vertex AI Studio</summary>
+<p>Click the following link to open the prompt designer in Vertex AI Studio.</p>
+<p><a href="https://console.cloud.google.com/vertex-ai/studio/multimodal">Open Vertex AI Studio</a></p>
+<p>If prompted, accept the Vertex AI Studio Terms of Service.</p>
+</details>
+<details>
+<summary>Step 2: Send the prompt</summary>
+<p>In the prompt box, enter the following text:</p>
+<p><code>What are some possible names for a flower shop that sells bouquets of dried flowers?</code></p>
+<p>Then, click <strong>Submit</strong>.</p>
+</details>
+<details>
+<summary>Step 3: View the response and code</summary>
+<p>The model's response appears in the <strong>Response</strong> box.</p>
+<p>To view the API code used to generate this response, click code<strong>Get code</strong>. In the <strong>Get code</strong> panel, you can select your preferred programming language to view the corresponding code snippet.</p>
+<p><strong>Note:</strong> Opening the sample Python code in a Colab Enterprise notebook is not available when using Vertex AI Studio without a Google Cloud account.</p>
+</details>
+<h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<ul>
+<li>See an <a href="/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design">introduction to prompt design</a>.</li>
+<li>Learn about <a href="/vertex-ai/generative-ai/docs/text/text-prompts">designing text prompts</a> and <a href="/vertex-ai/generative-ai/docs/chat/chat-prompts">text chat prompts</a>.</li>
+<li>Learn about <a href="/vertex-ai/generative-ai/docs/multimodal/send-chat-prompts-gemini#streaming-and-non-streaming-responses">streaming responses from a model</a>.</li>
+</ul>
 
 
 
@@ -923,15 +1121,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="start/quickstarts/try-gen-ai/" class="md-footer__link md-footer__link--next" aria-label="Next: Send a text prompt to the Gemini API without an account">
+          <a href="../../../image/quickstart-image-generate-console/" class="md-footer__link md-footer__link--next" aria-label="Next: Generate an image and verify its watermark using Imagen">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Send a text prompt to the Gemini API without an account
+                Generate an image and verify its watermark using Imagen
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -973,10 +1187,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

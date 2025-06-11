@@ -56,3 +56,28 @@
   max-width: none !important;
   overflow: visible !important;
 }
+
+.md-button {
+  display: inline-block;
+  padding: 1px 2px; /* Ultra minimal padding */
+  background-color: #4285f4; /* Light blue color */
+  color: white !important; /* White text */
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px; /* Standard rounded corners (e.g., 4px) */
+  font-weight: 400; /* Lighter text */
+  font-size: 0.65rem; /* Extra small font */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.md-button:hover {
+  background-color: #3367d6; /* Darker blue on hover */
+}
+
+.mermaid {
+  display: block;
+  margin: 1em auto;
+  text-align: center;
+}
+
+
+

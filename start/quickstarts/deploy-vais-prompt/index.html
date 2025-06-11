@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/openai/Overview/">
+        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/quickstarts/deploy-vais-prompt/">
       
       
-        <link rel="prev" href="../../../start/express-mode/vertex-ai-express-mode-api-quickstart/">
+        <link rel="prev" href="../quickstart/">
       
       
-        <link rel="next" href="../Authenticate/">
+        <link rel="next" href="../../express-mode/overview/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Overview - Google Cloud Vertex AI Documentations</title>
+        <title>Deploy your Vertex AI Studio prompt as a web application - Google Cloud Vertex AI Documentations</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-openai-libraries-with-vertex-ai" class="md-skip">
+        <a href="#quickstart-deploy-your-vertex-ai-studio-prompt-as-a-web-application" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Deploy your Vertex AI Studio prompt as a web application
             
           </span>
         </div>
@@ -279,8 +279,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -300,11 +302,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -320,7 +322,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -334,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../start/quickstarts/try-gen-ai/" class="md-nav__link">
+      <a href="../try-gen-ai/" class="md-nav__link">
         
   
   
@@ -380,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../start/quickstarts/quickstart-multimodal/" class="md-nav__link">
+      <a href="../quickstart-multimodal/" class="md-nav__link">
         
   
   
@@ -403,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../start/quickstarts/quickstart/" class="md-nav__link">
+      <a href="../quickstart/" class="md-nav__link">
         
   
   
@@ -423,10 +425,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../start/quickstarts/deploy-vais-prompt/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Deploy your Vertex AI Studio prompt as a web application
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -437,6 +461,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Before you start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-permissions-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Additional permissions required
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-and-test-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Deploy and test your prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manage-your-deployed-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Manage your deployed application
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Troubleshooting common issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -495,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../start/express-mode/overview/" class="md-nav__link">
+      <a href="../../express-mode/overview/" class="md-nav__link">
         
   
   
@@ -518,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../start/express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
+      <a href="../../express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
         
   
   
@@ -541,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../start/express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
+      <a href="../../express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
         
   
   
@@ -576,10 +674,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -591,11 +687,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -611,7 +707,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Migrate
@@ -622,10 +718,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -639,11 +733,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -659,7 +753,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             Call Vertex AI models uing OpenAI libraries
@@ -670,32 +764,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../migration/openai/Overview/" class="md-nav__link">
         
   
   
@@ -706,119 +778,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#choosing-an-sdk" class="md-nav__link">
-    <span class="md-ellipsis">
-      📚 Choosing an SDK
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      📚 Supported models
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 Supported models">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gemini-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gemini models
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#self-deployed-models-from-model-garden" class="md-nav__link">
-    <span class="md-ellipsis">
-      Self-deployed models from Model Garden
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔗 Supported parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔗 Supported parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#standard-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Standard parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multimodal-input-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multimodal input parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gemini-specific-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gemini-specific parameters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔗 What's next
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -831,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Authenticate/" class="md-nav__link">
+      <a href="../../../migration/openai/Authenticate/" class="md-nav__link">
         
   
   
@@ -854,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Examples/" class="md-nav__link">
+      <a href="../../../migration/openai/Examples/" class="md-nav__link">
         
   
   
@@ -885,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
+      <a href="../../../migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
         
   
   
@@ -1007,86 +966,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-an-sdk" class="md-nav__link">
+  <a href="#before-you-start" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Choosing an SDK
+      📚 Before you start
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-models" class="md-nav__link">
+  <a href="#additional-permissions-required" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Supported models
+      📚 Additional permissions required
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="📚 Supported models">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gemini-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gemini models
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#self-deployed-models-from-model-garden" class="md-nav__link">
-    <span class="md-ellipsis">
-      Self-deployed models from Model Garden
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-parameters" class="md-nav__link">
+  <a href="#deploy-and-test-your-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      🔗 Supported parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔗 Supported parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#standard-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Standard parameters
+      ⚙️ Deploy and test your prompt
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#multimodal-input-parameters" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#manage-your-deployed-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Multimodal input parameters
+      ⚙️ Manage your deployed application
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#gemini-specific-parameters" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      Gemini-specific parameters
+      📚 Troubleshooting common issues
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1118,241 +1038,245 @@
   
 
 
-<h1 id="using-openai-libraries-with-vertex-ai">Using OpenAI libraries with Vertex AI<a class="headerlink" href="#using-openai-libraries-with-vertex-ai" title="Permanent link">&para;</a></h1>
-<p>The Chat Completions API is an OpenAI-compatible endpoint that makes it easier to use Gemini models on Vertex AI with existing tools that leverage OpenAI libraries for Python and REST.</p>
-<p>To see an example of using the Chat Completions API, you can run the "Call Gemini with the OpenAI Library" Jupyter notebook in your preferred environment:</p>
-<p><a href="https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/gemini/chat-completions/intro_chat_completions_api.ipynb">Open in Colab</a> | <a href="https://console.cloud.google.com/vertex-ai/colab/import/https%3A%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fgenerative-ai%2Fmain%2Fgemini%2Fchat-completions%2Fintro_chat_completions_api.ipynb">Open in Colab Enterprise</a> | <a href="https://console.cloud.google.com/vertex-ai/workbench/deploy-notebook?download_url=https%3A%2F%2Fraw.githubusercontent.com%2FGoogleCloudPlatform%2Fgenerative-ai%2Fmain%2Fgemini%2Fchat-completions%2Fintro_chat_completions_api.ipynb">Open in Vertex AI Workbench user-managed notebooks</a> | <a href="https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/chat-completions/intro_chat_completions_api.ipynb">View on GitHub</a></p>
-<h2 id="choosing-an-sdk">📚 Choosing an SDK<a class="headerlink" href="#choosing-an-sdk" title="Permanent link">&para;</a></h2>
-<p>If you're already using the OpenAI libraries, this API offers a low-cost way to switch between OpenAI models and Vertex AI-hosted models to compare output, cost, and scalability without changing your existing code. If you are starting a new project, we recommend using the native Google Gen AI SDK.</p>
+<h1 id="quickstart-deploy-your-vertex-ai-studio-prompt-as-a-web-application">Quickstart: Deploy your Vertex AI Studio prompt as a web application<a class="headerlink" href="#quickstart-deploy-your-vertex-ai-studio-prompt-as-a-web-application" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Preview</strong></p>
+<p>This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the <a href="/terms/service-terms#1">Service Specific Terms</a>. Pre-GA features are available "as is" and might have limited support. For more information, see the <a href="/products#product-launch-stages">launch stage descriptions</a>.</p>
+</blockquote>
+<p>In Vertex AI Studio, you can design and iterate on your prompts and compare results from different configurations and models. Once you finish engineering your prompt, you can deploy it as a web application to share with your collaborators or target users. The web application is hosted on Cloud Run and is available outside the Google Cloud console.</p>
+<p>In this quickstart, you will:</p>
+<ul>
+<li>Create a prompt with prompt variables.</li>
+<li>Deploy your prompt as a web application.</li>
+<li>Monitor deployment progress and test the deployed application.</li>
+<li>Update and re-deploy your prompt.</li>
+<li>Test prompt submission with multimodal support.</li>
+</ul>
+<h2 id="before-you-start">📚 Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
+<p>If you have never used Vertex AI Studio before, you can follow the <a href="/vertex-ai/generative-ai/docs/start/quickstarts/quickstart">Vertex AI Studio quickstart guide</a> or take the <a href="https://www.cloudskillsboost.google/course_templates/552">Google Cloud Skills Boost course</a> to learn the basics.</p>
+<p>Before proceeding with this guide, ensure you have the following:</p>
+<ol>
+<li>A Google Cloud project with billing enabled.</li>
+<li>The Vertex AI API enabled.</li>
+</ol>
+<h2 id="additional-permissions-required">📚 Additional permissions required<a class="headerlink" href="#additional-permissions-required" title="Permanent link">&para;</a></h2>
+<p>In addition to the existing permissions for using Vertex AI Studio, you need the following permissions to deploy your prompt as a web application.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">SDK</th>
-<th style="text-align: left;">Best for</th>
-<th style="text-align: left;">Pros</th>
-<th style="text-align: left;">Cons</th>
+<th>Action</th>
+<th>Required permissions</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>OpenAI-compatible endpoint</strong></td>
-<td style="text-align: left;">Migrating existing applications that use the OpenAI Python library or REST API.</td>
-<td style="text-align: left;">- Minimal code changes required.<br>- Enables easy comparison between OpenAI and Gemini models.</td>
-<td style="text-align: left;">- Doesn't support all Gemini-native features.<br>- May have slight differences in parameter handling.</td>
+<td><strong>Enable additional APIs</strong></td>
+<td><code>serviceusage.services.enable</code></td>
+<td>Enable the following APIs:<ul><li>Cloud Run Admin API (<code>run.googleapis.com</code>)</li><li>Artifact Registry API (<code>artifactregistry.googleapis.com</code>)</li><li>Cloud Build API (<code>cloudbuild.googleapis.com</code>)</li><li>Cloud Logging API (<code>logging.googleapis.com</code>)</li></ul></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Google Gen AI SDK</strong></td>
-<td style="text-align: left;">New projects or applications that require full access to Gemini features.</td>
-<td style="text-align: left;">- Full support for all Gemini features.<br>- Optimized for Google Cloud infrastructure.<br>- Idiomatic and actively developed.</td>
-<td style="text-align: left;">- Requires writing new code or refactoring existing OpenAI-based code.</td>
+<td><strong>Grant permissions to service accounts</strong></td>
+<td><code>resourcemanager.projects.setIamPolicy</code></td>
+<td>Grant the <a href="/compute/docs/access/service-accounts#default_service_account">Compute Engine default service account</a> the following roles:<ul><li><a href="/vertex-ai/docs/general/access-control#aiplatform.serviceAgent">Vertex AI Service Agent</a> (<code>roles/aiplatform.serviceAgent</code>)</li><li><a href="/iam/docs/understanding-roles#cloudbuild.builds.builder">Cloud Build Service Account</a> (<code>roles/cloudbuild.builds.builder</code>)</li></ul></td>
+</tr>
+<tr>
+<td><strong>Deploy specific permissions</strong></td>
+<td><code>storage.buckets.create</code><br><code>run.services.create</code><br><code>artifactregistry.repositories.create</code><br><code>run.services.setIamPolicy</code></td>
+<td>During deployment, source code is uploaded to Cloud Storage and then deployed to a new Cloud Run service. The <code>artifactregistry.repositories.create</code> permission is required to create a repository for the container image. The <code>run.services.setIamPolicy</code> permission is required to make the service publicly accessible.</td>
 </tr>
 </tbody>
 </table>
-<p>For more information on the native SDK, see <a href="/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal">Use the Google Gen AI SDK</a>.</p>
-<h2 id="supported-models">📚 Supported models<a class="headerlink" href="#supported-models" title="Permanent link">&para;</a></h2>
-<p>The Chat Completions API supports both Gemini models and select self-deployed models from Model Garden.</p>
-<h3 id="gemini-models">Gemini models<a class="headerlink" href="#gemini-models" title="Permanent link">&para;</a></h3>
-<p>The following models provide support for the Chat Completions API:</p>
+<p>If you are the owner of your project, you can follow the guides in Vertex AI Studio without taking additional actions. If you are not the project owner, ask your project administrator to perform the first two actions and then grant you the <strong>Editor</strong> (<code>roles/editor</code>) and <strong>Cloud Run Admin</strong> (<code>roles/run.admin</code>) roles.</p>
+<h2 id="deploy-and-test-your-prompt">⚙️ Deploy and test your prompt<a class="headerlink" href="#deploy-and-test-your-prompt" title="Permanent link">&para;</a></h2>
+<details>
+<summary>Step 1: Create a prompt with prompt variables</summary>
+<ol>
+<li>Navigate to the <a href="https://console.cloud.google.com/vertex-ai/studio/multimodal">create prompt page</a> in Vertex AI Studio.</li>
+<li>Click data_object <strong>Add variable</strong> in the prompt input box.</li>
+<li>
+<p>In the <strong>Manage prompt variables</strong> dialog, enter a variable name, provide a default value, and click <strong>Apply</strong>.</p>
+<p><img alt="Manage prompt variables dialog" src="../images/02-prompt-variable-dialog.png" /></p>
+</li>
+<li>
+<p>In the prompt input box, compose a prompt using the variable you created. You can also adjust other parameters, such as enabling <strong>Grounding with Google Search</strong> and adding system instructions like "Always get current weather from the web".</p>
+</li>
+</ol>
+</details>
+<details>
+<summary>Step 2: Deploy your prompt as a web application</summary>
+<ol>
+<li>
+<p>Click the <strong>Build with code</strong> button in the top right corner, then select <strong>Deploy as app</strong>.</p>
+<p><img alt="Click build with code button and click deploy as app" src="../images/04-click-build-with-code-button.png" /></p>
+</li>
+<li>
+<p><strong>Save the prompt</strong>: A prompt must be saved before it can be deployed. If prompted, save your prompt. The deployment dialog will open automatically after the prompt is saved.</p>
+<p><img alt="Save prompt first before deployment" src="../images/05-save-prompt.png" /></p>
+<p><strong>Note:</strong> Saving your prompt in a region for the first time can take 2-3 minutes. A warning box will appear after 1 minute. This is an expected one-time operation. Subsequent saves in the same project and region will take only a few seconds.</p>
+</li>
+<li>
+<p><strong>Enable APIs and grant permissions</strong>: If this is your first deployment, you will be prompted to enable the required APIs. Click <strong>Enable required APIs</strong>.</p>
+</li>
+<li>
+<p>After the APIs are enabled, the <strong>Create a web app</strong> dialog appears. Since access control is not supported in Public Preview, all deployed applications will have public access. <strong>Do not include sensitive or personally identifiable information (PII) in your prompt.</strong></p>
+</li>
+<li>
+<p>Check the <strong>I understand this app will be deployed publicly</strong> checkbox and click <strong>Create app</strong>.</p>
+</li>
+<li>
+<p>If this is your first deployment, another dialog will ask you to grant the required roles to the service account. Click <strong>Grant all</strong> to proceed.</p>
+<p><strong>Note:</strong> If you don't have the necessary permissions, ask your project administrator for assistance. See the <a href="#additional-permissions-required">additional permissions required</a> section for details.</p>
+</li>
+<li>
+<p><strong>Deployment starts</strong>: Vertex AI Studio packages the source code for the web application into a zip file, uploads it to a Cloud Storage bucket, and begins the deployment. The <strong>Manage web app</strong> dialog will appear, showing information about your deployment.</p>
+<p><img alt="Manage app dialog" src="../images/10-manage-app-dialog.png" /></p>
+</li>
+</ol>
+</details>
+<details>
+<summary>Step 3: Monitor deployment and test the application</summary>
+<p>Deployment typically takes 2-3 minutes. You can monitor the progress in the <strong>Status</strong> column of the <strong>Manage web app</strong> dialog.</p>
 <ul>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-5-pro">Gemini 2.5 Pro</a> (Preview)</li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Gemini 2.5 Flash</a> (Preview)</li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-0-flash">Gemini 2.0 Flash</a></li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-0-flash-lite">Gemini 2.0 Flash-Lite</a></li>
+<li>
+<p><strong>Monitor from the dialog</strong>: If you close the dialog, you can reopen it from the menu under the <strong>Build with code</strong> button. Once deployment is complete, the status changes to <strong>Ready</strong>, and an <strong>Open</strong> button appears.</p>
+<p><img alt="Open the app button shows up next to the app name" src="../images/12-open-app.png" /></p>
+</li>
+<li>
+<p><strong>Monitor from notifications</strong>: You can also monitor the status from the <strong>Notifications</strong> menu (bell icon). The icon will show a green circle when deployment is successful. Clicking the notification redirects you to the Cloud Run page.</p>
+<p><img alt="Monitor the status from the notification bell" src="../images/14-notification-bell.png" /></p>
+</li>
 </ul>
-<h3 id="self-deployed-models-from-model-garden">Self-deployed models from Model Garden<a class="headerlink" href="#self-deployed-models-from-model-garden" title="Permanent link">&para;</a></h3>
-<p>The <a href="https://huggingface.co/docs/text-generation-inference/en/index">Hugging Face Text Generation Interface (HF TGI)</a> and <a href="http://us-docker.pkg.dev/vertex-ai/vertex-vision-model-garden-dockers/pytorch-vllm-serve">Vertex AI Model Garden prebuilt vLLM</a> containers support the Chat Completions API. However, not every model deployed to these containers supports the API. The following are the most popular supported models by container:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="hf-tgi" name="__tabbed_1" type="radio" /><input id="vllm" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="hf-tgi">HF TGI</label><label for="vllm">vLLM</label></div>
+<p><strong>Access control and secret key</strong></p>
+<p>Your web application is deployed with <strong>Allow unauthenticated</strong> access enabled. To provide basic protection, the application requires a secret key in the URL. You can find this key in the <strong>Secret Key</strong> column of the <strong>Manage web app</strong> dialog. When you open the app from Vertex AI Studio, the key is automatically appended.</p>
+<p><strong>Open and test the application</strong></p>
+<ol>
+<li>
+<p>Click <strong>Open</strong> in the <strong>Manage web app</strong> dialog. The application will open in a new tab with the secret key appended to the URL (e.g., <code>?key=SECRET_KEY</code>).</p>
+<p><img alt="Open the web application from the manage app dialog. Secret key is appended to the URL." src="../images/13-web-app.png" /></p>
+</li>
+<li>
+<p>Enter a value for the prompt variable and click <strong>Submit</strong>. The results will appear on the right.</p>
+<p><img alt="Submit the prompt from the web app" src="../images/13-2-web-applications-results.png" /></p>
+</li>
+</ol>
+<p><strong>Note:</strong> Cloud Run is serverless, so the application container may shut down during inactivity. If the app is slow to load or a submission fails, refreshing the page usually resolves the issue.</p>
+</details>
+<details>
+<summary>Step 4: Update and re-deploy your prompt</summary>
+<ol>
+<li>Edit your prompt in Vertex AI Studio. For example, you can turn the prompt into a conversation.</li>
+<li>Click the <strong>Build with code</strong> button and select <strong>Manage app</strong> to open the <strong>Manage web app</strong> dialog.</li>
+<li>Click <strong>Update app</strong> to re-deploy your application with the updated prompt.</li>
+<li>A confirmation dialog will appear, warning you that re-deploying will overwrite any changes made directly in Cloud Run. Click <strong>Confirm</strong> to proceed.</li>
+<li>Monitor the update process in the <strong>Manage web app</strong> dialog, similar to the initial deployment.</li>
+<li>
+<p>Once the update is complete, open the web application. You will see the updated UI, such as a conversation interface.</p>
+<p><img alt="The updated app has a chat UI" src="../images/20-updated-app.png" /></p>
+</li>
+</ol>
+</details>
+<details>
+<summary>Step 5: Test multimodal content</summary>
+<p>You can insert inputs like images, videos, audio, and documents into the conversation UI. The supported input types depend on the model selected for the prompt. For details, see the <a href="https://ai.google.dev/gemini-api/docs/models#model-variations">documentation for multimodal support for each model</a>.</p>
+<ol>
+<li>
+<p>To insert a file, click the clip icon button in the conversation input box.</p>
+<p><img alt="Insert multimodal inputs" src="../images/21-multimodal.png" /></p>
+</li>
+<li>
+<p>After providing the input, you can interact with the model about it.</p>
+<p><img alt="Interact with the model using the multimodal inputs" src="../images/22-multimodal-image.png" /></p>
+</li>
+</ol>
+</details>
+<h2 id="manage-your-deployed-application">⚙️ Manage your deployed application<a class="headerlink" href="#manage-your-deployed-application" title="Permanent link">&para;</a></h2>
+<p>Once you are familiar with the deployment process, you can perform the following advanced actions.</p>
+<details>
+<summary>Edit source code in Cloud Run</summary>
+<p>If you want to customize the web application beyond the prompt, you can edit its source code directly in Cloud Run.</p>
+<ol>
+<li>
+<p>Open the <strong>Manage web app</strong> dialog, click the more_vert more icon at the end of the row, and select <strong>Source code</strong>.</p>
+<p><img alt="open source code editor from the manage web app dialog" src="../images/adv-edit-01-open-source-code.png" /></p>
+</li>
+<li>
+<p>In the Cloud Run source code page, click <strong>Edit source</strong>.</p>
+</li>
+<li>After making your changes, click <strong>Save and redeploy</strong>.</li>
+</ol>
+<p><strong>Note:</strong> Re-deploying from Vertex AI Studio will overwrite any changes made in Cloud Run. To save a version of your custom code, click <strong>Download ZIP</strong> before re-deploying from Vertex AI Studio.</p>
+</details>
+<details>
+<summary>Manage public access</summary>
+<p>You can control whether your web application is publicly accessible from the Cloud Run security settings.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="turn-off-public-access" name="__tabbed_1" type="radio" /><input id="turn-on-public-access-again" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="turn-off-public-access">Turn off public access</label><label for="turn-on-public-access-again">Turn on public access again</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<ul>
-<li><a href="https://huggingface.co/google/gemma-2-9b-it"><code>gemma-2-9b-it</code></a></li>
-<li><a href="https://huggingface.co/google/gemma-2-27b-it"><code>gemma-2-27b-it</code></a></li>
-<li><a href="https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct"><code>Meta-Llama-3.1-8B-Instruct</code></a></li>
-<li><a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct"><code>Meta-Llama-3-8B-Instruct</code></a></li>
-<li><a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3"><code>Mistral-7B-Instruct-v0.3</code></a></li>
-<li><a href="https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"><code>Mistral-Nemo-Instruct-2407</code></a></li>
-</ul>
+<ol>
+<li>In the <strong>Manage Web App</strong> dialog, click the edit pencil icon in the <strong>Access Control</strong> column. This opens the Cloud Run security page.</li>
+<li>Select <strong>Require authentication</strong> and click <strong>Save</strong>.</li>
+<li>Your web application will no longer be publicly accessible and will show an <strong>Error: Forbidden</strong> page if accessed via its URL.</li>
+</ol>
 </div>
 <div class="tabbed-block">
-<ul>
-<li><a href="https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/335">Gemma</a></li>
-<li><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama2">Llama 2</a></li>
-<li><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3">Llama 3</a></li>
-<li><a href="https://console.cloud.google.com/vertex-ai/publishers/mistral-ai/model-garden/mistral-7b">Mistral-7B</a></li>
-<li><a href="https://console.cloud.google.com/vertex-ai/publishers/mistralai/model-garden/mistral-nemo">Mistral Nemo</a></li>
-</ul>
+<ol>
+<li>Navigate to the Cloud Run security page for your service.</li>
+<li>Select <strong>Allow unauthenticated invocations</strong> and click <strong>Save</strong>.</li>
+</ol>
+<p>For more details, see <a href="/run/docs/authenticating/overview">Authentication in Cloud Run</a>.</p>
 </div>
 </div>
 </div>
-<h2 id="supported-parameters">🔗 Supported parameters<a class="headerlink" href="#supported-parameters" title="Permanent link">&para;</a></h2>
-<p>For Google models, the Chat Completions API supports the following OpenAI parameters. For a description of each parameter, see OpenAI's documentation on <a href="https://platform.openai.com/docs/api-reference/chat/create">Creating chat completions</a>. Parameter support for third-party models varies by model. Consult the model's documentation to see which parameters are supported.</p>
-<p>If you pass any unsupported parameter, it is ignored.</p>
-<h3 id="standard-parameters">Standard parameters<a class="headerlink" href="#standard-parameters" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>messages</code></td>
-<td style="text-align: left;"><ul><li><code>System message</code></li><li><code>User message</code>: The <code>text</code> and <code>image_url</code> types are supported. The <code>image_url</code> type supports images stored as a Cloud Storage URI or a base64 encoding in the form <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>. To learn how to create a Cloud Storage bucket and upload a file to it, see <a href="/storage/docs/discover-object-storage-console">Discover object storage</a>. The <code>detail</code> option is not supported.</li><li><code>Assistant message</code></li><li><code>Tool message</code></li><li><code>Function message</code>: This field is deprecated, but supported for backwards compatibility.</li></ul></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>model</code></td>
-<td style="text-align: left;">The model to use for the completion.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>max_completion_tokens</code></td>
-<td style="text-align: left;">Alias for <code>max_tokens</code>.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>max_tokens</code></td>
-<td style="text-align: left;">The maximum number of tokens to generate.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>n</code></td>
-<td style="text-align: left;">The number of completions to generate.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>frequency_penalty</code></td>
-<td style="text-align: left;">Penalizes new tokens based on their existing frequency in the text so far.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>presence_penalty</code></td>
-<td style="text-align: left;">Penalizes new tokens based on whether they appear in the text so far.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>reasoning_effort</code></td>
-<td style="text-align: left;">Configures how much time and how many tokens are used on a response.<ul><li><code>low</code>: 1024</li><li><code>medium</code>: 8192</li><li><code>high</code>: 24576</li></ul>As no thoughts are included in the response, only one of <code>reasoning_effort</code> or <code>extra_body.google.thinking_config</code> may be specified.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>response_format</code></td>
-<td style="text-align: left;"><ul><li><code>json_object</code>: Interpreted as passing "application/json" to the Gemini API.</li><li><code>json_schema</code>: Fully recursive schemas are not supported. <code>additional_properties</code> is supported.</li><li><code>text</code>: Interpreted as passing "text/plain" to the Gemini API.</li><li>Any other MIME type is passed as is to the model, such as passing "application/json" directly.</li></ul></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>seed</code></td>
-<td style="text-align: left;">Corresponds to <code>GenerationConfig.seed</code>.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>stop</code></td>
-<td style="text-align: left;">Sequences where the API will stop generating further tokens.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>stream</code></td>
-<td style="text-align: left;">If set, partial message deltas will be sent, like in ChatGPT.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>temperature</code></td>
-<td style="text-align: left;">Controls randomness. Lowering results in less random completions.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>top_p</code></td>
-<td style="text-align: left;">Controls diversity via nucleus sampling.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>tools</code></td>
-<td style="text-align: left;"><ul><li><code>type</code></li><li><code>function</code><ul><li><code>name</code></li><li><code>description</code></li><li><code>parameters</code>: Specify parameters by using the <a href="https://spec.openapis.org/oas/v3.0.3#openapi-specification">OpenAPI specification</a>. This differs from the OpenAI parameters field, which is described as a JSON Schema object. To learn about keyword differences between OpenAPI and JSON Schema, see the <a href="https://swagger.io/docs/specification/data-models/keywords/">OpenAPI guide</a>.</li></ul></li></ul></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>tool_choice</code></td>
-<td style="text-align: left;"><ul><li><code>none</code></li><li><code>auto</code></li><li><code>required</code>: Corresponds to the mode <code>ANY</code> in the <code>FunctionCallingConfig</code>.</li><li><code>validated</code>: Corresponds to the mode <code>VALIDATED</code> in the <code>FunctionCallingConfig</code>. This is Google-specific.</li></ul></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>web_search_options</code></td>
-<td style="text-align: left;">Corresponds to the <code>GoogleSearch</code> tool. No sub-options are supported.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>function_call</code></td>
-<td style="text-align: left;">This field is deprecated, but supported for backwards compatibility.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>functions</code></td>
-<td style="text-align: left;">This field is deprecated, but supported for backwards compatibility.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="multimodal-input-parameters">Multimodal input parameters<a class="headerlink" href="#multimodal-input-parameters" title="Permanent link">&para;</a></h3>
-<p>The Chat Completions API supports select multimodal inputs. In general, the <code>data</code> parameter can be a URI or a combination of MIME type and base64 encoded bytes in the form <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>.</p>
-<p>For a full list of MIME types, see <a href="/vertex-ai/generative-ai/docs/model-reference/inference#blob"><code>GenerateContent</code></a>. For more information on OpenAI's base64 encoding, see <a href="https://platform.openai.com/docs/guides/images-vision#giving-a-model-images-as-input">their documentation</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>input_audio</code></td>
-<td style="text-align: left;"><ul><li><code>data</code>: Any URI or valid blob format. We support all blob types, including image, audio, and video. Anything supported by <code>GenerateContent</code> is supported (HTTP, Cloud Storage, etc.).</li><li><code>format</code>: OpenAI supports both <code>wav</code> (audio/wav) and <code>mp3</code> (audio/mp3). Using Gemini, all valid MIME types are supported.</li></ul></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>image_url</code></td>
-<td style="text-align: left;"><ul><li><code>data</code>: Like <code>input_audio</code>, any URI or valid blob format is supported. Note that <code>image_url</code> as a URL will default to the <code>image/*</code> MIME-type and <code>image_url</code> as blob data can be used as any multimodal input.</li><li><code>detail</code>: Similar to <a href="/vertex-ai/generative-ai/docs/multimodal/image-understanding#supported_models">media resolution</a>, this determines the maximum tokens per image for the request. Note that while OpenAI's field is per-image, Gemini enforces the same detail across the request, and passing multiple detail types in one request will throw an error.</li></ul></td>
-</tr>
-</tbody>
-</table>
-<p>For usage, see our <a href="/vertex-ai/generative-ai/docs/migrate/openai/examples#multimodal-input-examples">multimodal input examples</a>.</p>
-<h3 id="gemini-specific-parameters">Gemini-specific parameters<a class="headerlink" href="#gemini-specific-parameters" title="Permanent link">&para;</a></h3>
-<p>Several features supported by Gemini are not available in OpenAI models. These features can still be passed in as parameters, but must be contained within an <code>extra_content</code> or <code>extra_body</code> or they will be ignored.</p>
-<p><strong><code>extra_body</code> features</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>safety_settings</code></td>
-<td style="text-align: left;">This corresponds to Gemini's <code>[SafetySetting](https://cloud.google.com/vertex-ai/generative-ai/docs/reference/rest/v1/SafetySetting)</code>.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>cached_content</code></td>
-<td style="text-align: left;">This corresponds to Gemini's <code>[GenerateContentRequest](https://cloud.google.com/vertex-ai/generative-ai/docs/reference/rest/v1/projects.locations.publishers.models/generateContent).cached_content</code>.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>thinking_config</code></td>
-<td style="text-align: left;">This corresponds to Gemini's <code>[GenerationConfig.ThinkingConfig](https://cloud.google.com/vertex-ai/generative-ai/docs/reference/rest/v1/GenerationConfig#ThinkingConfig)</code>.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>thought_tag_marker</code></td>
-<td style="text-align: left;">Used to separate a model's thoughts from its responses for models with Thinking available. If not specified, no tags will be returned around the model's thoughts. If present, subsequent queries will strip the thought tags and mark the thoughts appropriately for context. This helps preserve the appropriate context for subsequent queries.</td>
-</tr>
-</tbody>
-</table>
-<p><strong><code>extra_part</code> features</strong></p>
-<p><code>extra_part</code> lets you specify additional settings at a per-<code>Part</code> level.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>extra_content</code></td>
-<td style="text-align: left;">A field for adding Gemini-specific content that shouldn't be ignored.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>thought</code></td>
-<td style="text-align: left;">This will explicitly mark if a field is a thought (and take precedence over <code>thought_tag_marker</code>). This should be used to specify whether a tool call is part of a thought or not.</td>
-</tr>
-</tbody>
-</table>
+</details>
+<details>
+<summary>Set up local access for development</summary>
+<p>If you have turned off public access, you can access the web application by setting up a local proxy using <code>gcloud</code> commands.</p>
+<ol>
+<li>Open Cloud Shell by clicking the terminal icon in the top right corner of the Google Cloud console and authorize it if prompted.</li>
+<li>
+<p>In the <strong>Manage web app</strong> dialog, click the more_vert more icon and select <strong>Set up local access via Cloud Shell</strong>.</p>
+<p><img alt="Get set up local access command from the manage web app dialog" src="/static/vertex-ai/generative-ai/docs/start/quickstarts/images/deploy/adv-05-cloud-shell-command.png" /></p>
+</li>
+<li>
+<p>A command will be pasted into your Cloud Shell. Press <strong>Enter</strong> to run it.</p>
+</li>
+<li>
+<p>Once the command is running, click the preview link provided in the Cloud Shell output to access your application locally. This link only works while the <code>gcloud</code> command is active.</p>
+<p><img alt="Local access link in Cloud Shell" src="../images/adv-06-local-access.png" /></p>
+</li>
+</ol>
+</details>
+<h2 id="troubleshooting-common-issues">📚 Troubleshooting common issues<a class="headerlink" href="#troubleshooting-common-issues" title="Permanent link">&para;</a></h2>
+<details>
+<summary>Authentication error: No secret key</summary>
+<p><strong>Error</strong>: You see a message indicating that the secret key is missing.</p>
+<p><img alt="error for no secret key" src="../images/error-01-no-secret-key.png" /></p>
+<p><strong>Solution</strong>: This error occurs when the <code>?key=SECRET_KEY</code> parameter is missing from the URL. Open the web application from the <strong>Manage web app</strong> dialog in Vertex AI Studio, which automatically appends the correct key.</p>
+</details>
+<details>
+<summary>Authentication error: Invalid secret key</summary>
+<p><strong>Error</strong>: You see a message indicating that the secret key is invalid.</p>
+<p><img alt="error for invalid key" src="../images/error-02-invalid-key.png" /></p>
+<p><strong>Solution</strong>: The secret key is unique to each prompt. Ensure you are using the correct key for the specific application. Open the application again from the <strong>Manage web app</strong> dialog to use the correct URL.</p>
+</details>
+<details>
+<summary>400 Invalid argument: empty input</summary>
+<p><strong>Error</strong>: A <code>400</code> error message appears when you submit a prompt with variables but the chat input is empty.</p>
+<p><img alt="error for empty content" src="../images/error-03-invalid-input.png" /></p>
+<p><strong>Solution</strong>: Type any non-empty text into the chat input box and resubmit.</p>
+</details>
+<details>
+<summary>400 Invalid argument: mimeType is not supported</summary>
+<p><strong>Error</strong>: A <code>400</code> error occurs if you upload a file type that the model does not support.</p>
+<p><img alt="error for unsupported mime types" src="../images/error-03-invalid-input.png" /></p>
+<p><strong>Solution</strong>: This is expected behavior. Use a file type that is supported by the selected model. See the <a href="https://ai.google.dev/gemini-api/docs/models#model-variations">documentation for multimodal support for each model</a> for a list of supported types.</p>
+</details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Learn more about <a href="/vertex-ai/generative-ai/docs/migrate/openai/auth-and-credentials">authentication and credentialing</a> with the OpenAI-compatible syntax.</li>
-<li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/migrate/openai/examples">Chat Completions API</a> with the OpenAI-compatible syntax.</li>
-<li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/model-reference/inference#examples">Inference API</a> with the OpenAI-compatible syntax.</li>
-<li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/model-reference/function-calling#examples">Function Calling API</a> with OpenAI-compatible syntax.</li>
-<li>Learn more about the <a href="/vertex-ai/generative-ai/docs/overview">Gemini API</a>.</li>
-<li>Learn more about <a href="/vertex-ai/generative-ai/docs/migrate/migrate-from-azure-to-gemini">migrating from Azure OpenAI to the Gemini API</a>.</li>
+<li>Explore more features in the <a href="/vertex-ai/generative-ai/docs/overview">Vertex AI Studio documentation</a> or the <a href="https://www.cloudskillsboost.google/course_templates/552">Introduction to Vertex AI Studio Google Cloud Skills Boost</a> course.</li>
+<li>Learn about <a href="/run/pricing">pricing for Cloud Run</a>.</li>
+<li>Understand <a href="/run/docs/authenticating/overview">authentication in Cloud Run</a>.</li>
 </ul>
 
 
@@ -1391,7 +1315,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../start/express-mode/vertex-ai-express-mode-api-quickstart/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API tutorial">
+          <a href="../quickstart/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Send text prompts to Gemini using Vertex AI Studio">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1401,20 +1325,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                API tutorial
+                Send text prompts to Gemini using Vertex AI Studio
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Authenticate/" class="md-footer__link md-footer__link--next" aria-label="Next: Authenticate">
+          <a href="../../express-mode/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Authenticate
+                Overview
               </div>
             </div>
             <div class="md-footer__button md-icon">

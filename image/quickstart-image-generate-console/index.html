@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/">
+        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/image/quickstart-image-generate-console/">
       
       
+        <link rel="prev" href="../../start/quickstarts/try-gen-ai/">
       
-        <link rel="next" href="start/quickstarts/try-gen-ai/">
+      
+        <link rel="next" href="../../start/quickstarts/quickstart-multimodal/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Google Cloud Vertex AI Documentations</title>
+        <title>Generate an image and verify its watermark using Imagen - Google Cloud Vertex AI Documentations</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-google-cloud-documentation" class="md-skip">
+        <a href="#quickstart-generate-and-verify-an-images-watermark-using-imagen-text-to-image-console" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
+    <a href="../.." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Generate an image and verify its watermark using Imagen
             
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
+    <a href="../.." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -255,19 +257,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -278,7 +271,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -287,8 +279,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -308,11 +302,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -328,7 +322,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -342,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/try-gen-ai/" class="md-nav__link">
+      <a href="../../start/quickstarts/try-gen-ai/" class="md-nav__link">
         
   
   
@@ -362,10 +356,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="image/quickstart-image-generate-console/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Generate an image and verify its watermark using Imagen
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -376,6 +392,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-and-save-an-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Generate and save an image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-an-images-digital-watermark" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Verify an image's digital watermark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Clean up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -388,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/quickstart-multimodal/" class="md-nav__link">
+      <a href="../../start/quickstarts/quickstart-multimodal/" class="md-nav__link">
         
   
   
@@ -411,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/quickstart/" class="md-nav__link">
+      <a href="../../start/quickstarts/quickstart/" class="md-nav__link">
         
   
   
@@ -434,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/deploy-vais-prompt/" class="md-nav__link">
+      <a href="../../start/quickstarts/deploy-vais-prompt/" class="md-nav__link">
         
   
   
@@ -503,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/overview/" class="md-nav__link">
+      <a href="../../start/express-mode/overview/" class="md-nav__link">
         
   
   
@@ -526,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
+      <a href="../../start/express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
         
   
   
@@ -549,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
+      <a href="../../start/express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
         
   
   
@@ -677,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Overview/" class="md-nav__link">
+      <a href="../../migration/openai/Overview/" class="md-nav__link">
         
   
   
@@ -700,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Authenticate/" class="md-nav__link">
+      <a href="../../migration/openai/Authenticate/" class="md-nav__link">
         
   
   
@@ -723,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Examples/" class="md-nav__link">
+      <a href="../../migration/openai/Examples/" class="md-nav__link">
         
   
   
@@ -754,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
+      <a href="../../migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
         
   
   
@@ -826,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gemini/migrate_to_gemini2/" class="md-nav__link">
+      <a href="../../gemini/migrate_to_gemini2/" class="md-nav__link">
         
   
   
@@ -869,6 +950,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-and-save-an-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Generate and save an image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-an-images-digital-watermark" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Verify an image's digital watermark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Clean up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -886,7 +1020,128 @@
   
 
 
-<h1 id="welcome-to-google-cloud-documentation">Welcome to Google Cloud Documentation<a class="headerlink" href="#welcome-to-google-cloud-documentation" title="Permanent link">&para;</a></h1>
+<h1 id="quickstart-generate-and-verify-an-images-watermark-using-imagen-text-to-image-console">Quickstart: Generate and verify an image's watermark using Imagen text-to-image (Console)<a class="headerlink" href="#quickstart-generate-and-verify-an-images-watermark-using-imagen-text-to-image-console" title="Permanent link">&para;</a></h1>
+<p>This quickstart shows you how to use the Google Cloud console to generate an image with Imagen's text-to-image capabilities and then verify its digital watermark, which is powered by <a href="https://deepmind.google/technologies/synthid/">SynthID</a>.</p>
+<p>Imagen on Vertex AI pricing is based on the feature you use. For more information, see <a href="/vertex-ai/pricing#generative_ai_models">Pricing</a>.</p>
+<figure style="text-align: center;">
+  <img src="../images/gen-img-quickstart.png" alt="A generated image of a dog" style="max-width: 100%; border-radius: 8px;">
+  <figcaption>Image generated using Imagen on Vertex AI from the prompt: "portrait of a french bulldog at the beach, 85mm f/2.8".</figcaption>
+</figure>
+
+<p>This tutorial follows this high-level workflow:</p>
+<pre class="mermaid"><code>flowchart TD
+    A[Start] --&gt; B[1\. Set up your Google Cloud project]
+    B --&gt; C[2\. Generate and save an image]
+    C --&gt; D[3\. Verify the image's watermark]
+    D --&gt; E[4\. Clean up resources]
+    E --&gt; F[End]</code></pre>
+<h2 id="before-you-begin">⚙️ Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Sign in to your Google Cloud account. If you're new to Google Cloud, <a href="https://console.cloud.google.com/freetrial">create an account</a> to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads.</p>
+</li>
+<li>
+<p>In the Google Cloud console, on the project selector page, select or create a Google Cloud project.</p>
+<blockquote>
+<p><strong>Note</strong>: If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.</p>
+</blockquote>
+<p><a class="md-button" href="https://console.cloud.google.com/projectselector2/home/dashboard">Go to project selector</a></p>
+</li>
+<li>
+<p><a href="/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project">Make sure that billing is enabled for your Google Cloud project</a>.</p>
+</li>
+<li>
+<p>Enable the Vertex AI API.</p>
+<p><a class="md-button" href="https://console.cloud.google.com/flows/enableapi?apiid=aiplatform.googleapis.com">Enable the API</a></p>
+</li>
+</ol>
+<h2 id="generate-and-save-an-image">⚙️ Generate and save an image<a class="headerlink" href="#generate-and-save-an-image" title="Permanent link">&para;</a></h2>
+<details>
+<summary>Step-by-step: Generate an image and save a local copy</summary>
+<ol>
+<li>
+<p>In the Google Cloud console, go to the <strong>Media</strong> page in Vertex AI Studio.</p>
+<p><a class="md-button" href="https://console.cloud.google.com/vertex-ai/studio/media/generate;tab=image">Go to Vertex AI Studio</a></p>
+</li>
+<li>
+<p>In the <strong>Prompt</strong> field, enter a description of the image you want to generate. For this quickstart, use the following prompt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>portrait of a french bulldog at the beach, 85mm f/2.8
+</span></code></pre></div>
+</li>
+<li>
+<p>In the <strong>Parameters</strong> panel, configure the generation options:</p>
+<ul>
+<li><strong>Model options</strong>: Select <code>Imagen 3</code>.</li>
+<li><strong>Aspect ratio</strong>: Select <code>1:1</code>.</li>
+<li><strong>Number of results</strong>: Change the value to <code>2</code>.</li>
+</ul>
+</li>
+<li>
+<p>Click play_arrow<strong>Generate</strong>.</p>
+<p>Imagen generates images similar to the following:</p>
+<p><figure style="text-align: center;">
+  <img src="../images/gen-img-quickstart_output.png" alt="The output of a generated image of a dog" style="max-width: 100%; border-radius: 8px;">
+</figure></p>
+</li>
+<li>
+<p>To save a local copy of an image, click one of the generated images to open the <strong>Image details</strong> window.</p>
+</li>
+<li>
+<p>In the <strong>Image details</strong> window, click <strong>Export</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Export image</strong> dialog, click <strong>Export</strong> to download the image as a PNG file.</p>
+</li>
+</ol>
+</details>
+<h2 id="verify-an-images-digital-watermark">⚙️ Verify an image's digital watermark<a class="headerlink" href="#verify-an-images-digital-watermark" title="Permanent link">&para;</a></h2>
+<details>
+<summary>Step-by-step: Verify the watermark of a saved image</summary>
+<p>After you generate and save a watermarked image, you can verify its digital watermark.</p>
+<ol>
+<li>
+<p>With a generated image selected, in the <strong>Image details</strong> window, click local_police<strong>Verify</strong>. You are redirected to the watermark verification tool.</p>
+</li>
+<li>
+<p>Click <strong>Upload image</strong>.</p>
+</li>
+<li>
+<p>In the file selector, choose the generated image you saved locally in the previous section.</p>
+</li>
+</ol>
+<p>After the image is processed, the tool displays the watermark verification result. A detected watermark will look similar to the following:</p>
+<p><figure style="text-align: center;">
+  <img src="../images/quickstart-watermark-detected.png" alt="A generated image of a digital watermark" style="max-width: 100%; border-radius: 8px;">
+</figure></p>
+<p>You have successfully used Imagen to generate an image and verify its digital watermark.</p>
+</details>
+<h2 id="clean-up">⚙️ Clean up<a class="headerlink" href="#clean-up" title="Permanent link">&para;</a></h2>
+<p>To avoid incurring charges to your Google Cloud account for the resources used in this quickstart, delete the project that you created.</p>
+<blockquote>
+<p><strong>Caution</strong>: Deleting a project has the following effects:</p>
+<ul>
+<li><strong>Everything in the project is deleted.</strong> If you used an existing project for this quickstart, when you delete it, you also delete any other work you've done in the project.</li>
+<li><strong>Custom project IDs are lost.</strong> When you created this project, you might have created a custom project ID that you want to use in the future. To preserve the URLs that use the project ID, such as an <code>appspot.com</code> URL, delete selected resources inside the project instead of deleting the whole project.</li>
+</ul>
+</blockquote>
+<ol>
+<li>
+<p>In the Google Cloud console, go to the <strong>Manage resources</strong> page.</p>
+<p><a class="md-button" href="https://console.cloud.google.com/iam-admin/projects">Go to Manage resources</a></p>
+</li>
+<li>
+<p>In the project list, select the project that you want to delete, and then click <strong>Delete</strong>.</p>
+</li>
+<li>In the dialog, type the project ID, and then click <strong>Shut down</strong> to delete the project.</li>
+</ol>
+<h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Learn about all image generative AI features in the <a href="/vertex-ai/generative-ai/docs/image/overview">Imagen on Vertex AI overview</a>.</li>
+<li>To view an overview of the API options for image generation and editing, see the <a href="/vertex-ai/generative-ai/docs/model-reference/imagen-api"><code>imagegeneration</code> model API reference</a>.</li>
+<li>Read the <a href="/vertex-ai/generative-ai/docs/image/responsible-ai-imagen#imagen-guidelines">usage guidelines for Imagen on Vertex AI</a>.</li>
+<li>Explore more pretrained models in <a href="/vertex-ai/generative-ai/docs/model-garden/explore-models">Model Garden</a>.</li>
+<li>Learn about <a href="/vertex-ai/generative-ai/docs/learn/responsible-ai">responsible AI best practices and Vertex AI's safety filters</a>.</li>
+</ul>
 
 
 
@@ -923,15 +1178,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../../start/quickstarts/try-gen-ai/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Send a text prompt to the Gemini API without an account">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Send a text prompt to the Gemini API without an account
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="start/quickstarts/try-gen-ai/" class="md-footer__link md-footer__link--next" aria-label="Next: Send a text prompt to the Gemini API without an account">
+          <a href="../../start/quickstarts/quickstart-multimodal/" class="md-footer__link md-footer__link--next" aria-label="Next: Generate text using the Gemini API">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Send a text prompt to the Gemini API without an account
+                Generate text using the Gemini API
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -973,10 +1244,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

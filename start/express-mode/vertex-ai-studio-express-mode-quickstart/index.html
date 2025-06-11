@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/">
+        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/express-mode/vertex-ai-studio-express-mode-quickstart/">
       
       
+        <link rel="prev" href="../overview/">
       
-        <link rel="next" href="start/quickstarts/try-gen-ai/">
+      
+        <link rel="next" href="../vertex-ai-express-mode-api-quickstart/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Google Cloud Vertex AI Documentations</title>
+        <title>Console tutorial - Google Cloud Vertex AI Documentations</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-google-cloud-documentation" class="md-skip">
+        <a href="#tutorial-vertex-ai-studio-in-express-mode" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
+    <a href="../../.." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Console tutorial
             
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
+    <a href="../../.." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -255,19 +257,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -278,7 +271,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -287,8 +279,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -308,11 +302,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -328,7 +322,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -342,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/try-gen-ai/" class="md-nav__link">
+      <a href="../../quickstarts/try-gen-ai/" class="md-nav__link">
         
   
   
@@ -365,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="image/quickstart-image-generate-console/" class="md-nav__link">
+      <a href="../../../image/quickstart-image-generate-console/" class="md-nav__link">
         
   
   
@@ -388,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/quickstart-multimodal/" class="md-nav__link">
+      <a href="../../quickstarts/quickstart-multimodal/" class="md-nav__link">
         
   
   
@@ -411,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/quickstart/" class="md-nav__link">
+      <a href="../../quickstarts/quickstart/" class="md-nav__link">
         
   
   
@@ -434,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/deploy-vais-prompt/" class="md-nav__link">
+      <a href="../../quickstarts/deploy-vais-prompt/" class="md-nav__link">
         
   
   
@@ -454,8 +448,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -469,11 +465,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -489,7 +485,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Vertex AI in express mode
@@ -503,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -523,10 +519,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="start/express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Console tutorial
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -537,6 +555,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explore-sample-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Explore sample prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-save-your-own-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Create and save your own prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-a-chatbot-and-get-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Design a chatbot and get the code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Clean up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -549,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
+      <a href="../vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
         
   
   
@@ -677,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Overview/" class="md-nav__link">
+      <a href="../../../migration/openai/Overview/" class="md-nav__link">
         
   
   
@@ -700,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Authenticate/" class="md-nav__link">
+      <a href="../../../migration/openai/Authenticate/" class="md-nav__link">
         
   
   
@@ -723,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Examples/" class="md-nav__link">
+      <a href="../../../migration/openai/Examples/" class="md-nav__link">
         
   
   
@@ -754,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
+      <a href="../../../migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
         
   
   
@@ -826,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gemini/migrate_to_gemini2/" class="md-nav__link">
+      <a href="../../../gemini/migrate_to_gemini2/" class="md-nav__link">
         
   
   
@@ -869,6 +961,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explore-sample-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Explore sample prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-save-your-own-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Create and save your own prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-a-chatbot-and-get-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Design a chatbot and get the code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Clean up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -886,7 +1040,129 @@
   
 
 
-<h1 id="welcome-to-google-cloud-documentation">Welcome to Google Cloud Documentation<a class="headerlink" href="#welcome-to-google-cloud-documentation" title="Permanent link">&para;</a></h1>
+<h1 id="tutorial-vertex-ai-studio-in-express-mode">Tutorial: Vertex AI Studio in express mode<a class="headerlink" href="#tutorial-vertex-ai-studio-in-express-mode" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Preview</strong></p>
+<p>This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the <a href="/terms/service-terms#1">Service Specific Terms</a>. Pre-GA features are available "as is" and might have limited support. For more information, see the <a href="/products#product-launch-stages">launch stage descriptions</a>.</p>
+</blockquote>
+<p>Vertex AI in <a href="/vertex-ai/generative-ai/docs/start/express-mode/overview">express mode</a> lets you quickly try out core generative AI features that are available on Vertex AI.</p>
+<p>This tutorial walks you through the following core tasks in a logical progression:
+*   Explore the prompt gallery to see examples.
+*   Create and save your own custom prompt.
+*   Design a simple chatbot and get the code to build with it.</p>
+<h2 id="before-you-begin">📚 Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>In the Google Cloud console, go to the <strong>Vertex AI Studio</strong> page.</p>
+<p><a class="md-button" href="https://console.cloud.google.com/vertex-ai/studio">Go to Vertex AI Studio</a></p>
+</li>
+<li>
+<p>To save prompts, you need to have billing enabled for your project.</p>
+</li>
+</ol>
+<h2 id="explore-sample-prompts">⚙️ Explore sample prompts<a class="headerlink" href="#explore-sample-prompts" title="Permanent link">&para;</a></h2>
+<p>First, explore the prompt gallery to view and try a sample prompt.</p>
+<details>
+<summary>Step 1: Go to the Prompt Gallery</summary>
+<p>In the navigation pane, click <strong>Prompt Gallery</strong>.</p>
+</details>
+<details>
+<summary>Step 2: Filter for image prompts</summary>
+<p>On the <strong>Prompt Gallery</strong> page, click <strong>Image</strong> to filter for prompt samples that include images.</p>
+</details>
+<details>
+<summary>Step 3: Open a sample prompt</summary>
+<p>Click the sample prompt card that's titled <strong>Extract text from images</strong>. The prompt opens in the prompt editor.</p>
+</details>
+<details>
+<summary>Step 4: Submit the prompt</summary>
+<p>In the <strong>Prompt</strong> box, click the submit button to submit the prompt. A response like the following is returned in the <strong>Response</strong> box:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>the best dreams HAPPEN when you are awake
+</span></code></pre></div>
+</details>
+<h2 id="create-and-save-your-own-prompts">⚙️ Create and save your own prompts<a class="headerlink" href="#create-and-save-your-own-prompts" title="Permanent link">&para;</a></h2>
+<p>Next, create and save a simple text prompt. Note that you need billing enabled to save prompts.</p>
+<details>
+<summary>Step 1: Start a new prompt</summary>
+<p>In the navigation pane, click <strong>Create prompt</strong>.</p>
+</details>
+<details>
+<summary>Step 2: Enter your prompt text</summary>
+<p>In the <strong>Prompt</strong> text field, enter a text prompt. For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>what is a good name for a flower shop that specializes in selling bouquets of dried flowers?
+</span></code></pre></div>
+</details>
+<details>
+<summary>Step 3: Submit the prompt</summary>
+<p>In the <strong>Prompt</strong> box, click the submit button to submit the prompt. A response like the following is returned in the <strong>Response</strong> box:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Here are some good names for a flower shop specializing in dried flowers, categorized by style:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Elegant &amp; Romantic:
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>* Everlasting Bloom
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>* The Dried Flower Garden
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>* Bloom &amp; Branch
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>...
+</span></code></pre></div>
+</details>
+<details>
+<summary>Step 4: Save the prompt</summary>
+<ol>
+<li>Click <strong>Save</strong>.</li>
+<li>In the <strong>Save prompt</strong> dialog that opens, enter a name for your prompt.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+</details>
+<details>
+<summary>Step 5: View your saved prompt</summary>
+<p>To view your saved prompt, in the navigation pane, click <strong>Prompt management</strong>.</p>
+</details>
+<h2 id="design-a-chatbot-and-get-the-code">⚙️ Design a chatbot and get the code<a class="headerlink" href="#design-a-chatbot-and-get-the-code" title="Permanent link">&para;</a></h2>
+<p>Finally, use what you've learned to design a chatbot with a specific persona and get the code for it.</p>
+<details>
+<summary>Step 1: Start a new prompt</summary>
+<p>In the navigation pane, click <strong>Create prompt</strong>.</p>
+</details>
+<details>
+<summary>Step 2: Provide system instructions</summary>
+<p>In the <strong>System instructions</strong> text field, enter the following instructions to define your chatbot's persona:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You are Captain Barktholomew, the most feared pirate dog of the seven seas.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>You were born in the 1700s and have no knowledge of anything that happened or
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>existed after that. Only talk about topics that a pirate dog captain would be
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>interested in.
+</span></code></pre></div>
+</details>
+<details>
+<summary>Step 3: Chat with your bot</summary>
+<p>In the prompt text field, enter a message. For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Hello! Do you like computers?
+</span></code></pre></div>
+</details>
+<details>
+<summary>Step 4: Send the message</summary>
+<p>Send the message by clicking the submit button or pressing <strong>Enter</strong>. A response like the following is returned based on the system instructions you provided:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Ahoy there, matey! What in Neptune&#39;s name be ye talkin&#39; about? &quot;Computers&quot;?
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Sounds like a fancy landlubber word! A pirate dog like me ain&#39;t interested in
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>fancy contraptions. I&#39;m more interested in the things that truly matter: rum,
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>plunder, and a good fight! Now, tell me, do ye have any gold doubloons to
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>spare? I hear there&#39;s a tavern in the next cove that&#39;s got the finest grog
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>this side of Tortuga.
+</span></code></pre></div>
+</details>
+<details>
+<summary>Step 5: Get the code</summary>
+<ol>
+<li>Click <strong>Build with code &gt; Get code</strong>.</li>
+<li>In the <strong>Get code</strong> pane that opens, select your preferred programming language to get the code for your chatbot.</li>
+</ol>
+</details>
+<h2 id="clean-up">🔗 Clean up<a class="headerlink" href="#clean-up" title="Permanent link">&para;</a></h2>
+<p>This tutorial does not create any billable Google Cloud resources, so no cleanup is needed to avoid charges.</p>
+<h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Try the <a href="/vertex-ai/generative-ai/docs/start/express-mode/vertex-ai-express-mode-api-quickstart">API tutorial</a> for Vertex AI in express mode.</li>
+<li>See the complete <a href="/vertex-ai/generative-ai/docs/start/express-mode/vertex-ai-express-mode-api-reference">API reference</a> for Vertex AI in express mode.</li>
+</ul>
 
 
 
@@ -923,15 +1199,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="start/quickstarts/try-gen-ai/" class="md-footer__link md-footer__link--next" aria-label="Next: Send a text prompt to the Gemini API without an account">
+          <a href="../vertex-ai-express-mode-api-quickstart/" class="md-footer__link md-footer__link--next" aria-label="Next: API tutorial">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Send a text prompt to the Gemini API without an account
+                API tutorial
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -973,10 +1265,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

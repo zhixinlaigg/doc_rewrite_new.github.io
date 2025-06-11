@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/">
+        <link rel="canonical" href="https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/quickstarts/quickstart/">
       
       
+        <link rel="prev" href="../quickstart-multimodal/">
       
-        <link rel="next" href="start/quickstarts/try-gen-ai/">
+      
+        <link rel="next" href="../deploy-vais-prompt/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Google Cloud Vertex AI Documentations</title>
+        <title>Send text prompts to Gemini using Vertex AI Studio - Google Cloud Vertex AI Documentations</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-google-cloud-documentation" class="md-skip">
+        <a href="#quickstart-send-text-prompts-to-gemini-using-vertex-ai-studio" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
+    <a href="../../.." title="Google Cloud Vertex AI Documentations" class="md-header__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Send text prompts to Gemini using Vertex AI Studio
             
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
+    <a href="../../.." title="Google Cloud Vertex AI Documentations" class="md-nav__button md-logo" aria-label="Google Cloud Vertex AI Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -255,19 +257,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -278,7 +271,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -287,8 +279,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -308,11 +302,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -328,7 +322,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Get started
@@ -342,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/try-gen-ai/" class="md-nav__link">
+      <a href="../try-gen-ai/" class="md-nav__link">
         
   
   
@@ -365,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="image/quickstart-image-generate-console/" class="md-nav__link">
+      <a href="../../../image/quickstart-image-generate-console/" class="md-nav__link">
         
   
   
@@ -388,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/quickstart-multimodal/" class="md-nav__link">
+      <a href="../quickstart-multimodal/" class="md-nav__link">
         
   
   
@@ -408,10 +402,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="start/quickstarts/quickstart/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Send text prompts to Gemini using Vertex AI Studio
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -422,6 +438,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-sample-prompts-in-vertex-ai-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 About sample prompts in Vertex AI Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-a-summarization-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Test a summarization prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-a-code-generation-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Test a code generation prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -434,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/quickstarts/deploy-vais-prompt/" class="md-nav__link">
+      <a href="../deploy-vais-prompt/" class="md-nav__link">
         
   
   
@@ -503,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/overview/" class="md-nav__link">
+      <a href="../../express-mode/overview/" class="md-nav__link">
         
   
   
@@ -526,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
+      <a href="../../express-mode/vertex-ai-studio-express-mode-quickstart/" class="md-nav__link">
         
   
   
@@ -549,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="start/express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
+      <a href="../../express-mode/vertex-ai-express-mode-api-quickstart/" class="md-nav__link">
         
   
   
@@ -677,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Overview/" class="md-nav__link">
+      <a href="../../../migration/openai/Overview/" class="md-nav__link">
         
   
   
@@ -700,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Authenticate/" class="md-nav__link">
+      <a href="../../../migration/openai/Authenticate/" class="md-nav__link">
         
   
   
@@ -723,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/openai/Examples/" class="md-nav__link">
+      <a href="../../../migration/openai/Examples/" class="md-nav__link">
         
   
   
@@ -754,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
+      <a href="../../../migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/" class="md-nav__link">
         
   
   
@@ -826,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gemini/migrate_to_gemini2/" class="md-nav__link">
+      <a href="../../../gemini/migrate_to_gemini2/" class="md-nav__link">
         
   
   
@@ -869,6 +950,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Before you begin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-sample-prompts-in-vertex-ai-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 About sample prompts in Vertex AI Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-a-summarization-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Test a summarization prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-a-code-generation-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Test a code generation prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 What's next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -886,7 +1020,104 @@
   
 
 
-<h1 id="welcome-to-google-cloud-documentation">Welcome to Google Cloud Documentation<a class="headerlink" href="#welcome-to-google-cloud-documentation" title="Permanent link">&para;</a></h1>
+<h1 id="quickstart-send-text-prompts-to-gemini-using-vertex-ai-studio">Quickstart: Send text prompts to Gemini using Vertex AI Studio<a class="headerlink" href="#quickstart-send-text-prompts-to-gemini-using-vertex-ai-studio" title="Permanent link">&para;</a></h1>
+<p>You can use Vertex AI Studio to design, test, and manage prompts for Google's <a href="/vertex-ai/generative-ai/docs/overview">Gemini</a> large language models (LLMs). Vertex AI Studio also supports certain third-party models that are offered on Vertex AI as <a href="/vertex-ai/generative-ai/docs/partner-models/use-partner-models">models as a service (MaaS)</a>, such as Anthropic's Claude models and Meta's Llama models.</p>
+<p>By providing a unified UI, Vertex AI Studio makes it easy to experiment with different models and prompts to discover the best combination for your use case before integrating it into your application.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>On your initial use of third-party models, Vertex AI prompts you to accept the third-party's terms and conditions. You must do this once for each third-party provider to start using their models.</p>
+</blockquote>
+<p>In this quickstart, you use sample prompts from the generative AI prompt gallery to test the Gemini model and view the code required to replicate the prompt in your own applications.</p>
+<h2 id="before-you-begin">⚙️ Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>
+<p>This quickstart requires you to complete the following steps to set up a Google Cloud project and enable the Vertex AI API.</p>
+<ol>
+<li>
+<p>Sign in to your Google Cloud account. If you're new to Google Cloud, <a href="https://console.cloud.google.com/freetrial">create an account</a> to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads.</p>
+</li>
+<li>
+<p>In the Google Cloud console, on the project selector page, select or create a Google Cloud project.</p>
+<blockquote>
+<p><strong>Note</strong>: If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.</p>
+</blockquote>
+<p><a class="md-button" href="https://console.cloud.google.com/projectselector2/home/dashboard">Go to project selector</a></p>
+</li>
+<li>
+<p><a href="/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project">Make sure that billing is enabled for your Google Cloud project</a>.</p>
+</li>
+<li>
+<p>Enable the Vertex AI API.</p>
+<p><a class="md-button" href="https://console.cloud.google.com/flows/enableapi?apiid=aiplatform.googleapis.com">Enable the API</a></p>
+</li>
+</ol>
+<h2 id="about-sample-prompts-in-vertex-ai-studio">📚 About sample prompts in Vertex AI Studio<a class="headerlink" href="#about-sample-prompts-in-vertex-ai-studio" title="Permanent link">&para;</a></h2>
+<p>A prompt is a natural language request submitted to a language model that generates a response. Prompts can contain questions, instructions, contextual information, <a href="/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design#few-shot-examples">few-shot examples</a>, and partial input for the model to complete. After the model receives a prompt, depending on the type of model used, it can generate text, embeddings, code, images, videos, music, and more.</p>
+<p>The sample prompts in the Vertex AI Studio <a href="/vertex-ai/generative-ai/docs/prompt-gallery">prompt gallery</a> are pre-designed to help demonstrate model capabilities. Each prompt is preconfigured with specified model and parameter values so you can open the sample prompt and click <strong>Submit</strong> to generate a response.</p>
+<h2 id="test-a-summarization-prompt">⚙️ Test a summarization prompt<a class="headerlink" href="#test-a-summarization-prompt" title="Permanent link">&para;</a></h2>
+<p>Send a summarization text prompt to the Vertex AI Gemini API. A summarization task extracts the most important information from text. You can provide information in the prompt to help the model create a summary, or ask the model to create a summary on its own.</p>
+<details>
+<summary>Step 1: Go to the Prompt Gallery</summary>
+<p>Go to the <strong>Prompt gallery</strong> page from the Vertex AI section in the Google Cloud console.</p>
+<p><a class="md-button" href="https://console.cloud.google.com/vertex-ai/studio/prompt-gallery">Go to prompt gallery</a></p>
+</details>
+<details>
+<summary>Step 2: Select the summarization task</summary>
+<p>In the <strong>Tasks</strong> drop-down menu, select <strong>Summarize</strong>.</p>
+</details>
+<details>
+<summary>Step 3: Open the sample prompt</summary>
+<p>Open the <strong>Audio summarization</strong> card. This sample prompt includes an audio file and requests a summary of the file contents in a bulleted list.</p>
+<p><img alt="The audio summarization prompt text and audio file" src="../images/audio-summary-prompt.png" /></p>
+</details>
+<details>
+<summary>Step 4: Review the model settings</summary>
+<p>In the settings panel, notice that the model's default value is set to <strong>Gemini-2.0-flash-001</strong>. You can choose a different Gemini model by clicking <strong>Switch model</strong>.</p>
+<p><img alt="The Gemini model in the settings panel" src="../images/model-settings.png" /></p>
+</details>
+<details>
+<summary>Step 5: Submit the prompt</summary>
+<p>Click <strong>Submit</strong> to generate the summary. The output is displayed in the response.</p>
+<p><img alt="The Submit button in the Prompt box" src="../images/prompt-submit-button.png" /></p>
+</details>
+<details>
+<summary>Step 6: View the code</summary>
+<p>To view the Vertex AI API code used to generate the transcript summary, click <strong>Build with code</strong> &gt; <strong>Get code</strong>.</p>
+<p>In the <strong>Get code</strong> panel, you can choose your preferred language to get the sample code for the prompt, or you can open the Python code in a Colab Enterprise notebook.</p>
+</details>
+<h2 id="test-a-code-generation-prompt">⚙️ Test a code generation prompt<a class="headerlink" href="#test-a-code-generation-prompt" title="Permanent link">&para;</a></h2>
+<p>Send a code generation prompt to the Vertex AI Gemini API. A code generation task generates code using a natural language description.</p>
+<details>
+<summary>Step 1: Go to the Prompt Gallery</summary>
+<p>Go to the <strong>Prompt gallery</strong> page from the Vertex AI section in the Google Cloud console.</p>
+<p><a class="md-button" href="https://console.cloud.google.com/vertex-ai/studio/prompt-gallery">Go to prompt gallery</a></p>
+</details>
+<details>
+<summary>Step 2: Select the code generation task</summary>
+<p>In the <strong>Tasks</strong> drop-down menu, select <strong>Code</strong>.</p>
+</details>
+<details>
+<summary>Step 3: Open the sample prompt</summary>
+<p>Open the <strong>Generate code from comments</strong> card. This sample prompt includes a <a href="/vertex-ai/generative-ai/docs/learn/prompts/system-instruction-introduction">system instruction</a> that tells the model how to respond and some incomplete Java methods.</p>
+<p><img alt="The code generation prompt text" src="../images/code-generation-prompt.png" /></p>
+</details>
+<details>
+<summary>Step 4: Review the model settings</summary>
+<p>In the settings panel, notice that the model's default value is set to <strong>Gemini-2.0-flash-001</strong>. You can choose a different Gemini model by clicking <strong>Switch model</strong>.</p>
+<p><img alt="The Gemini model in the settings panel" src="../images/model-settings.png" /></p>
+</details>
+<details>
+<summary>Step 5: Submit the prompt</summary>
+<p>To complete each method by generating code in the areas marked <code>&lt;WRITE CODE HERE&gt;</code>, click <strong>Submit</strong>. The output is displayed in the response.</p>
+</details>
+<details>
+<summary>Step 6: View the code</summary>
+<p>To view the Vertex AI API code used to generate the code, click <strong>Build with code</strong> &gt; <strong>Get code</strong>.</p>
+<p>In the <strong>Get code</strong> panel, you can choose your preferred language to get the sample code for the prompt, or you can open the Python code in a Colab Enterprise notebook.</p>
+</details>
+<h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<ul>
+<li>See an <a href="/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design">introduction to prompt design</a>.</li>
+<li>Learn about <a href="/vertex-ai/generative-ai/docs/multimodal/design-multimodal-prompts">designing multimodal prompts</a> and <a href="/vertex-ai/generative-ai/docs/chat/chat-prompts">chat prompts</a>.</li>
+</ul>
 
 
 
@@ -923,15 +1154,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../quickstart-multimodal/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generate text using the Gemini API">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Generate text using the Gemini API
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="start/quickstarts/try-gen-ai/" class="md-footer__link md-footer__link--next" aria-label="Next: Send a text prompt to the Gemini API without an account">
+          <a href="../deploy-vais-prompt/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy your Vertex AI Studio prompt as a web application">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Send a text prompt to the Gemini API without an account
+                Deploy your Vertex AI Studio prompt as a web application
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -973,10 +1220,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

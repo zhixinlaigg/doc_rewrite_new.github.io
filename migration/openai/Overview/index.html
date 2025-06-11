@@ -807,6 +807,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1091,6 +1100,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1345,6 +1363,31 @@
 </tr>
 </tbody>
 </table>
+<h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
+<details>
+<summary>I'm already using the OpenAI Python library. Why should I consider using it with Vertex AI, and is it difficult to switch?</summary>
+<p>Using the OpenAI library with Vertex AI's Chat Completions API provides a low-effort way to test and compare the performance, cost, and scalability of Google's Gemini models and select open models. If your application is already built with the OpenAI Python library or REST API, you can switch to using models on Vertex AI with minimal code changes. However, for new projects, using the Vertex AI SDK for Python is recommended for full access to all Vertex AI features.</p>
+</details>
+<details>
+<summary>Which models can I access through the OpenAI-compatible Chat Completions API?</summary>
+<p>The API supports both Google's Gemini models and select self-deployed models from Model Garden.</p>
+<ul>
+<li><strong>Gemini models</strong>: Gemini 2.5 Pro, Gemini 2.5 Flash, Gemini 2.0 Flash, and Gemini 2.0 Flash-Lite.</li>
+<li><strong>Self-deployed models</strong>: You can use models deployed with Hugging Face Text Generation Interface (HF TGI) or Vertex AI's prebuilt vLLM containers. This includes popular models like Gemma, Llama 3, and Mistral.</li>
+</ul>
+</details>
+<details>
+<summary>How can I use Gemini-specific features that aren't part of the standard OpenAI API?</summary>
+<p>You can access features unique to Gemini by passing them within an <code>extra_body</code> object in your API request. Supported Gemini-specific parameters include <code>safety_settings</code>, <code>cached_content</code>, and <code>thinking_config</code>.</p>
+</details>
+<details>
+<summary>My application needs the model to return a JSON object. How can I enforce this using the Chat Completions API?</summary>
+<p>You can specify the output format by using the <code>response_format</code> parameter. To get a JSON output, set it to <code>json_object</code>. This is interpreted as passing "application/json" to the Gemini API.</p>
+</details>
+<details>
+<summary>How do I send images to a model using the OpenAI library with Vertex AI?</summary>
+<p>You can send images by including them in the <code>messages</code> list. For a user message, use the <code>image_url</code> type. The image data can be provided as a Cloud Storage URI or as a base64 encoded string in the format <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>. Note that while the <code>image_url</code> parameter is used, the <code>detail</code> option within it is not supported.</p>
+</details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Learn more about <a href="/vertex-ai/generative-ai/docs/migrate/openai/auth-and-credentials">authentication and credentialing</a> with the OpenAI-compatible syntax.</li>

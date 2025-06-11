@@ -613,6 +613,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -959,6 +968,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1155,6 +1173,44 @@
 </details>
 <h2 id="clean-up">⚙️ Clean up<a class="headerlink" href="#clean-up" title="Permanent link">&para;</a></h2>
 <p>This tutorial does not create any Google Cloud resources, so no clean up is needed to avoid charges.</p>
+<h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
+<details>
+<summary>What is Vertex AI in express mode?</summary>
+<p>Vertex AI in express mode is a way to quickly try out core generative AI features available on Vertex AI using an API key for authentication. It is currently a Preview feature, which means it is subject to pre-general availability terms, may have limited support, and is provided "as is".</p>
+</details>
+<details>
+<summary>How do I get started with the Vertex AI API in express mode?</summary>
+<p>To get started, you need to install and initialize the Google Gen AI SDK.</p>
+<ol>
+<li><strong>Install the SDK</strong>: Run <code>pip install google-genai</code>. If you are using Colab, you should ignore any dependency conflicts and restart the runtime after installation.</li>
+<li><strong>Initialize the SDK</strong>: Import the library and configure the client with your API key.
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google</span><span class="w"> </span><span class="kn">import</span> <span class="n">genai</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Replace YOUR_API_KEY with your API key.</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">API_KEY</span> <span class="o">=</span> <span class="s2">&quot;YOUR_API_KEY&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">client</span> <span class="o">=</span> <span class="n">genai</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">vertexai</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">API_KEY</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">)</span>
+</span></code></pre></div></li>
+</ol>
+</details>
+<details>
+<summary>When should I use a streaming request versus a non-streaming request?</summary>
+<p>You should use a <strong>non-streaming request</strong> for tasks where the entire response is needed before processing can continue. This is the simplest request type.</p>
+<p>Use a <strong>streaming request</strong> for interactive applications to reduce perceived latency and display results incrementally as they are generated. To make a streaming request, set <code>stream=True</code> when calling the <code>generate_content_stream</code> method.</p>
+</details>
+<details>
+<summary>How can I connect the Gemini model to my own tools or external APIs?</summary>
+<p>You can use function calling to connect the model to external tools and APIs. This involves three main steps:
+1.  Declare your function and its parameters and pass it to the model as a tool.
+2.  The model will generate a function call with arguments based on the user's prompt.
+3.  Your code executes the specified function with the provided arguments and sends the result back to the model to inform its final response.</p>
+</details>
+<details>
+<summary>Will I be charged for any Google Cloud resources if I follow this tutorial?</summary>
+<p>No. The documentation states that this tutorial does not create any Google Cloud resources, so no cleanup is needed to avoid charges.</p>
+</details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Try the <a href="/vertex-ai/generative-ai/docs/start/express-mode/vertex-ai-studio-express-mode-quickstart">Vertex AI Studio tutorial</a> for Vertex AI in express mode.</li>

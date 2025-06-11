@@ -782,6 +782,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -995,6 +1004,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1197,6 +1215,110 @@
 </span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>
 </span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </span></code></pre></div>
+<h3 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h3>
+<details>
+<summary>What's the simplest way to configure my application to use the OpenAI library with Vertex AI?</summary>
+<p>The simplest method is to use environment variables, which separates your configuration from your code.</p>
+<ol>
+<li>First, ensure you have installed the necessary libraries (<code>pip install openai google-auth requests</code>) and authenticated with gcloud (<code>gcloud auth application-default login</code>).</li>
+<li>Set the following environment variables in your terminal, replacing the placeholder values:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PROJECT_ID</span><span class="o">=</span>YOUR_PROJECT_ID
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">LOCATION</span><span class="o">=</span>YOUR_LOCATION
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>gcloud<span class="w"> </span>auth<span class="w"> </span>application-default<span class="w"> </span>print-access-token<span class="k">)</span><span class="s2">&quot;</span>
+</span></code></pre></div></li>
+<li>Set the base URL environment variable. The URL depends on whether you are calling a Gemini model or a self-deployed model. For a Gemini model, use:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_BASE_URL</span><span class="o">=</span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">LOCATION</span><span class="si">}</span><span class="s2">-aiplatform.googleapis.com/v1beta1/projects/</span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">/locations/</span><span class="si">${</span><span class="nv">LOCATION</span><span class="si">}</span><span class="s2">/endpoints/openapi&quot;</span>
+</span></code></pre></div></li>
+<li>Finally, you can initialize the OpenAI client in your Python code without any extra configuration, as it will automatically use these environment variables.
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">openai</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">client</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">OpenAI</span><span class="p">()</span>
+</span></code></pre></div></li>
+</ol>
+</details>
+<details>
+<summary>My script works initially but fails with an authentication error after about an hour. Why is this happening and how can I fix it?</summary>
+<p>This happens because the access token used for authentication is short-lived and expires after one hour by default. To fix this, you need to refresh the token periodically.</p>
+<p>The documentation provides a Python wrapper class called <code>OpenAICredentialsRefresher</code> that handles this automatically. This class intercepts calls to the OpenAI client, checks if the credential has expired, and refreshes it if necessary before proceeding with the API call.</p>
+<p>Here is how you can use it:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># (Assuming the OpenAICredentialsRefresher class is defined as in the documentation)</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1"># TODO(developer): Update and un-comment below lines</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># project_id = &quot;PROJECT_ID&quot;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1"># location = &quot;us-central1&quot;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">client</span> <span class="o">=</span> <span class="n">OpenAICredentialsRefresher</span><span class="p">(</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="n">base_url</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s2">-aiplatform.googleapis.com/v1/projects/</span><span class="si">{</span><span class="n">project_id</span><span class="si">}</span><span class="s2">/locations/</span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s2">/endpoints/openapi&quot;</span><span class="p">,</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">)</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="c1"># Now you can use the client as usual, and it will handle token refreshes.</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;google/gemini-2.0-flash-001&quot;</span><span class="p">,</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Why is the sky blue?&quot;</span><span class="p">}],</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="p">)</span>
+</span></code></pre></div></p>
+</details>
+<details>
+<summary>What are the different ways to set up authentication, and what are the pros and cons of each?</summary>
+<p>There are two primary methods to configure authentication: Programmatic Client Setup and Environment Variables.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Pros</th>
+<th style="text-align: left;">Cons</th>
+<th style="text-align: left;">Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Programmatic Client Setup</strong></td>
+<td style="text-align: left;">Provides granular control within your application. Credentials can be managed and refreshed dynamically in your code.</td>
+<td style="text-align: left;">Requires more code to manage credentials.</td>
+<td style="text-align: left;">Applications that need to manage authentication state dynamically or handle multiple clients with different credentials.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Environment Variables</strong></td>
+<td style="text-align: left;">Offers a simple setup and separates configuration from your code, which aligns with 12-factor app principles.</td>
+<td style="text-align: left;">Less flexible for applications that require dynamic credential changes.</td>
+<td style="text-align: left;">Development environments, containerized deployments, and applications where configuration is managed externally.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>How do I call a custom model I've deployed to a Vertex AI endpoint instead of a standard Gemini model?</summary>
+<p>To call a self-deployed model, you need to specify your model's unique endpoint ID in the client's base URL instead of using the default <code>openapi</code> endpoint.</p>
+<p>You can find your endpoint ID by running the gcloud command: <code>gcloud ai endpoints list</code>.</p>
+<ul>
+<li><strong>If using programmatic setup</strong>, update the <code>base_url</code> when initializing the client:
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Replace &quot;YOUR_ENDPOINT_ID&quot; with your actual endpoint ID</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">ENDPOINT_ID</span> <span class="o">=</span> <span class="s2">&quot;YOUR_ENDPOINT_ID&quot;</span> 
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">OpenAI</span><span class="p">(</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="n">base_url</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;https://</span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s2">-aiplatform.googleapis.com/v1/projects/</span><span class="si">{</span><span class="n">project_id</span><span class="si">}</span><span class="s2">/locations/</span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s2">/endpoints/</span><span class="si">{</span><span class="n">ENDPOINT_ID</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="n">api_key</span><span class="o">=</span><span class="n">credentials</span><span class="o">.</span><span class="n">token</span><span class="p">,</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">)</span>
+</span></code></pre></div></li>
+<li><strong>If using environment variables</strong>, set the <code>OPENAI_BASE_URL</code> variable to point to your endpoint:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Replace &quot;ENDPOINT_ID&quot; with your actual endpoint ID</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ENDPOINT</span><span class="o">=</span>ENDPOINT_ID
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_BASE_URL</span><span class="o">=</span><span class="s2">&quot;https://</span><span class="si">${</span><span class="nv">LOCATION</span><span class="si">}</span><span class="s2">-aiplatform.googleapis.com/v1beta1/projects/</span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">/locations/</span><span class="si">${</span><span class="nv">LOCATION</span><span class="si">}</span><span class="s2">/endpoints/</span><span class="si">${</span><span class="nv">ENDPOINT</span><span class="si">}</span><span class="s2">&quot;</span>
+</span></code></pre></div></li>
+</ul>
+</details>
+<details>
+<summary>What are the prerequisites I need to complete before attempting to authenticate?</summary>
+<p>Before you configure authentication using either the programmatic or environment variable method, you must complete the following setup steps:</p>
+<ol>
+<li><strong>Install the required Python libraries</strong>:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>pip<span class="w"> </span>install<span class="w"> </span>openai<span class="w"> </span>google-auth<span class="w"> </span>requests
+</span></code></pre></div></li>
+<li><strong>Set up Application Default Credentials (ADC)</strong> for your local environment. This allows your application to find and use your Google Cloud credentials automatically.
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>application-default<span class="w"> </span>login
+</span></code></pre></div></li>
+<li><strong>Install the Google Cloud CLI</strong> if you haven't already. This is required for the <code>gcloud</code> command used in the ADC setup.</li>
+</ol>
+</details>
 <h3 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h3>
 <ul>
 <li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/migrate/openai/examples">Chat Completions API</a> with the OpenAI-compatible syntax.</li>

@@ -523,6 +523,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1011,6 +1020,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1271,6 +1289,28 @@
 <p><strong>Error</strong>: A <code>400</code> error occurs if you upload a file type that the model does not support.</p>
 <p><img alt="error for unsupported mime types" src="../images/error-03-invalid-input.png" /></p>
 <p><strong>Solution</strong>: This is expected behavior. Use a file type that is supported by the selected model. See the <a href="https://ai.google.dev/gemini-api/docs/models#model-variations">documentation for multimodal support for each model</a> for a list of supported types.</p>
+</details>
+<h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
+<details>
+<summary>I've created a prompt in Vertex AI Studio. How can I share it with my team for testing without giving them access to the Google Cloud console?</summary>
+<p>You can deploy your prompt as a web application. In Vertex AI Studio, once your prompt is ready, click <strong>Build with code</strong> and select <strong>Deploy as app</strong>. This feature packages your prompt into a web app hosted on Cloud Run, making it accessible via a URL outside of the Google Cloud console. You can then share this URL with your collaborators for testing.</p>
+</details>
+<details>
+<summary>I'm not a Project Owner and I'm having trouble deploying my prompt as a web app. What permissions do I need?</summary>
+<p>To deploy a prompt as a web app, you need more than the standard Vertex AI Studio permissions. Ask your project administrator to grant your user account the <strong>Editor</strong> (<code>roles/editor</code>) and <strong>Cloud Run Admin</strong> (<code>roles/run.admin</code>) roles. Your administrator may also need to perform one-time actions like enabling the Cloud Run, Artifact Registry, Cloud Build, and Cloud Logging APIs.</p>
+</details>
+<details>
+<summary>My deployed web app is publicly accessible by default. How can I make it private, and how would I test it then?</summary>
+<p>You can restrict public access directly in the Cloud Run settings. From the <strong>Manage web app</strong> dialog in Vertex AI Studio, click the pencil icon in the <strong>Access Control</strong> column to open the Cloud Run security page. There, you can select <strong>Require authentication</strong>.</p>
+<p>To test the private application, you can set up a local proxy. In the <strong>Manage web app</strong> dialog, click the <strong>more_vert</strong> icon, select <strong>Set up local access via Cloud Shell</strong>, and run the provided command in your terminal. This will generate a local preview link that works as long as the command is active in Cloud Shell.</p>
+</details>
+<details>
+<summary>I want to customize the UI of my deployed web app. If I edit the source code in Cloud Run, will my changes be saved if I update the prompt later in Vertex AI Studio?</summary>
+<p>No, your changes will be overwritten. While you can edit the web application's source code directly in Cloud Run, redeploying an updated prompt from Vertex AI Studio will overwrite any customizations you've made. To preserve your work, it is recommended that you download a ZIP file of your custom code from the Cloud Run editor before redeploying from Vertex AI Studio.</p>
+</details>
+<details>
+<summary>My web app is showing an 'Authentication error: No secret key'. What does this mean and how do I fix it?</summary>
+<p>This error indicates that the required secret key is missing from the application's URL. Each deployed app is protected by a unique key. To fix this, either open the application directly from the <strong>Manage web app</strong> dialog in Vertex AI Studio (which appends the key automatically) or manually copy the key from the <strong>Secret Key</strong> column in the same dialog and append it to the URL in the format <code>?key=SECRET_KEY</code>.</p>
 </details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>

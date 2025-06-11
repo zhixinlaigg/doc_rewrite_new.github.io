@@ -922,6 +922,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1021,6 +1030,15 @@
   <a href="#getting-help" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 Getting help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
     </span>
   </a>
   
@@ -1393,6 +1411,37 @@
 </ul>
 <h2 id="getting-help">🔗 Getting help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
 <p>If you need help, Google Cloud offers support packages to meet your needs, such as 24/7 coverage, phone support, and access to a technical support manager. For more information, see <a href="/support">Google Cloud Support</a>.</p>
+<h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
+<details>
+<summary>Why should I migrate my application from Gemini 1.x to Gemini 2?</summary>
+<p>Migrating to Gemini 2 provides significant performance improvements and access to new capabilities not found in Gemini 1.x or PaLM models. Additionally, each model version has a specific support and availability timeline, so migrating ensures your application remains on a supported version. While most migrations don't require major code changes, testing your prompts with Gemini 2 is recommended to ensure a smooth transition.</p>
+</details>
+<details>
+<summary>I'm using the Vertex AI SDK for my Gemini 1.x application. Do I have to switch to the new Gen AI SDK to use Gemini 2 models?</summary>
+<p>No, you are not required to switch. You can continue using the Vertex AI SDK with Gemini 2 models by updating the model name in your code. However, the documentation recommends considering an upgrade to the Gen AI SDK, as new Gemini 2 capabilities will only be made available through it. The Vertex AI SDK will not support all features of Gemini 2.0.</p>
+</details>
+<details>
+<summary>How do I choose the right Gemini 2 model for my application?</summary>
+<p>To select the best Gemini 2 model, you should evaluate your application's requirements against the features and costs of the available models. Key factors to consider include:
+*   <strong>Input/Output modalities</strong> (text, image, video, etc.)
+*   <strong>Context window size</strong>
+*   <strong>Special features</strong> like Grounding with Search, function calling, or code execution
+*   <strong>Latency and cost</strong></p>
+<p>The documentation provides a feature comparison table to help you decide. For example, if you need the fastest response time and cost efficiency, a Flash model might be the best choice.</p>
+</details>
+<details>
+<summary>I'm using a fine-tuned Gemini 1.x model. Can I reuse my tuning settings for Gemini 2?</summary>
+<p>No, you should not reuse your old hyperparameter values. If your application requires fine-tuning, you must submit a new tuning job with the Gemini 2 model. It is recommended to start with the default tuning hyperparameters, as the tuning service has been optimized for Gemini 2, and reusing previous values may not yield the best results. Before you retune, you should perform an offline evaluation, as Gemini 2's improved base quality might mean that fine-tuning is no longer necessary for your application.</p>
+</details>
+<details>
+<summary>My application's performance dropped after migrating to Gemini 2. What can I do to improve it?</summary>
+<p>If you notice a drop in performance, you can take several steps to optimize your application:
+*   <strong>Tune Prompts:</strong> Iteratively refine your prompts to improve performance. You can use techniques like "Hill Climbing" or the Vertex AI prompt optimizer.
+*   <strong>Adjust Parameters:</strong> Experiment with token sampling parameters like <code>Top-P</code>, especially if you previously relied on the <code>Top-K</code> parameter, which is not supported in newer models.
+*   <strong>Try a More Powerful Model:</strong> If you are using a lighter model like Gemini 2.0 Flash-Lite, test a more capable model like Gemini 2.0 Flash.
+*   <strong>Fine-Tune:</strong> If prompt engineering is not sufficient, consider fine-tuning the Gemini 2 model.
+*   <strong>Analyze Failures:</strong> Examine your evaluation outputs to identify patterns in failures. This can help you create more targeted evaluation data and adjust prompts to address specific errors.</p>
+</details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Read the list of <a href="/vertex-ai/generative-ai/docs/faq">frequently asked questions</a>.</li>

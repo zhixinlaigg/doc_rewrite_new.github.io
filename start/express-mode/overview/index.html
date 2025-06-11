@@ -639,6 +639,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1103,6 +1112,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1377,6 +1395,43 @@
 </ol>
 <p>After you graduate from express mode, specify your project ID and location instead of your API key when you call the REST API endpoints. For example:
 <code>https://{location}-aiplatform.googleapis.com/v1/projects/{projectid}/locations/{location}/publishers/google/models/{model}:streamGenerateContent</code></p>
+<h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
+<details>
+<summary>What is Vertex AI in express mode and what are its main limitations?</summary>
+<p>Vertex AI in express mode is a way to quickly start building generative AI applications on Google Cloud for free, without needing to enter billing information. Upon signing up with a <code>@gmail.com</code> account, you get access to core Vertex AI Studio features, an API key, and a 90-day trial period.</p>
+<p>The main limitations compared to the full Vertex AI platform are:
+*   <strong>Time limit:</strong> 90 days (removed by enabling billing).
+*   <strong>Services:</strong> Access is limited to basic Generative AI on Vertex AI services.
+*   <strong>Quotas:</strong> Rate limits are lower (e.g., 30 requests per minute for Gemini models).
+*   <strong>SLA:</strong> There is no Service Level Agreement (SLA).
+*   <strong>Data sources:</strong> Limited to Google Drive.</p>
+</details>
+<details>
+<summary>Why can't I sign up for express mode? I don't see the 'Try Vertex AI Studio free' button.</summary>
+<p>You may not be eligible for Vertex AI in express mode. Eligibility is restricted to developers who sign up using a <code>@gmail.com</code> Google Account that has not been previously used to access Google Cloud. For example, if you have already used your Google Account for the Google Cloud Free Program or a free trial, you are ineligible for express mode with that same account and will not be shown the sign-up button.</p>
+</details>
+<details>
+<summary>How do I authenticate API calls in express mode?</summary>
+<p>In express mode, you authenticate using an API key that is automatically generated during sign-up. To use it:</p>
+<ol>
+<li>In the Google Cloud console for express mode, click the <strong>Menu</strong>.</li>
+<li>Select <strong>API Keys</strong> to view and copy your key.</li>
+<li>In your code, provide this key for authentication. For REST calls, you add it as a query parameter (<code>?key=YOUR_API_KEY</code>). For the Python SDK, you provide it when initializing the client.</li>
+</ol>
+</details>
+<details>
+<summary>What happens after my 90-day express mode trial ends?</summary>
+<p>The free trial for Vertex AI in express mode lasts for 90 days. To continue using the service beyond this period, you must enable billing. Enabling billing removes the 90-day limit, increases your usage quotas, and transitions your account to a pay-as-you-go model where you only pay for what you use. It also unlocks additional features that are unavailable in the free version.</p>
+</details>
+<details>
+<summary>I'm ready to use the full Google Cloud platform. How do I 'graduate' from express mode and how will my API calls change?</summary>
+<p>To graduate from express mode and access all Google Cloud services, navigate to the <strong>Menu</strong> in the express mode console, select <strong>Billing</strong>, and in the <strong>Access all Google Cloud</strong> section, click <strong>Learn more and get started</strong>.</p>
+<p>After graduating, your API calls must be updated. The primary change is the endpoint format and authentication method. Instead of using an API key, you will use your project ID and location for authentication.</p>
+<ul>
+<li><strong>Express mode endpoint:</strong> <code>https://aiplatform.googleapis.com/v1/publishers/google/models/{model}:streamGenerateContent?key={API_KEY}</code></li>
+<li><strong>Standard endpoint:</strong> <code>https://{location}-aiplatform.googleapis.com/v1/projects/{project}/locations/{location}/publishers/google/models/{model}:streamGenerateContent</code></li>
+</ul>
+</details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Try the <a href="/vertex-ai/generative-ai/docs/start/express-mode/vertex-ai-studio-express-mode-quickstart">Vertex AI Studio tutorial</a> for Vertex AI in express mode.</li>

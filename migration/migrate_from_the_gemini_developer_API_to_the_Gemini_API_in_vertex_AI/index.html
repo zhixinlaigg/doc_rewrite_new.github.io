@@ -858,6 +858,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1037,6 +1046,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
   
 </li>
       
@@ -1342,6 +1360,40 @@
 </ol>
 <p>Deleting an API key takes a few minutes to propagate. After propagation completes, any traffic using the deleted API key is rejected.</p>
 <p><strong>Important:</strong> If you delete a key that's still used in production and need to recover it, see <a href="/sdk/gcloud/reference/beta/services/api-keys/undelete"><code>gcloud beta services api-keys undelete</code></a>.</p>
+</details>
+<h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
+<details>
+<summary>What are the main advantages of migrating from the Gemini Developer API to the Gemini API in Vertex AI?</summary>
+<p>Migrating to the Gemini API in Vertex AI is beneficial as your generative AI solutions mature. Vertex AI provides a comprehensive platform for building and deploying applications end-to-end with enterprise-grade features. Key advantages include:</p>
+<ul>
+<li><strong>MLOps Capabilities:</strong> Access to a full suite of MLOps tools for model evaluation, monitoring, and management.</li>
+<li><strong>Enterprise Support:</strong> Features like customer-managed encryption keys, Virtual Private Cloud (VPC), data residency, and access transparency.</li>
+<li><strong>Integration:</strong> Seamless integration with other Google Cloud services like Cloud Run for deployment, BigQuery and Cloud Storage for data management and Retrieval-Augmented Generation (RAG), and Cloud Logging for monitoring.</li>
+<li><strong>Scalability and Security:</strong> Deploy applications with enterprise-grade scale, security, and privacy, leveraging Google Cloud's robust infrastructure.</li>
+</ul>
+</details>
+<details>
+<summary>How does authentication change when moving from the Gemini Developer API to the Vertex AI Gemini API?</summary>
+<p>Authentication methods are a key difference between the two APIs. The Gemini Developer API uses an API key for authentication. In contrast, the Gemini API in Vertex AI uses Google Cloud Identity and Access Management (IAM). Instead of an API key, you authenticate using a Google Cloud service account, and access is controlled by assigning roles, such as the "Vertex AI User" role, to a user, group, or service account.</p>
+</details>
+<details>
+<summary>I have prompts saved in Google AI Studio. How do I migrate them to Vertex AI Studio?</summary>
+<p>To migrate your prompts from Google AI Studio to Vertex AI Studio, follow these steps:</p>
+<ol>
+<li>Open Google Drive and navigate to the <strong>AI_Studio</strong> folder where your prompts are stored.</li>
+<li>Download the desired prompt files (which will be in <code>.txt</code> format) to your local machine.</li>
+<li>Convert the downloaded files to JSON format by changing the file extension from <code>.txt</code> to <code>.json</code>.</li>
+<li>In the Google Cloud console, go to <strong>Vertex AI Studio</strong> and select <strong>Prompt management</strong>.</li>
+<li>Click <strong>Import prompt</strong>, browse to your local JSON file, and upload it. The prompt will then appear in the <strong>My Prompts</strong> tab.</li>
+</ol>
+</details>
+<details>
+<summary>After migrating to Vertex AI, do I need to retrain the custom models I created in Google AI Studio?</summary>
+<p>Yes. According to the documentation, any models that you created and trained in Google AI Studio must be retrained in Vertex AI after you migrate.</p>
+</details>
+<details>
+<summary>I've successfully migrated my application to use the Vertex AI Gemini API. What should I do with my old Gemini API key?</summary>
+<p>As a security best practice, you should delete any API key that is no longer in use. You can delete your old Gemini API key from the Google Cloud API Credentials page. Find the key, click the <strong>Actions</strong> icon, and select <strong>Delete API key</strong>. If you accidentally delete a key that is still in use, it can be recovered for a limited time using the <code>gcloud beta services api-keys undelete</code> command.</p>
 </details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>

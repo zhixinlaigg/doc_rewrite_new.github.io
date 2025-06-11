@@ -829,6 +829,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -1039,6 +1048,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
   
 </li>
       
@@ -1479,6 +1497,38 @@
 </span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="p">}</span>
 </span></code></pre></div>
+<h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
+<details>
+<summary>I'm already using the OpenAI Python library. How can I adapt my code to call Google's Gemini models on Vertex AI?</summary>
+<p>You can use your existing knowledge of the OpenAI library with a few configuration changes. When initializing the client, you need to:
+1.  Set the <code>base_url</code> to your Vertex AI endpoint: <code>https://{location}-aiplatform.googleapis.com/v1/projects/{project_id}/locations/{location}/endpoints/openapi</code>.
+2.  Pass a Google Cloud access token as the <code>api_key</code>.</p>
+<p>After the client is configured, you can use methods like <code>client.chat.completions.create()</code> as you normally would, specifying a Google model like <code>"google/gemini-2.0-flash-001"</code>.</p>
+</details>
+<details>
+<summary>Can I send images or audio files to the chat model with my text prompts?</summary>
+<p>Yes, the API supports multimodal requests. You can include images or audio in your request by structuring the <code>content</code> of your message as an array.</p>
+<ul>
+<li><strong>For images:</strong> Include an object with <code>type: "image_url"</code> and an <code>image_url</code> pointing to a file in a Google Cloud Storage bucket (e.g., <code>"gs://.../image.jpg"</code>).</li>
+<li><strong>For audio:</strong> Include an object with <code>type: "input_audio"</code> and an <code>input_audio</code> object specifying the format and the location of the audio file in a Google Cloud Storage bucket.</li>
+</ul>
+</details>
+<details>
+<summary>How does the API call differ between a Google-hosted Gemini model and a model I've deployed myself on a Vertex AI endpoint?</summary>
+<p>The primary difference is in the endpoint URL and how the model is specified.</p>
+<ul>
+<li><strong>For a Google-hosted model:</strong> The <code>base_url</code> includes <code>/endpoints/openapi</code>, and you specify the model using a <code>google/</code> prefix, for example, <code>model="google/gemini-2.0-flash-001"</code>.</li>
+<li><strong>For a self-deployed model:</strong> The <code>base_url</code> points directly to your specific endpoint ID (<code>.../endpoints/{endpoint_id}</code>), and the <code>model</code> parameter is the ID of your deployed model (e.g., <code>model="gemma-2-9b-it"</code>).</li>
+</ul>
+</details>
+<details>
+<summary>How can I force the model to return a response in a specific JSON structure?</summary>
+<p>You can get structured output by using the <code>response_format</code> parameter. The documentation provides a Python example where a Pydantic <code>BaseModel</code> is defined to represent the desired JSON schema. This model class is then passed to the <code>response_format</code> argument in the <code>client.beta.chat.completions.parse()</code> call to ensure the output conforms to that structure.</p>
+</details>
+<details>
+<summary>How do I use Google-specific features that aren't in the standard OpenAI API, like getting the model's intermediate thoughts?</summary>
+<p>You can pass Google-specific parameters using the <code>extra_body</code> field in your request. For example, to get intermediate thoughts from the model during generation, you can include a <code>thinking_config</code> object within a <code>google</code> dictionary inside <code>extra_body</code>. This allows you to access advanced, platform-specific capabilities.</p>
+</details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/model-reference/inference#examples">Inference API</a> with the OpenAI-compatible syntax.</li>

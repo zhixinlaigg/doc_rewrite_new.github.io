@@ -468,6 +468,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whats-next" class="md-nav__link">
     <span class="md-ellipsis">
       🔗 What's next
@@ -987,6 +996,15 @@
   <a href="#send-a-multimodal-prompt-text-and-video" class="md-nav__link">
     <span class="md-ellipsis">
       💻 Send a multimodal prompt (text and video)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Related Questions
     </span>
   </a>
   
@@ -2100,6 +2118,41 @@
 </div>
 </div>
 </div>
+<h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
+<details>
+<summary>What's the difference between the Generative AI SDK and the Vertex AI SDK, and which one should I use for Gemini?</summary>
+<p>The documentation outlines two SDK families for interacting with Gemini models on Vertex AI:</p>
+<ul>
+<li><strong>Generative AI SDK</strong>: This is a higher-level, streamlined SDK designed specifically for generative AI workflows. It offers a more intuitive interface for common tasks and is recommended for getting started.</li>
+<li><strong>Vertex AI SDK</strong>: This is a comprehensive SDK for all Vertex AI services, including Gemini. It provides lower-level access and more control over all platform features.</li>
+</ul>
+<p>For most use cases, especially when starting out, the <strong>Generative AI SDK</strong> is the recommended choice.</p>
+</details>
+<details>
+<summary>How do I authenticate to use the Vertex AI Gemini API? Can I use an API key like in Google AI Studio?</summary>
+<p>No, you cannot use an API key. The Vertex AI Gemini API uses Identity and Access Management (IAM) for access control. To authenticate, you must first install and initialize the Google Cloud CLI and then run the following command to generate local Application Default Credentials (ADC):
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>application-default<span class="w"> </span>login
+</span></code></pre></div></p>
+</details>
+<details>
+<summary>What types of content can I include in a prompt to the Gemini API?</summary>
+<p>The Gemini API is multimodal, meaning it can process more than just text. You can send requests that include:
+*   Text only
+*   A combination of text and images
+*   A combination of text and video (including audio from the video)</p>
+</details>
+<details>
+<summary>How do I include an image or video file in my API request?</summary>
+<p>To include an image or video in your request, you must first upload the file to a Google Cloud Storage bucket. Then, in your API call, you provide the Cloud Storage URI of the file (e.g., <code>gs://your-bucket/your-file.jpg</code>) along with its MIME type (e.g., <code>image/jpeg</code> or <code>video/mp4</code>). The code examples show how to structure this using <code>Part.from_uri</code> or a <code>fileData</code> object.</p>
+</details>
+<details>
+<summary>What are the essential prerequisites for making my first API call?</summary>
+<p>Before sending a request to the Gemini API, you must complete two main setup steps:</p>
+<ol>
+<li><strong>Set up your Google Cloud project</strong>: This involves creating or selecting a project, ensuring billing is enabled, and enabling the Vertex AI API.</li>
+<li><strong>Set up your local environment</strong>: You need to install the Google Cloud CLI, authenticate to generate Application Default Credentials, and install the appropriate SDK for your programming language (e.g., <code>pip install --upgrade google-genai</code> for the Python Generative AI SDK).</li>
+</ol>
+</details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Learn more about the <a href="/vertex-ai/generative-ai/docs/overview">Vertex AI Gemini API</a>.</li>

@@ -100,5 +100,9 @@
   border: 0;
 }
 
+.mermaid {
+  transform: scale(1);
+  transform-origin: top left;
+}
 
 

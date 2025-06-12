@@ -1,0 +1,1 @@
+function sso_() { this.get_username = get_username; this.auths = { 2200000: 1749816302721, 2500000: 1749796683613, }; this.get_auth_expiration_time = function(level) { var ret = 0; for (var auth in this.auths) { if (auth >= level && this.auths[auth] > ret) { ret = this.auths[auth]; } } return ret; }; }; function get_username() { return "zhixinlai"; }; var sso = new sso_();

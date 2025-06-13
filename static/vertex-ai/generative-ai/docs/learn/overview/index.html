@@ -1103,7 +1103,7 @@
 <h1 id="generative-ai-beginners-guide">Generative AI beginner's guide<a class="headerlink" href="#generative-ai-beginners-guide" title="Permanent link">&para;</a></h1>
 <p>This beginner's guide introduces you to the core technologies of generative AI and explains how they fit together to power chatbots and applications. Generative AI (also known as <em>genAI</em> or <em>gen AI</em>) is a field of machine learning (ML) that develops and uses ML models for generating new content.</p>
 <p>Generative AI models are often called large language models (LLMs) because of their large size and ability to understand and generate natural language. However, depending on the data that the models are trained on, these models can understand and generate content from multiple modalities, including text, images, videos, and audio. Models that work with multiple modalities of data are called <em>multimodal</em> models.</p>
-<p>Google provides the <a href="../../multimodal/overview/">Gemini</a> family of generative AI models designed for <em>multimodal</em> use cases, capable of processing information from multiple modalities, including images, videos, and text.</p>
+<p>Google provides the Gemini family of generative AI models designed for <em>multimodal</em> use cases, capable of processing information from multiple modalities, including images, videos, and text.</p>
 <h2 id="the-generative-ai-workflow-on-vertex-ai">📚 The generative AI workflow on Vertex AI<a class="headerlink" href="#the-generative-ai-workflow-on-vertex-ai" title="Permanent link">&para;</a></h2>
 <p>For generative AI models to generate content that's useful in real-world applications, they need to have the following capabilities:</p>
 <ul>
@@ -1120,17 +1120,17 @@
 <p>The following diagram shows how these different capabilities work together to generate content that you want:</p>
 <p><img alt="Generative AI workflow diagram" src="../../images/generative-ai-workflow.png" /></p>
 <h3 id="prompt">Prompt<a class="headerlink" href="#prompt" title="Permanent link">&para;</a></h3>
-<p>The generative AI workflow typically starts with prompting. A prompt is a natural language request sent to a generative AI model to elicit a response. Depending on the model, a prompt can contain <em>text</em>, <em>images</em>, <em>videos</em>, <em>audio</em>, <em>documents</em>, and other modalities, or even multiple modalities (multimodal). Creating a prompt to get the desired response from the model is a practice called <a href="introduction-prompt-design.md">prompt design</a>. While prompt design is a process of trial and error, there are prompt design principles and strategies that you can use to nudge the model to behave in the desired way. <a href="../start/quickstarts/quickstart.md">Vertex AI Studio</a> offers a prompt management tool to help you manage your prompts.</p>
+<p>The generative AI workflow typically starts with prompting. A prompt is a natural language request sent to a generative AI model to elicit a response. Depending on the model, a prompt can contain <em>text</em>, <em>images</em>, <em>videos</em>, <em>audio</em>, <em>documents</em>, and other modalities, or even multiple modalities (multimodal). Creating a prompt to get the desired response from the model is a practice called <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design">prompt design</a>. While prompt design is a process of trial and error, there are prompt design principles and strategies that you can use to nudge the model to behave in the desired way. <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart">Vertex AI Studio</a> offers a prompt management tool to help you manage your prompts.</p>
 <h3 id="foundation-models">Foundation models<a class="headerlink" href="#foundation-models" title="Permanent link">&para;</a></h3>
-<p>Prompts are sent to a generative AI model for response generation. Vertex AI has a variety of <a href="models.md">generative AI foundation models</a> that are accessible through a managed API, including the following:</p>
+<p>Prompts are sent to a generative AI model for response generation. Vertex AI has a variety of <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models">generative AI foundation models</a> that are accessible through a managed API, including the following:</p>
 <ul>
 <li><strong>Gemini API:</strong> For advanced reasoning, multiturn chat, code generation, and multimodal prompts.</li>
 <li><strong>Imagen API:</strong> For image generation, image editing, and visual captioning.</li>
 <li><strong>MedLM:</strong> For medical question answering and summarization. (<strong>Deprecated</strong>)</li>
 </ul>
-<p>The models differ in size, modality, and cost. You can explore Google models, as well as open models and models from Google partners, in <a href="../../start/explore-models.md">Model Garden</a>.</p>
+<p>The models differ in size, modality, and cost. You can explore Google models, as well as open models and models from Google partners, in <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-garden/explore-models">Model Garden</a>.</p>
 <h3 id="model-customization">Model customization<a class="headerlink" href="#model-customization" title="Permanent link">&para;</a></h3>
-<p>You can customize the default behavior of Google's foundation models so that they consistently generate the desired results without using complex prompts. This customization process is called <a href="../models/tune-models.md">model tuning</a>. Model tuning helps you reduce the cost and latency of your requests by allowing you to simplify your prompts. Vertex AI also offers <a href="../models/evaluate-models.md">model evaluation tools</a> to help you evaluate the performance of your tuned model. After your tuned model is production-ready, you can <a href="../deploy/overview.md">deploy it to an endpoint</a> and monitor its performance, similar to standard MLOps workflows.</p>
+<p>You can customize the default behavior of Google's foundation models so that they consistently generate the desired results without using complex prompts. This customization process is called <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/tune-models">model tuning</a>. Model tuning helps you reduce the cost and latency of your requests by allowing you to simplify your prompts. Vertex AI also offers <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/computation-based-eval-pipeline">model evaluation tools</a> to help you evaluate the performance of your tuned model. After your tuned model is production-ready, you can <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/deploy/overview">deploy it to an endpoint</a> and monitor its performance, similar to standard MLOps workflows.</p>
 <h3 id="access-external-information">Access external information<a class="headerlink" href="#access-external-information" title="Permanent link">&para;</a></h3>
 <p>Vertex AI offers multiple ways to give the model access to external APIs and real-time information.</p>
 <table>
@@ -1143,43 +1143,41 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong><a href="../grounding/overview.md">Grounding</a></strong></td>
+<td style="text-align: left;"><strong><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview">Grounding</a></strong></td>
 <td style="text-align: left;">Reduce model hallucinations.</td>
 <td style="text-align: left;">Connects model responses to a source of truth, such as your own data or web search, to make responses more factual.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><a href="rag-access/rag.md">Retrieval-Augmented Generation (RAG)</a></strong></td>
+<td style="text-align: left;"><strong><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/rag-engine/rag-overview">Retrieval-Augmented Generation (RAG)</a></strong></td>
 <td style="text-align: left;">Provide knowledge from external sources.</td>
 <td style="text-align: left;">Connects models to external knowledge sources, such as documents and databases, to generate more accurate and informative responses.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><a href="../../multimodal/test/test/">Function calling</a></strong></td>
+<td style="text-align: left;"><strong><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/function-calling">Function calling</a></strong></td>
 <td style="text-align: left;">Interact with external systems.</td>
 <td style="text-align: left;">Lets the model interact with external APIs to get real-time information and perform real-world tasks.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="citation-check">Citation check<a class="headerlink" href="#citation-check" title="Permanent link">&para;</a></h3>
-<p>After the response is generated, Vertex AI checks whether <a href="responsible-ai.md#citation_metadata">citations</a> need to be included with the response. If a significant amount of the text in the response comes from a particular source, that source is added to the citation metadata in the response.</p>
+<p>After the response is generated, Vertex AI checks whether <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/responsible-ai#citation_metadata">citations</a> need to be included with the response. If a significant amount of the text in the response comes from a particular source, that source is added to the citation metadata in the response.</p>
 <h3 id="responsible-ai-and-safety">Responsible AI and safety<a class="headerlink" href="#responsible-ai-and-safety" title="Permanent link">&para;</a></h3>
-<p>The last layer of checks that the prompt and response go through before being returned is the <a href="responsible-ai.md#safety_filters_and_attributes">safety filters</a>. Vertex AI checks both the prompt and response for how much the prompt or response belongs to a <a href="responsible-ai.md#safety_attribute_descriptions">safety category</a>. If the threshold is exceeded for one or more categories, the response is blocked and Vertex AI returns a <a href="responsible-ai.md#fallback_responses">fallback response</a>.</p>
+<p>The last layer of checks that the prompt and response go through before being returned is the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/responsible-ai#safety_filters_and_attributes">safety filters</a>. Vertex AI checks both the prompt and response for how much the prompt or response belongs to a <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/responsible-ai#safety_attribute_descriptions">safety category</a>. If the threshold is exceeded for one or more categories, the response is blocked and Vertex AI returns a <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/responsible-ai#fallback_responses">fallback response</a>.</p>
 <h3 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
-<p>If the prompt and response pass the safety filter checks, the response is returned. Typically, the response is returned all at once. However, with Vertex AI you can also receive responses progressively as it generates by enabling <a href="../multimodal/send-chat-prompts-gemini.md#streaming-and-non-streaming-responses">streaming</a>.</p>
+<p>If the prompt and response pass the safety filter checks, the response is returned. Typically, the response is returned all at once. However, with Vertex AI you can also receive responses progressively as it generates by enabling <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/send-chat-prompts-gemini#streaming-and-non-streaming-responses">streaming</a>.</p>
 <h2 id="get-started">⚙️ Get started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h2>
 <p>Try one of these quickstarts to get started with generative AI on Vertex AI.</p>
 <ul>
 <li>
-<p><strong><a href="../start/quickstarts/quickstart-multimodal.md">Generate text using the Vertex AI Gemini API</a></strong>
-    <img alt="Try Gemini thumbnail" src="../images/gemini.png" />
+<p><strong><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal">Generate text using the Vertex AI Gemini API</a></strong>
     Use the SDK to send requests to the Vertex AI Gemini API.</p>
 </li>
 <li>
-<p><strong><a href="../start/quickstarts/quickstart.md">Send prompts to Gemini using the Vertex AI Studio Prompt Gallery</a></strong>
-    <img alt="Model Garden thumbnail" src="../images/model_garden.png" />
+<p><strong><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart">Send prompts to Gemini using the Vertex AI Studio Prompt Gallery</a></strong>
     Test prompts with no setup required.</p>
 </li>
 <li>
-<p><strong><a href="../image/quickstart-image-generate-console.md">Generate an image and verify its watermark using Imagen</a></strong>
+<p><strong><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/image/quickstart-image-generate-console">Generate an image and verify its watermark using Imagen</a></strong>
     Create a watermarked image using Imagen on Vertex AI.</p>
 </li>
 </ul>

@@ -1166,16 +1166,16 @@
 </tr>
 </tbody>
 </table>
-<p>For more information on the native SDK, see <a href="/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal">Use the Google Gen AI SDK</a>.</p>
+<p>For more information on the native SDK, see <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal">Use the Google Gen AI SDK</a>.</p>
 <h2 id="supported-models">📚 Supported models<a class="headerlink" href="#supported-models" title="Permanent link">&para;</a></h2>
 <p>The Chat Completions API supports both Gemini models and select self-deployed models from Model Garden.</p>
 <h3 id="gemini-models">Gemini models<a class="headerlink" href="#gemini-models" title="Permanent link">&para;</a></h3>
 <p>The following models provide support for the Chat Completions API:</p>
 <ul>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-5-pro">Gemini 2.5 Pro</a> (Preview)</li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Gemini 2.5 Flash</a> (Preview)</li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-0-flash">Gemini 2.0 Flash</a></li>
-<li><a href="/vertex-ai/generative-ai/docs/models/gemini/2-0-flash-lite">Gemini 2.0 Flash-Lite</a></li>
+<li><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-pro">Gemini 2.5 Pro</a> (Preview)</li>
+<li><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Gemini 2.5 Flash</a> (Preview)</li>
+<li><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-0-flash">Gemini 2.0 Flash</a></li>
+<li><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-0-flash-lite">Gemini 2.0 Flash-Lite</a></li>
 </ul>
 <h3 id="self-deployed-models-from-model-garden">Self-deployed models from Model Garden<a class="headerlink" href="#self-deployed-models-from-model-garden" title="Permanent link">&para;</a></h3>
 <p>The <a href="https://huggingface.co/docs/text-generation-inference/en/index">Hugging Face Text Generation Interface (HF TGI)</a> and <a href="http://us-docker.pkg.dev/vertex-ai/vertex-vision-model-garden-dockers/pytorch-vllm-serve">Vertex AI Model Garden prebuilt vLLM</a> containers support the Chat Completions API. However, not every model deployed to these containers supports the API. The following are the most popular supported models by container:</p>
@@ -1216,7 +1216,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><code>messages</code></td>
-<td style="text-align: left;"><ul><li><code>System message</code></li><li><code>User message</code>: The <code>text</code> and <code>image_url</code> types are supported. The <code>image_url</code> type supports images stored as a Cloud Storage URI or a base64 encoding in the form <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>. To learn how to create a Cloud Storage bucket and upload a file to it, see <a href="/storage/docs/discover-object-storage-console">Discover object storage</a>. The <code>detail</code> option is not supported.</li><li><code>Assistant message</code></li><li><code>Tool message</code></li><li><code>Function message</code>: This field is deprecated, but supported for backwards compatibility.</li></ul></td>
+<td style="text-align: left;"><ul><li><code>System message</code></li><li><code>User message</code>: The <code>text</code> and <code>image_url</code> types are supported. The <code>image_url</code> type supports images stored as a Cloud Storage URI or a base64 encoding in the form <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>. To learn how to create a Cloud Storage bucket and upload a file to it, see <a href="https://cloud.google.com/storage/docs/discover-object-storage-console">Discover object storage</a>. The <code>detail</code> option is not supported.</li><li><code>Assistant message</code></li><li><code>Tool message</code></li><li><code>Function message</code>: This field is deprecated, but supported for backwards compatibility.</li></ul></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>model</code></td>
@@ -1294,7 +1294,7 @@
 </table>
 <h3 id="multimodal-input-parameters">Multimodal input parameters<a class="headerlink" href="#multimodal-input-parameters" title="Permanent link">&para;</a></h3>
 <p>The Chat Completions API supports select multimodal inputs. In general, the <code>data</code> parameter can be a URI or a combination of MIME type and base64 encoded bytes in the form <code>"data:&lt;MIME-TYPE&gt;;base64,&lt;BASE64-ENCODED-BYTES&gt;"</code>.</p>
-<p>For a full list of MIME types, see <a href="/vertex-ai/generative-ai/docs/model-reference/inference#blob"><code>GenerateContent</code></a>. For more information on OpenAI's base64 encoding, see <a href="https://platform.openai.com/docs/guides/images-vision#giving-a-model-images-as-input">their documentation</a>.</p>
+<p>For a full list of MIME types, see <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/inference#blob"><code>GenerateContent</code></a>. For more information on OpenAI's base64 encoding, see <a href="https://platform.openai.com/docs/guides/images-vision#giving-a-model-images-as-input">their documentation</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1309,11 +1309,11 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>image_url</code></td>
-<td style="text-align: left;"><ul><li><code>data</code>: Like <code>input_audio</code>, any URI or valid blob format is supported. Note that <code>image_url</code> as a URL will default to the <code>image/*</code> MIME-type and <code>image_url</code> as blob data can be used as any multimodal input.</li><li><code>detail</code>: Similar to <a href="/vertex-ai/generative-ai/docs/multimodal/image-understanding#supported_models">media resolution</a>, this determines the maximum tokens per image for the request. Note that while OpenAI's field is per-image, Gemini enforces the same detail across the request, and passing multiple detail types in one request will throw an error.</li></ul></td>
+<td style="text-align: left;"><ul><li><code>data</code>: Like <code>input_audio</code>, any URI or valid blob format is supported. Note that <code>image_url</code> as a URL will default to the <code>image/*</code> MIME-type and <code>image_url</code> as blob data can be used as any multimodal input.</li><li><code>detail</code>: Similar to <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/image-understanding#supported_models">media resolution</a>, this determines the maximum tokens per image for the request. Note that while OpenAI's field is per-image, Gemini enforces the same detail across the request, and passing multiple detail types in one request will throw an error.</li></ul></td>
 </tr>
 </tbody>
 </table>
-<p>For usage, see our <a href="/vertex-ai/generative-ai/docs/migrate/openai/examples#multimodal-input-examples">multimodal input examples</a>.</p>
+<p>For usage, see our <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/migrate/openai/examples#multimodal-input-examples">multimodal input examples</a>.</p>
 <h3 id="gemini-specific-parameters">Gemini-specific parameters<a class="headerlink" href="#gemini-specific-parameters" title="Permanent link">&para;</a></h3>
 <p>Several features supported by Gemini are not available in OpenAI models. These features can still be passed in as parameters, but must be contained within an <code>extra_content</code> or <code>extra_body</code> or they will be ignored.</p>
 <p><strong><code>extra_body</code> features</strong></p>
@@ -1390,12 +1390,12 @@
 </details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Learn more about <a href="/vertex-ai/generative-ai/docs/migrate/openai/auth-and-credentials">authentication and credentialing</a> with the OpenAI-compatible syntax.</li>
-<li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/migrate/openai/examples">Chat Completions API</a> with the OpenAI-compatible syntax.</li>
-<li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/model-reference/inference#examples">Inference API</a> with the OpenAI-compatible syntax.</li>
-<li>See examples of calling the <a href="/vertex-ai/generative-ai/docs/model-reference/function-calling#examples">Function Calling API</a> with OpenAI-compatible syntax.</li>
-<li>Learn more about the <a href="/vertex-ai/generative-ai/docs/overview">Gemini API</a>.</li>
-<li>Learn more about <a href="/vertex-ai/generative-ai/docs/migrate/migrate-from-azure-to-gemini">migrating from Azure OpenAI to the Gemini API</a>.</li>
+<li>Learn more about <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/migrate/openai/auth-and-credentials">authentication and credentialing</a> with the OpenAI-compatible syntax.</li>
+<li>See examples of calling the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/migrate/openai/examples">Chat Completions API</a> with the OpenAI-compatible syntax.</li>
+<li>See examples of calling the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/inference#examples">Inference API</a> with the OpenAI-compatible syntax.</li>
+<li>See examples of calling the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/function-calling#examples">Function Calling API</a> with OpenAI-compatible syntax.</li>
+<li>Learn more about the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs">Gemini API</a>.</li>
+<li>Learn more about <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/migrate/migrate-from-azure-to-gemini">migrating from Azure OpenAI to the Gemini API</a>.</li>
 </ul>
 
 

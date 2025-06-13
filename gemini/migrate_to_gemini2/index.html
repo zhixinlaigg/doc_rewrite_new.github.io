@@ -955,14 +955,14 @@
 
 
 <h1 id="migrate-your-application-to-gemini-2-with-the-gemini-api-in-vertex-ai">Migrate your application to Gemini 2 with the Gemini API in Vertex AI<a class="headerlink" href="#migrate-your-application-to-gemini-2-with-the-gemini-api-in-vertex-ai" title="Permanent link">&para;</a></h1>
-<p>This guide shows how to migrate generative AI applications from Gemini 1.x and PaLM models to <a href="/vertex-ai/generative-ai/docs/gemini-v2">Gemini 2 models</a>.</p>
+<p>This guide shows how to migrate generative AI applications from Gemini 1.x and PaLM models to <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models">Gemini 2 models</a>.</p>
 <h2 id="why-migrate-to-gemini-2">📚 Why migrate to Gemini 2?<a class="headerlink" href="#why-migrate-to-gemini-2" title="Permanent link">&para;</a></h2>
-<p>Gemini 2 delivers significant performance improvements over Gemini 1.x and PaLM models, along with <a href="/vertex-ai/generative-ai/docs/gemini-v2">new capabilities</a>. Additionally, each model version has its own <a href="/vertex-ai/generative-ai/docs/learn/model-versions">version support and availability timeline</a>.</p>
+<p>Gemini 2 delivers significant performance improvements over Gemini 1.x and PaLM models, along with <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models">new capabilities</a>. Additionally, each model version has its own <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions">version support and availability timeline</a>.</p>
 <p>Upgrading most generative AI applications to Gemini 2 shouldn't require significant reengineering of prompts or code. But some applications require prompt changes, and these changes are difficult to predict without running a prompt through Gemini 2 first. Therefore, Gemini 2 testing is recommended before migration.</p>
 <p>Significant code changes are only needed for certain breaking changes, or to use new Gemini 2 capabilities.</p>
 <h2 id="which-gemini-2-model-should-i-migrate-to">📚 Which Gemini 2 model should I migrate to?<a class="headerlink" href="#which-gemini-2-model-should-i-migrate-to" title="Permanent link">&para;</a></h2>
-<p>As you choose a Gemini 2 model to migrate to, you'll want to consider the features that your application requires, as well as the <a href="/vertex-ai/generative-ai/pricing">cost of those features</a>.</p>
-<p>For an overview of Gemini 2 model features, see <a href="/vertex-ai/generative-ai/docs/gemini-v2">Gemini 2</a>. For an overview of all Google models, see <a href="/vertex-ai/generative-ai/docs/learn/models">Google models</a>.</p>
+<p>As you choose a Gemini 2 model to migrate to, you'll want to consider the features that your application requires, as well as the <a href="https://cloud.google.com/vertex-ai/generative-ai/pricing">cost of those features</a>.</p>
+<p>For an overview of Gemini 2 model features, see <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models">Gemini 2</a>. For an overview of all Google models, see <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models">Google models</a>.</p>
 <p>For a comparison of Gemini 1.x and Gemini 2 models, see the following table.</p>
 <table>
 <thead>
@@ -1014,7 +1014,7 @@
 <td>64,192</td>
 </tr>
 <tr>
-<td><a href="/vertex-ai/generative-ai/docs/grounding/grounding-with-google-search">Grounding with Search</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-google-search">Grounding with Search</a></td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -1023,7 +1023,7 @@
 <td>Yes</td>
 </tr>
 <tr>
-<td><a href="/vertex-ai/generative-ai/docs/multimodal/function-calling">Function calling</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/function-calling">Function calling</a></td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -1032,7 +1032,7 @@
 <td>Yes</td>
 </tr>
 <tr>
-<td><a href="/vertex-ai/generative-ai/docs/multimodal/code-execution">Code execution</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/code-execution">Code execution</a></td>
 <td>No</td>
 <td>No</td>
 <td>Yes</td>
@@ -1041,7 +1041,7 @@
 <td>Yes</td>
 </tr>
 <tr>
-<td><a href="/vertex-ai/generative-ai/docs/context-cache/context-cache-overview">Context caching</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/context-cache/context-cache-overview">Context caching</a></td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -1050,7 +1050,7 @@
 <td>Yes</td>
 </tr>
 <tr>
-<td><a href="/vertex-ai/generative-ai/docs/multimodal/batch-prediction-gemini">Batch prediction</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/batch-prediction-gemini">Batch prediction</a></td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -1059,7 +1059,7 @@
 <td>Yes</td>
 </tr>
 <tr>
-<td><a href="/vertex-ai/generative-ai/docs/live-api">Live API</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/live-api">Live API</a></td>
 <td>No</td>
 <td>No</td>
 <td>No</td>
@@ -1077,7 +1077,7 @@
 <td>Fast + most cost efficient</td>
 </tr>
 <tr>
-<td><a href="/vertex-ai/generative-ai/docs/models/tune-models">Fine-tuning</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/tune-models">Fine-tuning</a></td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -1087,15 +1087,15 @@
 </tr>
 <tr>
 <td>Recommended SDK</td>
-<td><a href="/vertex-ai/docs/python-sdk/use-vertex-ai-python-sdk">Vertex AI SDK</a></td>
-<td><a href="/vertex-ai/docs/python-sdk/use-vertex-ai-python-sdk">Vertex AI SDK</a></td>
-<td><a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
-<td><a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
-<td><a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
-<td><a href="/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/docs/python-sdk/use-vertex-ai-python-sdk">Vertex AI SDK</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/docs/python-sdk/use-vertex-ai-python-sdk">Vertex AI SDK</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/sdks/overview">Gen AI SDK</a></td>
 </tr>
 <tr>
-<td><a href="/vertex-ai/generative-ai/pricing">Pricing units</a></td>
+<td><a href="https://cloud.google.com/vertex-ai/generative-ai/pricing">Pricing units</a></td>
 <td>Character</td>
 <td>Character</td>
 <td>Token</td>
@@ -1108,12 +1108,12 @@
 <h2 id="before-you-begin">⚙️ Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>
 <p>For a seamless Gemini 2 migration, we recommend that you address the following concerns before you begin the migration process.</p>
 <ul>
-<li><strong>Model retirement awareness</strong>: Note the <a href="/vertex-ai/generative-ai/docs/learn/model-versions">model version support and availability timelines</a> for older Gemini models, and make sure your migration is completed before the model you're using is retired.</li>
-<li><strong>InfoSec, governance, and regulatory approvals</strong>: Proactively request the approvals you need for Gemini 2 from your information security (InfoSec), risk, and compliance stakeholders. Make sure that you cover domain-specific risk and compliance constraints, especially in heavily regulated industries such as healthcare and financial services. Note that <a href="/vertex-ai/generative-ai/docs/security-controls">Gemini security controls</a> differ among Gemini 2 models.</li>
-<li><strong>Location availability</strong>: See the <a href="/vertex-ai/generative-ai/docs/learn/locations#genai-locations">Generative AI on Google Cloud models and partner model availability</a> documentation, and make sure your chosen Gemini 2 model is available in the regions where you need it, or consider switching to the <a href="/vertex-ai/generative-ai/docs/learn/locations#global-endpoint">global endpoint</a>.</li>
-<li><strong>Modality and tokenization-based pricing differences</strong>: Check Gemini 2 pricing for all the modalities (text, code, images, speech) in your application. For more information, see <a href="/vertex-ai/generative-ai/pricing">generative AI pricing page</a>. Note that Gemini 2 text input and output is priced per token, while Gemini 1 text input and output is priced per character.</li>
-<li><strong>Provisioned Throughput</strong>: If needed, <a href="/vertex-ai/generative-ai/docs/purchase-provisioned-throughput#place-an-order">purchase additional Provisioned Throughput</a> for Gemini 2 or <a href="/vertex-ai/generative-ai/docs/purchase-provisioned-throughput#change-order">change existing Provisioned Throughput orders</a>.</li>
-<li><strong>Supervised fine-tuning</strong>: If your Gemini application uses <a href="/vertex-ai/generative-ai/docs/models/gemini-supervised-tuning">supervised fine-tuning</a>, submit a new tuning job with Gemini 2. We recommend that you start with the default tuning hyperparameters instead of reusing the hyperparameter values that you used with previous Gemini versions. The tuning service has been optimized for Gemini 2. Therefore, reusing previous hyperparameter values might not yield the best results.</li>
+<li><strong>Model retirement awareness</strong>: Note the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions">model version support and availability timelines</a> for older Gemini models, and make sure your migration is completed before the model you're using is retired.</li>
+<li><strong>InfoSec, governance, and regulatory approvals</strong>: Proactively request the approvals you need for Gemini 2 from your information security (InfoSec), risk, and compliance stakeholders. Make sure that you cover domain-specific risk and compliance constraints, especially in heavily regulated industries such as healthcare and financial services. Note that <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/security-controls">Gemini security controls</a> differ among Gemini 2 models.</li>
+<li><strong>Location availability</strong>: See the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/locations#genai-locations">Generative AI on Google Cloud models and partner model availability</a> documentation, and make sure your chosen Gemini 2 model is available in the regions where you need it, or consider switching to the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/locations#global-endpoint">global endpoint</a>.</li>
+<li><strong>Modality and tokenization-based pricing differences</strong>: Check Gemini 2 pricing for all the modalities (text, code, images, speech) in your application. For more information, see <a href="https://cloud.google.com/vertex-ai/generative-ai/pricing">generative AI pricing page</a>. Note that Gemini 2 text input and output is priced per token, while Gemini 1 text input and output is priced per character.</li>
+<li><strong>Provisioned Throughput</strong>: If needed, <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/provisioned-throughput/purchase-provisioned-throughput#place-an-order">purchase additional Provisioned Throughput</a> for Gemini 2 or <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/provisioned-throughput/purchase-provisioned-throughput#change-order">change existing Provisioned Throughput orders</a>.</li>
+<li><strong>Supervised fine-tuning</strong>: If your Gemini application uses <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini-supervised-tuning">supervised fine-tuning</a>, submit a new tuning job with Gemini 2. We recommend that you start with the default tuning hyperparameters instead of reusing the hyperparameter values that you used with previous Gemini versions. The tuning service has been optimized for Gemini 2. Therefore, reusing previous hyperparameter values might not yield the best results.</li>
 <li><strong>Regression testing</strong>: There are three main types of regression tests involved when upgrading to Gemini 2 models:<ul>
 <li><strong>Code regression tests</strong>: Regression testing from a software engineering and DevOps perspective. This type of regression test is always required.</li>
 <li><strong>Model performance regression tests</strong>: Regression testing from a data science or machine learning perspective. This means ensuring that the new Gemini 2 model provides outputs that are at least as high-quality as outputs from the current production model. Model performance regression tests are just model evaluations done as part of a change to a system or to the underlying model. Model performance regression testing further breaks down into:<ul>
@@ -1282,17 +1282,17 @@
 <h2 id="improving-model-performance">📚 Improving model performance<a class="headerlink" href="#improving-model-performance" title="Permanent link">&para;</a></h2>
 <p>As you complete your migration, use the following tips to maximize Gemini 2 model performance:</p>
 <ul>
-<li>Inspect your <a href="/vertex-ai/generative-ai/docs/learn/prompts/system-instructions">system instructions</a>, <a href="/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies">prompts</a>, and <a href="/vertex-ai/generative-ai/docs/learn/prompts/few-shot-examples">few-shot learning examples</a> for any inconsistencies, contradictions, or irrelevant instructions and examples.</li>
+<li>Inspect your <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/system-instructions">system instructions</a>, <a href="/https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies">prompts</a>, and <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/few-shot-examples">few-shot learning examples</a> for any inconsistencies, contradictions, or irrelevant instructions and examples.</li>
 <li>Test a more powerful model. For example, if you evaluated Gemini 2.0 Flash-Lite, try Gemini 2.0 Flash.</li>
-<li>Examine any automated evaluation results to make sure they match human judgment, especially results that use a <a href="/vertex-ai/generative-ai/docs/models/evaluate-judge-model">judge model</a>. Make sure your judge model instructions don't contain inconsistencies or ambiguities.</li>
+<li>Examine any automated evaluation results to make sure they match human judgment, especially results that use a <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/evaluate-judge-model">judge model</a>. Make sure your judge model instructions don't contain inconsistencies or ambiguities.</li>
 <li>One way to improve judge model instructions is to test the instructions with multiple humans in isolation and see if their judgments are consistent. If humans interpret the instructions differently and render different judgments, your judge model instructions are ambiguous.</li>
-<li><a href="/vertex-ai/generative-ai/docs/models/tune-models">Fine-tune the Gemini 2 model</a>.</li>
+<li><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/tune-models">Fine-tune the Gemini 2 model</a>.</li>
 <li>Examine evaluation outputs to look for patterns that show specific kinds of failures. Grouping together failures into different models, kinds, or categories gives you more targeted evaluation data, which makes it easier to adjust prompts to address these errors.</li>
 <li>Make sure you are independently evaluating different generative AI components.</li>
-<li>Experiment with adjusting <a href="/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters#token-sampling-parameters">token sampling parameters</a>.</li>
+<li>Experiment with adjusting <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters#token-sampling-parameters">token sampling parameters</a>.</li>
 </ul>
 <h2 id="getting-help">🔗 Getting help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>If you need help, Google Cloud offers support packages to meet your needs, such as 24/7 coverage, phone support, and access to a technical support manager. For more information, see <a href="/support">Google Cloud Support</a>.</p>
+<p>If you need help, Google Cloud offers support packages to meet your needs, such as 24/7 coverage, phone support, and access to a technical support manager. For more information, see <a href="https://cloud.google.com/support?hl=en">Google Cloud Support</a>.</p>
 <h2 id="related-questions">📚 Related Questions<a class="headerlink" href="#related-questions" title="Permanent link">&para;</a></h2>
 <details>
 <summary>Why should I migrate my application from Gemini 1.x to Gemini 2?</summary>
@@ -1326,8 +1326,8 @@
 </details>
 <h2 id="whats-next">🔗 What's next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Read the list of <a href="/vertex-ai/generative-ai/docs/faq">frequently asked questions</a>.</li>
-<li><a href="/vertex-ai/generative-ai/docs/migrate/migrate-palm-to-gemini">Migrate from the PaLM API to the Gemini API in Vertex AI</a>.</li>
+<li>Read the list of <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/faq">frequently asked questions</a>.</li>
+<li><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/migrate/migrate-palm-to-gemini">Migrate from the PaLM API to the Gemini API in Vertex AI</a>.</li>
 </ul>
 
 

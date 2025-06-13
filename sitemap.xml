@@ -2,74 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/test/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/api_reference/generate_content/</loc>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/gemini/migrate_to_gemini2/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/image/quickstart-image-generate-console/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/migrate_from_the_gemini_developer_API_to_the_Gemini_API_in_vertex_AI/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/openai/Authenticate/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/openai/Examples/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/migration/openai/Overview/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/express-mode/overview/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/express-mode/vertex-ai-express-mode-api-quickstart/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/express-mode/vertex-ai-studio-express-mode-quickstart/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/quickstarts/deploy-vais-prompt/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/quickstarts/quickstart-multimodal/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/quickstarts/quickstart/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/start/quickstarts/try-gen-ai/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/static/vertex-ai/generative-ai/docs/learn/overview/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/static/vertex-ai/generative-ai/docs/multimodal/overview/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
     <url>
          <loc>https://github.com/zhixinlaigg/doc_rewrite_new.github.io/static/vertex-ai/generative-ai/docs/multimodal/test/test/</loc>
-         <lastmod>2025-06-12</lastmod>
+         <lastmod>2025-06-13</lastmod>
     </url>
 </urlset>
